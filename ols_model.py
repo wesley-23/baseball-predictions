@@ -29,6 +29,7 @@ def createTrainingSets():
             if int(prev_attrs[3]) == 2019:
                 prev = line
                 continue
+            prev_at_bats = prev_attrs[5]
             prev_attrs[5] = curr_attrs[5]
             prev_attrs[6] = curr_attrs[6]
             prev_attrs[7] = curr_attrs[7]
@@ -37,8 +38,8 @@ def createTrainingSets():
             prev_attrs[10] = curr_attrs[10]
             newLine = ''
             for attr in prev_attrs:
-                newLine += attr + ','
-            newLine = newLine[:-1]
+                newLine += attr.strip() + ','
+            newLine += prev_at_bats + '\n'
             if int(curr_attrs[3]) == 2023:
                 writeToTest(newLine)
                 prev = line
