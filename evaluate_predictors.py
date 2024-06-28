@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import statsmodels.api as sm
 from scipy.stats import norm
+import math
 
 
 def model_ba_vs_exit_velocity():
@@ -69,7 +70,7 @@ def calculate_spread_of_exit_velocity():
     df = pd.read_csv('batter_stats_sorted.csv')
     hard_hit_z_score = norm.ppf(1 - df['hard_hit_percent'] * 0.01)
     X = 95 * np.ones(df['hard_hit_percent'].shape)
-    ev_variance = ((X - df['exit_velocity_avg']) / hard_hit_z_score)
+    ev_variance = ((X - df['exit_velocity_avg']) / hard_hit_z_score) ** 2
     out = pd.DataFrame({
         'z-score': hard_hit_z_score,
         'stdev': ev_variance

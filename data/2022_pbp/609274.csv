@@ -1,0 +1,37 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Single, 2, 0, 0, 2, 90.8, 20
+Strikeout, 1, 1, 2, 1, None, None
+Single, 0, 1, 0, 0, 66.6, 21
+Strikeout, 3, 1, 2, 0, None, None
+Strikeout, 0, 1, 2, 0, None, None
+Strikeout, 2, 0, 2, 2, None, None
+Strikeout, 1, 1, 1, 2, None, None
+Flyout, 1, 0, 2, 2, 83.0, 56
+Single, 1, 1, 0, 1, 93.1, 13
+Strikeout, 2, 0, 2, 1, None, None
+Groundout, 0, 2, 0, 1, 41.9, -12
+Strikeout, 1, 0, 2, 1, None, None
+Strikeout, 0, 1, 2, 0, None, None
+Double, 0, 0, 0, 0, 89.8, 12
+Flyout, 1, 0, 1, 1, 96.1, 40
+Strikeout, 2, 1, 1, 2, None, None
+Flyout, 0, 0, 0, 0, 98.6, 28
+Double, 3, 1, 1, 0, 92.1, 20
+Single, 0, 0, 0, 0, 68.6, 28
+Flyout, 1, 0, 1, 0, 88.3, 44
+Strikeout, 2, 0, 3, 0, None, None
+Flyout, 0, 0, 0, 0, 85.7, 35
+Strikeout, 2, 1, 1, 2, None, None
+Walk, 4, 1, 0, 0, None, None
+Flyout, 0, 0, 0, 0, 83.5, 53
+Pop Out, 0, 2, 0, 1, 86.6, 68
+GIDP, 1, 0, 0, 1, 95.6, -7
+Pop Out, 2, 1, 0, 0, 87.0, 66
+Sac Fly, 0, 0, 1, 0, 92.7, 48
+Caught Stealing 2B, 2, 0, 0, 1, None, None
+Strikeout, 1, 1, 1, 1, None, None
+Strikeout, 0, 1, 2, 0, None, None
+Flyout, 0, 1, 0, 1, 77.0, 45
+Groundout, 0, 0, 1, 0, 78.0, 5
+Strikeout, 3, 1, 1, 1, None, None
+Strikeout, 2, 1, 0, 2, None, None
