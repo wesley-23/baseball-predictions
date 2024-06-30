@@ -1,0 +1,72 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Walk, 4, 0, 1, 1, None, None
+Double, 0, 1, 0, 0, 97.7, 29
+Single, 2, 0, 0, 2, 73.1, 20
+Groundout, 1, 0, 0, 0, 99.6, -21
+Flyout, 2, 2, 0, 0, 75.9, 52
+Strikeout, 3, 1, 1, 1, None, None
+Groundout, 1, 0, 0, 0, 94.4, -16
+Double, 1, 1, 1, 0, 98.7, 29
+Flyout, 2, 1, 0, 1, 98.0, 26
+Single, 0, 0, 0, 0, 100.1, 13
+Double, 0, 0, 0, 0, 99.4, 23
+Walk, 4, 0, 0, 0, None, None
+Walk, 4, 1, 0, 0, None, None
+Groundout, 3, 1, 0, 0, 71.2, 3
+Single, 1, 0, 0, 0, 100.2, -1
+Field Error, 0, 0, 0, 0, 92.8, -23
+Strikeout, 1, 1, 1, 1, None, None
+Groundout, 1, 0, 0, 0, 76.3, -10
+Walk, 4, 2, 0, 0, None, None
+Groundout, 2, 0, 0, 0, 96.0, -10
+Strikeout, 1, 1, 2, 1, None, None
+Triple, 1, 1, 0, 1, 91.3, 31
+Forceout, 0, 0, 0, 0, 84.8, -8
+Groundout, 3, 1, 1, 0, 100.1, -17
+Lineout, 2, 1, 0, 2, 104.3, 6
+Strikeout, 0, 2, 1, 0, None, None
+Double, 2, 0, 1, 1, 96.5, 27
+Strikeout, 1, 0, 2, 1, None, None
+Flyout, 3, 1, 0, 1, 94.9, 42
+Flyout, 0, 0, 0, 1, 89.7, 42
+Groundout, 2, 2, 0, 0, 99.0, -31
+Single, 3, 1, 0, 5, 78.0, -1
+Double, 0, 1, 0, 0, 77.8, 14
+Strikeout, 3, 1, 2, 1, None, None
+Flyout, 3, 0, 0, 0, 69.2, 53
+Groundout, 2, 0, 1, 0, 89.2, -40
+Single, 1, 0, 0, 0, 90.3, 10
+Pop Out, 1, 0, 0, 0, 74.7, 79
+Single, 3, 0, 0, 1, 104.3, 5
+Groundout, 0, 0, 0, 0, 71.6, -23
+Groundout, 0, 0, 0, 0, 100.0, -9
+Single, 0, 1, 0, 0, 82.1, -46
+Single, 1, 1, 0, 0, 66.9, 32
+Single, 0, 1, 0, 0, 41.9, 36
+Groundout, 1, 0, 0, 1, 62.0, 8
+Strikeout, 2, 3, 0, 1, None, None
+Single, 1, 0, 0, 0, 68.1, 12
+Sac Fly, 2, 0, 0, 0, 100.7, 31
+Strikeout, 0, 1, 1, 1, None, None
+Hit By Pitch, 1, 0, 1, 2, None, None
+Single, 0, 0, 0, 0, 102.5, -7
+Groundout, 0, 1, 0, 0, 93.6, -23
+Lineout, 2, 0, 1, 0, 89.3, 7
+Flyout, 1, 0, 0, 0, 96.6, 48
+Strikeout, 1, 1, 1, 2, None, None
+Single, 3, 0, 1, 5, 107.1, 13
+Strikeout, 1, 1, 2, 0, None, None
+Pop Out, 2, 1, 0, 1, 55.5, 56
+Groundout, 0, 1, 0, 1, 78.2, None
+Strikeout, 2, 1, 1, 1, None, None
+Strikeout, 2, 1, 2, 1, None, None
+Groundout, 0, 0, 0, 0, 70.6, -13
+Flyout, 1, 0, 1, 0, 88.5, 48
+Strikeout, 1, 1, 2, 0, None, None
+Pop Out, 2, 1, 0, 1, 55.5, 56
+Groundout, 0, 1, 0, 1, 78.2, None
+Single, 1, 0, 0, 2, 86.3, 18
+Groundout, 0, 2, 0, 1, 70.8, 8
+Groundout, 0, 1, 0, 1, 84.9, -9
+Single, 1, 0, 0, 0, 86.6, 15
+Lineout, 0, 0, 0, 0, 80.8, 21

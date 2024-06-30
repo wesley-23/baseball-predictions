@@ -65,8 +65,21 @@ def create_hit_EV_LA_hit_chart():
 
     plt.show()
 
+def create_hit_frequency_heat_map():
+    fig, ax = plt.subplots()
+    df = pd.read_csv('2022_pbp_all/EV_LA_hit_out_data.csv', skipinitialspace=True)
 
-    
+    ev = df['EV']
+    la = df['LA']
+    rate = df['Hits'] / (df['Hits'] + df['Outs'])
+
+    colors = ()
+    for r in rate:
+        c = (1 - r, 0, r)
+        colors += (c,)
+
+    ax.scatter(ev, la, c = colors)
+    plt.show()
     
 
-create_hit_frequency_data()
+create_hit_frequency_heat_map()

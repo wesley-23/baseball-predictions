@@ -7,8 +7,8 @@ import os
 def daterange(start_date, end_date):
     for n in range(int((end_date - start_date).days)):
         yield start_date + timedelta(n)
-start_date = date(2022, 4, 7)
-end_date = date(2022, 10, 5)
+start_date = date(2023, 10, 1)
+end_date = date(2023, 10, 2)
 
 def write_to_csv(year, line, id):
     path = str(year) + '_pbp/' + str(id) + '.csv'
@@ -140,7 +140,7 @@ def main():
                     line += outcome['LA'] + '\n'
                 else:
                     line += 'None\n'
-                write_to_csv(2022, line, pid)
+                write_to_csv(2023, line, pid)
             sleep(5)
 
 

@@ -1,0 +1,27 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Home Run, 1, 0, 1, 0, 106.2, 31
+Walk, 4, 0, 0, 2, None, None
+Walk, 4, 0, 0, 0, None, None
+Forceout, 3, 0, 1, 0, 93.2, 10
+Walk, 4, 0, 0, 2, None, None
+Walk, 4, 1, 1, 1, None, None
+Strikeout, 0, 3, 0, 0, None, None
+Single, 0, 0, 0, 0, 75.7, 11
+Walk, 4, 1, 1, 1, None, None
+Groundout, 2, 0, 0, 1, 86.9, 3
+Flyout, 3, 1, 0, 0, 96.3, 34
+Walk, 4, 0, 1, 1, None, None
+Strikeout, 2, 1, 1, 2, None, None
+Strikeout, 2, 2, 1, 1, None, None
+Strikeout, 0, 1, 2, 0, None, None
+Flyout, 0, 0, 0, 0, 72.6, 49
+Groundout, 0, 0, 0, 0, 77.4, 4
+Strikeout, 2, 2, 1, 1, None, None
+Single, 2, 1, 0, 0, 100.8, 12
+Single, 1, 1, 1, 0, 101.6, -5
+Strikeout, 2, 1, 1, 2, None, None
+Strikeout, 2, 2, 1, 1, None, None
+Strikeout, 0, 1, 2, 0, None, None
+Flyout, 0, 0, 0, 0, 72.6, 49
+Single, 0, 0, 0, 1, 44.0, -65
+Groundout, 3, 0, 0, 2, 76.4, -17
