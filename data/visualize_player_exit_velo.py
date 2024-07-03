@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+from matplotlib.colors import LinearSegmentedColormap
 import pandas as pd
 import numpy as np
 
@@ -67,19 +68,78 @@ def create_hit_EV_LA_hit_chart():
 
 def create_hit_frequency_heat_map():
     fig, ax = plt.subplots()
-    df = pd.read_csv('2022_pbp_all/EV_LA_hit_out_data.csv', skipinitialspace=True)
+    table = get_hit_frequencies_table()
+    colors = [(0, 0, 0.5), (0.8, 0.9, 1)]
+    cmap_name = 'heat_colors'
+    cmap_ = LinearSegmentedColormap.from_list(cmap_name, colors, N = 100)
 
+    im = ax.imshow(table, origin = 'lower', cmap = cmap_)
+    fig.colorbar(im, ax = ax, label = 'Hit Rate')
+
+    ax.set_title('2022 Hit Rate for Batted Balls From LA and EV Data\n', fontsize = 20)
+    
+    plt.xlabel('Exit Velocity')
+    plt.ylabel('Launch Angle')
+    fig.text(.25, .1,'Entries with insufficient were data estimated using nearest outcomes with similar launch angle and exit velocity. The amount of \ndata points used for each observation was at least 10.')
+    plt.show()
+
+    
+def get_hit_frequencies_table():
+    df = pd.read_csv('2022_pbp_all/EV_LA_hit_out_data.csv', skipinitialspace=True)
     ev = df['EV']
     la = df['LA']
-    rate = df['Hits'] / (df['Hits'] + df['Outs'])
 
-    colors = ()
-    for r in rate:
-        c = (1 - r, 0, r)
-        colors += (c,)
+    rows = la.max() + 1
+    cols = ev.max() + 1
 
-    ax.scatter(ev, la, c = colors)
-    plt.show()
-    
+    table = np.zeros((rows, cols))
+    hm = np.zeros((rows, cols))
+
+    for e, l, h, o in zip(ev, la, df['Hits'], df['Outs']):
+        r = h / (h + o)
+        table[l][e] = r
+        hm[l][e] = h + o
+    interpolate(table, hm, 10)
+   
+    return table
+
+def interpolate(table, hm, n):
+    for i in range(len(table)):
+        for j in range(len(table[0])):
+            points = hm[i][j]
+            average = table[i][j] * points
+            bound = 1
+            while points < n:
+                for j_ in range(j - bound, j + bound + 1):
+                    if i - bound >= 0:
+                        if not (j_ < 0 or j_ >= len(table[0])):
+                            num = hm[i - bound][j_]
+                            points += num
+                            average += (table[i - bound][j_] * num)
+                    if i + bound < len(table):
+                        if not (j_ < 0 or j_ >= len(table[0])):
+                            num = hm[i - bound][j_]
+                            points += num
+                            average += (table[i - bound][j_] * num)
+                for i_ in range(i - bound, i + bound + 1):
+                    if j - bound >= 0:
+                        if not (i_ < 0 or i_ >= len(table)):
+                            num = hm[i_][j - bound]
+                            points += num
+                            average += (table[i_][j - bound] * num)
+                    if j + bound < len(table[0]):
+                        if not (i_ < 0 or i_ >= len(table)):
+                            num = hm[i_][j + bound]
+                            points += num
+                            average += (table[i_][j + bound] * num)
+                bound += 1
+            table[i][j] = (average) / points
+
+
+
+
 
 create_hit_frequency_heat_map()
+# get_hit_frequencies_table()
+# create_hit_EV_LA_hit_chart()
+
