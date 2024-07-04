@@ -99,11 +99,13 @@ def get_hit_frequencies_table():
         r = h / (h + o)
         table[l][e] = r
         hm[l][e] = h + o
-    interpolate(table, hm, 10)
+    table = interpolate(table, hm, 10)
    
     return table
 
 def interpolate(table, hm, n):
+    new_table = np.zeros((len(table), len(table[0])))
+
     for i in range(len(table)):
         for j in range(len(table[0])):
             points = hm[i][j]
@@ -118,9 +120,9 @@ def interpolate(table, hm, n):
                             average += (table[i - bound][j_] * num)
                     if i + bound < len(table):
                         if not (j_ < 0 or j_ >= len(table[0])):
-                            num = hm[i - bound][j_]
+                            num = hm[i + bound][j_]
                             points += num
-                            average += (table[i - bound][j_] * num)
+                            average += (table[i + bound][j_] * num)
                 for i_ in range(i - bound, i + bound + 1):
                     if j - bound >= 0:
                         if not (i_ < 0 or i_ >= len(table)):
@@ -133,7 +135,8 @@ def interpolate(table, hm, n):
                             points += num
                             average += (table[i_][j + bound] * num)
                 bound += 1
-            table[i][j] = (average) / points
+            new_table[i][j] = (average) / points
+    return new_table
 
 
 
