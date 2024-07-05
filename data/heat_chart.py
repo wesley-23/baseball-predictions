@@ -19,13 +19,13 @@ class heat_chart:
         if self.neighbors != None:
             path = 'data/' + str(year) + '_pbp_all/'+str(self.neighbors) +'.csv'    
             if os.path.isfile(path):
-                self.hits, self.outs = self.parse_file(path)    
+                self.hits, self.outs, self.la_min, self.all_la, self.max_ev = self.parse_file(path)    
             else:
                 path = 'data/' + str(year) + '_pbp_all/EV_LA_hit_out_data.csv'
-                self.hits, self.outs = self.parse_file(path, n = self.neighbors)            
+                self.hits, self.outs, self.la_min, self.all_la, self.max_ev= self.parse_file(path, n = self.neighbors)            
         else:
             path = 'data/' + str(year) + '_pbp_all/EV_LA_hit_out_data.csv'
-            self.hits, self.outs = self.parse_file(path)
+            self.hits, self.outs, self.la_min, self.all_la, self.max_ev = self.parse_file(path)
 
     def parse_file(self, path, **kwargs):
         n = kwargs.get('n', None)
@@ -33,19 +33,20 @@ class heat_chart:
         ev = df['EV']
         la = df['LA']
 
-        rows = la.max() + 1
+        min = abs(la.min())
+        rows = la.max() + min + 1
         cols = ev.max() + 1
 
         hits = np.zeros((rows, cols))
         outs = np.zeros((rows, cols))
 
         for e, l, h, o in zip(ev, la, df['Hits'], df['Outs']):
-            hits[l][e] = h
-            outs[l][e] = o
+            hits[l - min][e] = h
+            outs[l - min][e] = o
 
         if not n is None:
             hits, outs = self.interpolate(hits, outs, n)
-        return (hits, outs)
+        return (hits, outs, min, rows, cols)
     
 
     def interpolate(self, hits, outs, n):
@@ -87,7 +88,7 @@ class heat_chart:
         cmap_ = LinearSegmentedColormap.from_list(cmap_name, colors, N = 100)
 
         table = self.hits / (self.hits + self.outs)
-        im = ax.imshow(table, origin = 'lower', cmap = cmap_)
+        im = ax.imshow(table, origin = 'lower', cmap = cmap_, extent = (0, self.max_ev, -self.la_min, self.all_la - self.la_min))
         fig.colorbar(im, ax = ax, label = 'Hit Rate')
 
         chart_title = str(self.year) + ' Hit Rate for Batted Balls from LA and EV Data\n'
@@ -112,7 +113,7 @@ class heat_chart:
                 f.write('EV, LA, Hits, Outs\n')
                 for i in range(0, len(self.hits)):
                     for j in range(0, len(self.hits[0])):
-                        line = str(j) + ', ' + str(i) + ', ' + str(self.hits[i][j]) + ', ' + str(self.outs[i][j]) + '\n'
+                        line = str(j) + ', ' + str(i - self.la_min) + ', ' + str(self.hits[i][j]) + ', ' + str(self.outs[i][j]) + '\n'
                         f.write(line)
                 f.close()
 

@@ -68,12 +68,12 @@ def create_hit_EV_LA_hit_chart():
 
 def create_hit_frequency_heat_map():
     fig, ax = plt.subplots()
-    table = get_hit_frequencies_table()
+    table, min_la, all_la, max_ev = get_hit_frequencies_table()
     colors = [(0, 0, 0.5), (0.8, 0.9, 1)]
     cmap_name = 'heat_colors'
     cmap_ = LinearSegmentedColormap.from_list(cmap_name, colors, N = 100)
 
-    im = ax.imshow(table, origin = 'lower', cmap = cmap_)
+    im = ax.imshow(table, origin = 'lower', cmap = cmap_, extent = (0, max_ev, -min_la, all_la - min_la))
     fig.colorbar(im, ax = ax, label = 'Hit Rate')
 
     ax.set_title('2022 Hit Rate for Batted Balls From LA and EV Data\n', fontsize = 20)
@@ -89,21 +89,20 @@ def get_hit_frequencies_table():
     ev = df['EV']
     la = df['LA']
 
-    rows = la.max() + 1
+    min = abs(la.min())
+    rows = la.max() + min + 1
     cols = ev.max() + 1
-    print(la.unique)
-    # print(la.min())
 
     table = np.zeros((rows, cols))
     hm = np.zeros((rows, cols))
 
     for e, l, h, o in zip(ev, la, df['Hits'], df['Outs']):
         r = h / (h + o)
-        table[l][e] = r
-        hm[l][e] = h + o
-    # table = interpolate(table, hm, 10)
+        table[l - min][e] = r
+        hm[l - min][e] = h + o
+    table = interpolate(table, hm, 20)
    
-    return table
+    return (table, min, rows, cols)
 
 def interpolate(table, hm, n):
     new_table = np.zeros((len(table), len(table[0])))
