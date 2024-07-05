@@ -1,0 +1,6 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Bunt Groundout, 0, 0, 0, 0, 42.8, -64
+Strikeout, 1, 0, 0, 0, None, None
+Groundout, 0, 1, 0, 0, 75.1, -44
+Strikeout Double Play, 0, 0, 0, 0, None, None
+Strikeout, 1, 0, 2, 0, None, None

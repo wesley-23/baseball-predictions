@@ -1,0 +1,35 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Single, 0, 0, 1, 0, 107.5, 2
+Home Run, 0, 0, 0, 0, 104.5, 27
+Groundout, 2, 2, 0, 0, 100.0, -2
+Walk, 4, 1, 0, 0, None, None
+Single, 1, 1, 0, 1, 64.0, 25
+Strikeout, 1, 2, 1, 0, None, None
+Single, 1, 0, 1, 0, 106.3, 15
+Home Run, 0, 0, 1, 2, 102.0, 28
+Pop Out, 1, 0, 0, 0, 85.4, 65
+Strikeout, 2, 2, 0, 2, None, None
+Home Run, 2, 1, 0, 0, 99.0, 31
+Flyout, 3, 1, 0, 1, 101.4, 23
+Pop Out, 0, 1, 0, 0, 75.1, 63
+Strikeout, 3, 2, 0, 1, None, None
+Single, 2, 1, 0, 0, 104.7, -11
+Walk, 4, 1, 0, 0, None, None
+Single, 2, 1, 0, 0, 102.5, -3
+Walk, 4, 1, 0, 1, None, None
+Strikeout, 0, 1, 1, 1, None, None
+Strikeout, 2, 2, 0, 1, None, None
+Flyout, 2, 1, 0, 2, 92.2, 45
+Pop Out, 0, 1, 1, 0, 72.7, 47
+Pop Out, 2, 1, 0, 0, 82.6, 83
+Lineout, 0, 0, 0, 0, 52.5, 24
+Strikeout, 2, 2, 1, 2, None, None
+Strikeout, 1, 1, 1, 1, None, None
+Strikeout, 0, 1, 1, 3, None, None
+Pop Out, 0, 0, 0, 0, 87.1, 57
+Flyout, 1, 0, 0, 1, 92.1, 31
+Groundout, 1, 0, 0, 3, 72.7, -38
+Lineout, 0, 0, 0, 0, 97.6, 21
+GIDP, 0, 0, 1, 1, 89.2, 7
+Home Run, 1, 1, 0, 0, 106.2, 20
+Groundout, 3, 1, 1, 0, 103.4, -10

@@ -7,8 +7,8 @@ import os
 def daterange(start_date, end_date):
     for n in range(int((end_date - start_date).days)):
         yield start_date + timedelta(n)
-start_date = date(2023, 10, 1)
-end_date = date(2023, 10, 2)
+start_date = date(2021, 9, 17)
+end_date = date(2021, 10, 4)
 
 def write_to_csv(year, line, id):
     path = str(year) + '_pbp/' + str(id) + '.csv'
@@ -140,14 +140,34 @@ def main():
                     line += outcome['LA'] + '\n'
                 else:
                     line += 'None\n'
-                write_to_csv(2023, line, pid)
+                write_to_csv(2021, line, pid)
             sleep(5)
 
 
+def fix(ids):
+    for id in ids:
+            print(id)
+            outcomes = scrape(id)
+            for outcome in outcomes:
+                pid = outcome['id']
+                line = ''
+                line += outcome['outcome'] + ', ' + str(outcome['balls']) + ', ' + str(outcome['called_strikes']) + ", " + str(outcome['whiffs']) + ', ' + str(outcome['fouls']) + ', '
+                if outcome['EV'] != None:
+                    line += outcome['EV'] + ', '
+                else:
+                    line += 'None, '
+                if outcome['LA'] != None:
+                    line += outcome['LA'] + '\n'
+                else:
+                    line += 'None\n'
+                write_to_csv(2021, line, pid)
+            sleep(5)
 
    
 
 main()
+# ids = [632462, 632468, 632472, 632473, 632474, 632475, 632476]
+# fix(ids)
         
         
     
