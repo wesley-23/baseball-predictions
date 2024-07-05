@@ -1,0 +1,9 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Fielders Choice, 0, 0, 0, 0, 38.7, -49
+Single, 1, 1, 1, 0, 86.0, -1
+Single, 2, 2, 0, 0, 97.3, -10
+Single, 1, 0, 0, 0, 85.8, 14
+Single, 0, 1, 0, 0, 96.0, 10
+Strikeout, 1, 1, 2, 0, None, None
+Strikeout, 0, 2, 1, 0, None, None
+Groundout, 0, 1, 0, 0, 71.0, -21

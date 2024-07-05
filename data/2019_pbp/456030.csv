@@ -1,0 +1,30 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Strikeout, 0, 1, 2, 0, None, None
+Single, 0, 0, 0, 0, None, None
+Single, 0, 0, 0, 0, None, None
+Double, 0, 0, 0, 0, None, None
+Flyout, 0, 0, 0, 0, None, None
+Strikeout, 0, 1, 2, 0, None, None
+Lineout, 0, 0, 0, 0, None, None
+Lineout, 0, 0, 0, 0, None, None
+GIDP, 1, 0, 0, 0, 88.8, -12
+Groundout, 0, 1, 0, 1, 86.6, -8
+Lineout, 2, 1, 0, 0, 93.4, 21
+Single, 2, 1, 1, 1, 98.2, 5
+Strikeout, 0, 1, 1, 1, None, None
+Single, 1, 1, 0, 0, 97.0, 2
+Double Play, 2, 1, 0, 2, 76.6, 32
+Flyout, 1, 0, 0, 1, 95.8, 25
+Groundout, 3, 0, 1, 1, 94.7, -17
+Groundout, 1, 0, 0, 1, 87.9, -18
+Walk, 4, 1, 0, 0, None, None
+Groundout, 1, 0, 0, 0, None, None
+Flyout, 1, 0, 0, 0, 85.2, 34
+Fielders Choice Out, 1, 0, 0, 0, 35.8, -23
+Field Error, 1, 1, 1, 1, 78.9, -27
+Strikeout, 1, 2, 0, 1, None, None
+Groundout, 1, 0, 0, 0, 84.6, 9
+Flyout, 2, 2, 0, 0, 86.3, 49
+Flyout, 1, 1, 0, 0, 92.2, 28
+GIDP, 3, 0, 0, 1, 95.2, -1
+Flyout, 0, 1, 0, 1, 80.7, 36

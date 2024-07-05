@@ -100,7 +100,7 @@ class heat_chart:
         if self.neighbors != None:
             chart_desc = 'Entries with insufficient were data estimated using nearest outcomes with similar launch angle and exit velocity. The amount of \ndata points used for each observation was at least ' + str(self.neighbors) + '.'
         else:
-            chart_desc = 'Hit frequencies from LA and EV data from {self.year}. No means of estimation were used for entries with insufficient data. Entries with no\ndata were assigned the value 0.'
+            chart_desc = 'Hit frequencies from LA and EV data from ' + self.year + '. No means of estimation were used for entries with insufficient data. Entries with no\ndata were assigned the value 0.'
         fig.text(.25, .1, chart_desc)
         plt.show()
     

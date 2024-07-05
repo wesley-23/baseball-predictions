@@ -1,0 +1,5 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Pickoff 1B, 2, 0, 0, 0, None, None
+Strikeout, 2, 1, 1, 2, None, None
+Double Play, 1, 0, 2, 1, 84.6, 40
+Groundout, 2, 1, 1, 0, 84.6, 4

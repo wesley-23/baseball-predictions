@@ -1,0 +1,51 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Strikeout, 0, 3, 0, 0, None, None
+Strikeout, 0, 1, 1, 1, None, None
+Single, 0, 1, 0, 0, 93.2, -7
+Flyout, 1, 1, 0, 1, 84.2, 36
+Strikeout, 0, 2, 1, 1, None, None
+Flyout, 1, 0, 0, 0, 82.0, 45
+Groundout, 0, 1, 1, 0, 77.3, -21
+Forceout, 0, 0, 0, 0, None, None
+Strikeout, 0, 1, 1, 1, None, None
+Sac Bunt, 0, 0, 0, 0, 25.1, 5
+Strikeout, 1, 3, 0, 1, None, None
+Groundout, 1, 0, 0, 0, 96.9, -10
+Groundout, 2, 1, 0, 0, 100.4, -19
+Sac Bunt, 0, 0, 0, 0, None, None
+Strikeout, 2, 2, 1, 1, None, None
+Strikeout, 0, 1, 1, 1, None, None
+Groundout, 0, 0, 0, 0, 66.7, -4
+Groundout, 1, 0, 1, 1, 97.8, -20
+Strikeout, 1, 0, 2, 1, None, None
+Sac Bunt, 0, 0, 0, 0, None, None
+Groundout, 3, 1, 1, 0, 104.0, -13
+Strikeout, 1, 1, 2, 1, None, None
+Single, 0, 0, 0, 0, 96.9, 1
+Strikeout, 1, 2, 0, 1, None, None
+Strikeout, 1, 2, 1, 0, None, None
+Single, 2, 0, 0, 0, 101.2, 9
+Lineout, 1, 0, 0, 0, 86.9, 25
+Fielders Choice, 0, 0, 0, 0, None, None
+Single, 1, 1, 0, 0, 100.0, -16
+Single, 0, 0, 0, 0, None, None
+Single, 0, 0, 0, 0, 90.5, 12
+Flyout, 1, 0, 0, 0, 95.1, 29
+Single, 0, 2, 0, 0, 98.8, -15
+Strikeout, 0, 1, 1, 2, None, None
+GIDP, 2, 0, 0, 0, None, None
+Double, 0, 1, 0, 0, 104.6, 17
+Double, 0, 1, 0, 0, 83.0, 21
+Lineout, 1, 0, 0, 0, 102.4, 14
+Strikeout, 1, 1, 0, 0, None, None
+Strikeout, 0, 1, 1, 1, None, None
+Groundout, 0, 0, 0, 0, 100.3, -7
+Hit By Pitch, 0, 1, 1, 0, None, None
+Flyout, 0, 1, 1, 0, 83.6, 37
+Single, 1, 0, 1, 0, 88.7, 7
+Sac Bunt, 0, 0, 0, 0, None, None
+Sac Bunt, 0, 0, 0, 0, None, None
+Strikeout, 1, 1, 2, 1, None, None
+Groundout, 1, 0, 2, 0, 73.4, -16
+Strikeout, 2, 2, 0, 2, None, None
+GIDP, 0, 0, 0, 0, None, None

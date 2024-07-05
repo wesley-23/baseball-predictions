@@ -1,0 +1,62 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Strikeout, 2, 2, 1, 0, None, None
+Strikeout, 0, 0, 2, 1, None, None
+Strikeout, 1, 1, 2, 1, None, None
+Forceout, 0, 0, 0, 0, 33.7, -21
+Single, 2, 1, 0, 0, 85.8, -16
+Lineout, 2, 0, 0, 1, 86.8, 23
+Strikeout, 0, 1, 1, 3, None, None
+Strikeout, 2, 2, 1, 0, None, None
+Strikeout, 3, 1, 1, 1, None, None
+GIDP, 2, 0, 0, 0, None, None
+Single, 1, 1, 1, 1, 99.4, 15
+Groundout, 0, 1, 0, 1, 87.4, -33
+Groundout, 0, 1, 0, 0, 66.5, -65
+Lineout, 0, 0, 0, 0, 92.1, 23
+Strikeout, 1, 2, 1, 0, None, None
+Strikeout, 1, 2, 0, 1, None, None
+Groundout, 1, 0, 0, 1, 55.8, -59
+Groundout, 1, 1, 0, 1, 101.4, -3
+Groundout, 1, 1, 0, 3, None, None
+Strikeout, 3, 2, 1, 2, None, None
+Groundout, 0, 0, 1, 0, 74.8, -43
+Strikeout, 1, 2, 1, 0, None, None
+Strikeout, 0, 0, 2, 2, None, None
+Single, 0, 0, 0, 0, 101.5, 5
+Strikeout, 0, 0, 1, 2, None, None
+Strikeout, 1, 1, 1, 1, None, None
+Strikeout, 3, 1, 2, 2, None, None
+Strikeout, 1, 0, 2, 1, None, None
+Single, 1, 0, 0, 1, 93.6, 12
+Groundout, 0, 1, 0, 0, None, None
+Groundout, 3, 1, 1, 0, 83.5, 2
+Sac Bunt, 1, 0, 0, 0, None, None
+Strikeout, 0, 0, 3, 0, None, None
+Sac Bunt, 1, 0, 0, 0, None, None
+Strikeout, 1, 3, 0, 0, None, None
+Strikeout, 3, 3, 0, 0, None, None
+Sac Bunt, 0, 0, 0, 0, None, None
+Strikeout, 3, 1, 1, 2, None, None
+Groundout, 0, 1, 0, 0, 75.8, -52
+Lineout, 2, 2, 0, 1, 100.8, 17
+Single, 0, 0, 0, 0, 85.1, 14
+Single, 0, 1, 0, 0, None, None
+Strikeout, 2, 0, 2, 1, None, None
+Strikeout, 1, 0, 1, 0, None, None
+Single, 0, 1, 1, 0, 96.7, 1
+Groundout, 1, 1, 0, 0, 77.3, 8
+Forceout, 0, 0, 0, 0, None, None
+Single, 3, 2, 0, 0, 85.8, 20
+Strikeout, 2, 1, 2, 0, None, None
+Sac Bunt, 0, 0, 0, 0, None, None
+Strikeout, 1, 0, 3, 0, None, None
+Sac Bunt, 1, 0, 0, 0, None, None
+Groundout, 0, 1, 0, 0, 81.1, -8
+Strikeout, 0, 2, 1, 0, None, None
+Single, 0, 1, 0, 1, 92.8, 6
+Strikeout, 1, 2, 1, 0, None, None
+Single, 0, 0, 0, 0, 101.2, -2
+Strikeout, 0, 1, 0, 0, None, None
+Groundout, 0, 0, 0, 0, 101.6, -4
+Strikeout, 0, 2, 1, 0, None, None
+Sac Bunt, 0, 0, 0, 0, None, None

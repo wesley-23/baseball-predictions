@@ -91,6 +91,8 @@ def get_hit_frequencies_table():
 
     rows = la.max() + 1
     cols = ev.max() + 1
+    print(la.unique)
+    # print(la.min())
 
     table = np.zeros((rows, cols))
     hm = np.zeros((rows, cols))
@@ -99,7 +101,7 @@ def get_hit_frequencies_table():
         r = h / (h + o)
         table[l][e] = r
         hm[l][e] = h + o
-    table = interpolate(table, hm, 10)
+    # table = interpolate(table, hm, 10)
    
     return table
 

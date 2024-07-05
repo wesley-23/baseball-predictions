@@ -1,0 +1,6 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Strikeout, 0, 0, 3, 0, None, None
+Lineout, 0, 0, 0, 0, None, None
+Home Run, 0, 1, 0, 1, None, None
+Single, 1, 1, 0, 0, 87.7, 5
+GIDP, 0, 2, 0, 0, 91.8, -32
