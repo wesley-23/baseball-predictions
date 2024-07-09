@@ -41,8 +41,8 @@ class heat_chart:
         outs = np.zeros((rows, cols))
 
         for e, l, h, o in zip(ev, la, df['Hits'], df['Outs']):
-            hits[l - min][e] = h
-            outs[l - min][e] = o
+            hits[l + min][e] = h
+            outs[l + min][e] = o
 
         if not n is None:
             hits, outs = self.interpolate(hits, outs, n)
@@ -104,7 +104,13 @@ class heat_chart:
             chart_desc = 'Hit frequencies from LA and EV data from ' + self.year + '. No means of estimation were used for entries with insufficient data. Entries with no\ndata were assigned the value 0.'
         fig.text(.25, .1, chart_desc)
         plt.show()
-    
+
+    def is_hit(self, ev, la):
+        index = self.la_min + la
+        hits = self.hits[index][ev]
+        total = hits + self.outs[index][ev]
+        return (hits / total) >= .5
+
     def __del__(self):
         if not self.neighbors is None:
             path = 'data/' + str(self.year) + '_pbp_all/'+str(self.neighbors) +'.csv'    

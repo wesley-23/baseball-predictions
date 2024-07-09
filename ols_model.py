@@ -91,41 +91,9 @@ def ols_model_fit_info():
         results = model.fit()
         print(results.summary())
         
-def plot():
-    df = pd.read_csv('batter_training_set.csv')
-    X = df.drop(['next_pa', 'next_hit', 'next_single', 'next_double', 'next_triple', 'next_home_run', 'last_name', 'first_name', 'player_id', 'year'], axis = 1)
-    batting_avg = df['next_hit'] / df['next_pa']
-
-    fig, ax = plt.subplots(len(X.columns) + 1, len(X.columns) + 1,)
-    plt.tick_params(axis='both', left=False, top=False, right=False, bottom=False, labelleft=False, labeltop=False, labelright=False, labelbottom=False)
-
-    for i in range(0, len(X.columns) + 1):
-        for j in range(0, len(X.columns) + 1):
-            if i == j:
-                if i < len(X.columns):
-                    ax[i][j].text(0.5, 0.5, s = X.columns[i], horizontalalignment='center', verticalalignment='center', fontsize=6)
-                else:
-                    ax[i][j].text(0.5, 0.5, s = 'batting_avg', horizontalalignment='center', verticalalignment='center', fontsize=6)
-            else:
-                if i < len(X.columns) and j < len(X.columns):
-                    ax[i][j].scatter(X[X.columns[j]], X[X.columns[i]], s = 0.25)
-                elif i < len(X.columns):
-                    ax[i][j].scatter(batting_avg, X[X.columns[i]], s = 0.25)
-                elif j < len(X.columns):
-                    ax[i][j].scatter(X[X.columns[j]], batting_avg, s = 0.25)
-            ax[i][j].set_xticklabels([])
-            ax[i][j].set_yticklabels([])
-
-
-
-    
-    plt.show()
-
-
 
 # createTrainingSets()
 # fit_ols_model()
 # ols_model_fit_info()
-plot()
 
 
