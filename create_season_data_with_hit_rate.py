@@ -1,7 +1,16 @@
 from data.heat_chart import heat_chart
+import os
 
+"""
+    Creates a csv file that contains each player's season data for a certain year augmented with my calculated expected batting average of the previous
+    year's play by play data. The hit probabilities for each outcome is predicted by a model trained on play by play on previous years so that the play 
+    by play data entered has not been seen by the model during training.
+
+    Args:
+        year(int): the year whose season data we are trying to predict 
+"""
 def get_players(year):
-    hm = heat_chart(2022, neighbors = 50)
+    hm = heat_chart(2021, neighbors = 20)
     f = open('data/batter_stats/batter_stats_sorted.csv', 'r')
     next(f)
     for line in f:
@@ -10,7 +19,9 @@ def get_players(year):
         y = int(l[3])
         if year == y:
             id = l[2]
-            path = 'data/' + str(year) + '_pbp/' + id + '.csv'
+            path = 'data/' + str(2022) + '_pbp/' + id + '.csv'
+            if not os.path.isfile(path):
+                continue
             pbp = open(path, 'r')
             plays = 0
             hits = 0
@@ -20,8 +31,9 @@ def get_players(year):
                 ev = p[5].strip()
                 la = p[6].strip()
                 if la == 'None' or ev == 'None':
-                    continue
-                if hm.is_hit(int(round(float(ev))), int(round(float(la)))):
+                    if p[0].strip() != 'Strikeout':
+                        continue
+                elif hm.is_hit(int(round(float(ev))), int(round(float(la)))):
                     hits += 1
                 plays += 1
             pbp.close()
@@ -30,10 +42,10 @@ def get_players(year):
             write(line, year)
 
 def write(line, year):
-    path = 'data/training_data/' + str(year) + '_with_hit_predictions_K=50.csv'
+    path = 'data/training_data/' + str(year) + '_with_hit_predictions_K=20.csv'
     f = open(path, 'a')
     f.write(line)
     f.close()
                 
-get_players(2022)
+get_players(2023)
 

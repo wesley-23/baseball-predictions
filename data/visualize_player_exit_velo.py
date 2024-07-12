@@ -2,12 +2,29 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap
 import pandas as pd
 import numpy as np
+import os
+
+
+# Create csv file that conglomerates all pbp data for a certain year.
+def create_conglomerate_data(year):
+    path = str(year) + '_pbp_all/' + str(year) + '_pbp_conglomerate.csv'
+    f = open(path, 'a')
+    dir = str(year) + '_pbp'
+    f.write('Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA\n')
+    for player in os.scandir(dir):
+        p = open(player.path, 'r')
+        next(p)
+        for line in p:
+            f.write(line)
+        p.close()
+    f.close()
 
 # Create new csv file that summarizes the amount of hits and outs that were made at each combination of exit velo rounded to the nearest int
 # and launch angle
-
-def create_hit_frequency_data():
-    df = pd.read_csv('2022_pbp_all/2022_pbp_conglomerate.csv', skipinitialspace=True)
+def create_hit_frequency_data(year):
+    path = str(year) + '_pbp_all/' + str(year) + '_pbp_conglomerate.csv'
+    dir = str(year) + '_pbp_all/'
+    df = pd.read_csv(path, skipinitialspace=True)
     df = df[(df.EV != 'None') & (df.LA != 'None') & (df.Outcome != 'Catcher Interference')]
     hits = df[(df.Outcome == 'Single') | (df.Outcome == 'Double') | (df.Outcome == 'Triple') | (df.Outcome == 'Home Run')]
     outs = df[(df.Outcome != 'Single') & (df.Outcome != 'Double') & (df.Outcome != 'Triple') & (df.Outcome != 'Home Run')]
@@ -36,8 +53,8 @@ def create_hit_frequency_data():
             outcome = [0, 1]
             outcomes[out] = outcome
 
-    
-    f = open('2022_pbp_all/EV_LA_hit_out_data.csv', 'a')
+    file = dir + 'EV_LA_hit_out_data.csv'
+    f = open(file, 'a')
     f.write('EV, LA, Hits, Outs\n')
     for entry in entries:
         ev, la = entry
@@ -143,7 +160,9 @@ def interpolate(table, hm, n):
 
 
 
-create_hit_frequency_heat_map()
+# create_hit_frequency_heat_map()
 # get_hit_frequencies_table()
 # create_hit_EV_LA_hit_chart()
+# create_conglomerate_data(2021)
+create_hit_frequency_data(2021)
 

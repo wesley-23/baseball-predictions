@@ -3,12 +3,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 import statsmodels.api as sm
 from scipy.stats import norm
-import math
 
 
 def model_ba_vs_exit_velocity():
-    df = pd.read_csv('batter_stats_sorted.csv')
-    training_data = pd.read_csv('batter_training_set.csv')
+    df = pd.read_csv('data/batter_stats/batter_stats_sorted.csv')
+    training_data = pd.read_csv('data/batter_stats/batter_training_set.csv')
 
     avg  = df['hit'] / df['pa']
     t_avg = training_data['next_hit'] / training_data['next_pa']
@@ -34,8 +33,8 @@ def model_ba_vs_exit_velocity():
     
 
 def graph_ba_vs_exit_velocity():
-    df = pd.read_csv('batter_stats_sorted.csv')
-    training = pd.read_csv('batter_training_set.csv')
+    df = pd.read_csv('data/batter_stats/batter_stats_sorted.csv')
+    training = pd.read_csv('data/batter_stats/batter_training_set.csv')
     fig, ax = plt.subplots(2)
     at_bats =  df['pa'] * (1 - df['bb_percent'] / 100)
     batting_avg = df['hit'] / at_bats
@@ -67,7 +66,7 @@ def graph_ba_vs_exit_velocity():
 # no relationship between batting average and the standard deviation that I found.
 
 def calculate_spread_of_exit_velocity():
-    df = pd.read_csv('batter_stats_sorted.csv')
+    df = pd.read_csv('data/batter_stats/batter_stats_sorted.csv')
     hard_hit_z_score = norm.ppf(1 - df['hard_hit_percent'] * 0.01)
     X = 95 * np.ones(df['hard_hit_percent'].shape)
     ev_variance = ((X - df['exit_velocity_avg']) / hard_hit_z_score) ** 2
@@ -85,7 +84,7 @@ def calculate_spread_of_exit_velocity():
     plt.show()
 
 def plot():
-    df = pd.read_csv('batter_training_set.csv')
+    df = pd.read_csv('data/batter_stats/batter_training_set.csv')
     X = df.drop(['next_pa', 'next_hit', 'next_single', 'next_double', 'next_triple', 'next_home_run', 'last_name', 'first_name', 'player_id', 'year'], axis = 1)
     batting_avg = df['next_hit'] / df['next_pa']
 
@@ -114,8 +113,19 @@ def plot():
     
     plt.show()
 
+def graph_exba_vs_ba():
+    df = pd.read_csv('data/training_data/2023_with_hit_predictions_K=50.csv')
+    at_bats =  df['pa'] * (1 - df['bb_percent'] / 100)
+    batting_avg = df['hit'] / at_bats
+    exbabip = df['expected_ba'] * (at_bats)
+
+    fig, ax = plt.subplots()
+    ax.scatter(exbabip, batting_avg)
+    plt.show()
+
+
 
 # graph_ba_vs_exit_velocity()
 # model_ba_vs_exit_velocity()
-calculate_spread_of_exit_velocity()
-
+# calculate_spread_of_exit_velocity()
+graph_exba_vs_ba()
