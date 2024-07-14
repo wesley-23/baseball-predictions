@@ -37,10 +37,10 @@ class heat_chart:
                 path = 'data/' + str(year) + '_pbp_all/EV_LA_hit_out_data.csv'
             else:
                 path = 'data/' + str(year) + '_pbp_all/' + str(self.to) + '_EV_LA_hit_out_data.csv'
-            if os.path.isfile():
+            if os.path.isfile(path):
                 self.hits, self.outs = self.parse_file(path = path)
             else:
-                self.hits, self.outs = self.parse_file
+                self.hits, self.outs = self.parse_file()
 
     def parse_file(self, **kwargs):
         n = kwargs.get('n', None)
