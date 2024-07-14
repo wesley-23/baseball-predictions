@@ -5,6 +5,8 @@ import numpy as np
 import os
 
 class heat_chart:
+    MAX_LA = 90
+    MAX_EV = 125
     """
     Args:
         year(int): year that the pbp data is from
@@ -13,41 +15,66 @@ class heat_chart:
     def __init__(self, year, **kwargs):
         self.neighbors = kwargs.get('neighbors', None)
         self.year = year
+        self.to = kwargs.get('to', None)
 
         if self.neighbors != None and not isinstance(self.neighbors, int):
-            raise TypeError('Neighbor arg must be integer')
+            raise TypeError('Neighbor must be integer')
+        
         if self.neighbors != None:
-            path = 'data/' + str(year) + '_pbp_all/'+str(self.neighbors) +'.csv'    
+            path = ''
+            if self.to is None:
+                path = 'data/' + str(year) + '_pbp_all/'+str(self.neighbors) +'.csv'  
+            else:
+                path = 'data/' + str(year) + '_pbp_all/' + str(self.to) + '_' + str(self.neighbors) + '.csv'  
             if os.path.isfile(path):
-                self.hits, self.outs, self.la_min, self.all_la, self.max_ev = self.parse_file(path)    
+                self.hits, self.outs = self.parse_file(path = path)    
             else:
                 path = 'data/' + str(year) + '_pbp_all/EV_LA_hit_out_data.csv'
-                self.hits, self.outs, self.la_min, self.all_la, self.max_ev= self.parse_file(path, n = self.neighbors)            
+                self.hits, self.outs = self.parse_file(n = self.neighbors)            
         else:
-            path = 'data/' + str(year) + '_pbp_all/EV_LA_hit_out_data.csv'
-            self.hits, self.outs, self.la_min, self.all_la, self.max_ev = self.parse_file(path)
+            path = ''
+            if self.to is None:
+                path = 'data/' + str(year) + '_pbp_all/EV_LA_hit_out_data.csv'
+            else:
+                path = 'data/' + str(year) + '_pbp_all/' + str(self.to) + '_EV_LA_hit_out_data.csv'
+            if os.path.isfile():
+                self.hits, self.outs = self.parse_file(path = path)
+            else:
+                self.hits, self.outs = self.parse_file
 
-    def parse_file(self, path, **kwargs):
+    def parse_file(self, **kwargs):
         n = kwargs.get('n', None)
-        df = pd.read_csv(path, skipinitialspace=True)
-        ev = df['EV']
-        la = df['LA']
+        path = kwargs.get('path', None)
 
-        min = abs(la.min())
-        rows = la.max() + min + 1
-        cols = ev.max() + 1
+        rows = 2 * self.MAX_LA + 1
+        cols = self.MAX_EV
+        min = self.MAX_LA
 
         hits = np.zeros((rows, cols))
         outs = np.zeros((rows, cols))
 
-        for e, l, h, o in zip(ev, la, df['Hits'], df['Outs']):
-            hits[l + min][e] = h
-            outs[l + min][e] = o
-
+        if path is not None:
+            df = pd.read_csv(path, skipinitialspace=True)
+            ev = df['EV']
+            la = df['LA']
+            for e, l, h, o in zip(ev, la, df['Hits'], df['Outs']):
+                hits[l + min][e] = h
+                outs[l + min][e] = o
+        else:
+            end = self.year + 1
+            if self.to is not None:
+                end = self.to + 1
+            for i in range(self.year, end):
+                path = 'data/' + str(i) + '_pbp_all/EV_LA_hit_out_data.csv'
+                df = pd.read_csv(path, skipinitialspace=True)
+                ev = df['EV']
+                la = df['LA']
+                for e, l, h, o in zip(ev, la, df['Hits'], df['Outs']):
+                    hits[l + min][e] = h
+                    outs[l + min][e] = o
         if not n is None:
             hits, outs = self.interpolate(hits, outs, n)
-        return (hits, outs, min, rows, cols)
-    
+        return (hits, outs)
 
     def interpolate(self, hits, outs, n):
         new_hits = np.zeros((len(hits), len(hits[0])))
@@ -88,10 +115,13 @@ class heat_chart:
         cmap_ = LinearSegmentedColormap.from_list(cmap_name, colors, N = 100)
 
         table = self.hits / (self.hits + self.outs)
-        im = ax.imshow(table, origin = 'lower', cmap = cmap_, extent = (0, self.max_ev, -self.la_min, self.all_la - self.la_min))
+        im = ax.imshow(table, origin = 'lower', cmap = cmap_, extent = (0, self.MAX_EV, -self.MAX_LA, self.MAX_LA + 1))
         fig.colorbar(im, ax = ax, label = 'Hit Rate')
 
-        chart_title = str(self.year) + ' Hit Rate for Batted Balls from LA and EV Data\n'
+        year_title = ''
+        if self.to is not None:
+            year_title = str(self.year) + '-' + str(self.to)
+        chart_title = year_title + ' Hit Rate for Batted Balls from LA and EV Data\n'
         ax.set_title(chart_title, fontsize = 20)
 
         plt.xlabel('Exit Velocity')
@@ -101,25 +131,29 @@ class heat_chart:
         if self.neighbors != None:
             chart_desc = 'Entries with insufficient were data estimated using nearest outcomes with similar launch angle and exit velocity. The amount of \ndata points used for each observation was at least ' + str(self.neighbors) + '.'
         else:
-            chart_desc = 'Hit frequencies from LA and EV data from ' + self.year + '. No means of estimation were used for entries with insufficient data. Entries with no\ndata were assigned the value 0.'
+            chart_desc = 'Hit frequencies from LA and EV data from ' + year_title + '. No means of estimation were used for entries with insufficient data. Entries with no\ndata were assigned the value 0.'
         fig.text(.25, .1, chart_desc)
         plt.show()
 
     def is_hit(self, ev, la):
-        index = self.la_min + la
+        index = self.MAX_LA + la
         hits = self.hits[index][ev]
         total = hits + self.outs[index][ev]
         return (hits / total) >= .5
 
     def __del__(self):
         if not self.neighbors is None:
-            path = 'data/' + str(self.year) + '_pbp_all/'+str(self.neighbors) +'.csv'    
+            path = ''
+            if self.to is None:
+                path = 'data/' + str(self.year) + '_pbp_all/'+str(self.neighbors) +'.csv'    
+            else:
+                path = 'data/' + str(self.year) + '_pbp_all/' + str(self.to) + '_' + str(self.neighbors) + '.csv' 
             if not os.path.isfile(path):
                 f = open(path, 'a')
                 f.write('EV, LA, Hits, Outs\n')
                 for i in range(0, len(self.hits)):
                     for j in range(0, len(self.hits[0])):
-                        line = str(j) + ', ' + str(i - self.la_min) + ', ' + str(self.hits[i][j]) + ', ' + str(self.outs[i][j]) + '\n'
+                        line = str(j) + ', ' + str(i - self.MAX_LA) + ', ' + str(self.hits[i][j]) + ', ' + str(self.outs[i][j]) + '\n'
                         f.write(line)
                 f.close()
 
