@@ -3,6 +3,8 @@ from matplotlib.colors import LinearSegmentedColormap
 import pandas as pd
 import numpy as np
 import os
+import queue
+import math
 
 
 # Create csv file that conglomerates all pbp data for a certain year.
@@ -126,43 +128,92 @@ def interpolate(table, hm, n):
 
     for i in range(len(table)):
         for j in range(len(table[0])):
+            pq = queue.PriorityQueue()
             points = hm[i][j]
-            average = table[i][j] * points
-            bound = 1
+            total = points * table[i][j]
+            vis = {}
+            pq.put((math.sqrt((1)+ (1)), (1, 1)))
+            pq.put((1, (1, 0)))
+            pq.put((1, (0, 1)))
             while points < n:
-                for j_ in range(j - bound, j + bound + 1):
-                    if i - bound >= 0:
-                        if not (j_ < 0 or j_ >= len(table[0])):
-                            num = hm[i - bound][j_]
-                            points += num
-                            average += (table[i - bound][j_] * num)
-                    if i + bound < len(table):
-                        if not (j_ < 0 or j_ >= len(table[0])):
-                            num = hm[i + bound][j_]
-                            points += num
-                            average += (table[i + bound][j_] * num)
-                for i_ in range(i - bound, i + bound + 1):
-                    if j - bound >= 0:
-                        if not (i_ < 0 or i_ >= len(table)):
-                            num = hm[i_][j - bound]
-                            points += num
-                            average += (table[i_][j - bound] * num)
-                    if j + bound < len(table[0]):
-                        if not (i_ < 0 or i_ >= len(table)):
-                            num = hm[i_][j + bound]
-                            points += num
-                            average += (table[i_][j + bound] * num)
-                bound += 1
-            new_table[i][j] = (average) / points
+                dx, dy = pq.get()[1]
+                # print(dx, dy)
+                if i - dx >= 0:
+                    if not j + dy >= len(table[0]):
+                        num = hm[i - dx][j + dy]
+                        points += num
+                        total += table[i - dx][j + dy] * num
+                    if not j - dy < 0:
+                        num = hm[i - dx][j - dy]
+                        points += num
+                        total += table[i - dx][j - dy] * num
+                if i + dx < len(table[0]):
+                    if not j + dy >= len(table[0]):
+                        num = hm[i + dx][j + dy]
+                        points += num
+                        total += table[i + dx][j + dy] * num
+                    if not j - dy < 0:
+                        num = hm[i + dx][j - dy]
+                        points += num
+                        total += table[i + dx][j - dy] * num
+                if not ((dx + 1) * 1000 + (dy + 1)) in vis:
+                    pq.put((math.sqrt((dx + 1)**2 + (dy + 1)**2), (dx + 1, dy + 1)))
+                    vis[(dx + 1) * 1000 + (dy + 1)] = True
+                if not ((dx + 1) * 1000 + dy) in vis:
+                    pq.put((math.sqrt((dx + 1)**2 + (dy)**2), (dx + 1, dy)))
+                    vis[(dx + 1) * 1000 + (dy)] = True
+                if not ((dy + 1)) in vis:
+                    pq.put((math.sqrt((dx)**2 + (dy + 1)**2), (dx, dy + 1)))
+                    vis[(dy + 1)] = True
+            new_table[i][j] = total / points
     return new_table
 
 
+                
+    
+
+# def interpolate(table, hm, n):
+#     new_table = np.zeros((len(table), len(table[0])))
+
+#     for i in range(len(table)):
+#         for j in range(len(table[0])):
+#             points = hm[i][j]
+#             average = table[i][j] * points
+#             bound = 1
+#             while points < n:
+#                 for j_ in range(j - bound, j + bound + 1):
+#                     if i - bound >= 0:
+#                         if not (j_ < 0 or j_ >= len(table[0])):
+#                             num = hm[i - bound][j_]
+#                             points += num
+#                             average += (table[i - bound][j_] * num)
+#                     if i + bound < len(table):
+#                         if not (j_ < 0 or j_ >= len(table[0])):
+#                             num = hm[i + bound][j_]
+#                             points += num
+#                             average += (table[i + bound][j_] * num)
+#                 for i_ in range(i - bound, i + bound + 1):
+#                     if j - bound >= 0:
+#                         if not (i_ < 0 or i_ >= len(table)):
+#                             num = hm[i_][j - bound]
+#                             points += num
+#                             average += (table[i_][j - bound] * num)
+#                     if j + bound < len(table[0]):
+#                         if not (i_ < 0 or i_ >= len(table)):
+#                             num = hm[i_][j + bound]
+#                             points += num
+#                             average += (table[i_][j + bound] * num)
+#                 bound += 1
+#             new_table[i][j] = (average) / points
+#     return new_table
 
 
 
-# create_hit_frequency_heat_map()
+
+
+create_hit_frequency_heat_map()
 # get_hit_frequencies_table()
 # create_hit_EV_LA_hit_chart()
 # create_conglomerate_data(2021)
-create_hit_frequency_data(2021)
+# create_hit_frequency_data(2021)
 
