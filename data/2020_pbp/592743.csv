@@ -1,0 +1,128 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Flyout, 3, 1, 0, 1, 85.8, 28
+Flyout, 2, 2, 0, 2, 93.3, 31
+Field Error, 0, 1, 0, 3, 77.8, 7
+Single, 3, 0, 1, 2, 72.2, 26
+Groundout, 1, 0, 0, 2, 88.2, -9
+Groundout, 0, 0, 0, 0, 102.5, 2
+Double, 1, 2, 0, 0, 94.3, 16
+Groundout, 1, 0, 0, 0, 62.3, -19
+Pop Out, 0, 1, 0, 0, 63.0, 67
+Groundout, 0, 1, 0, 0, 94.4, -4
+Groundout, 2, 0, 0, 1, 104.9, 2
+Forceout, 0, 0, 0, 0, 96.3, -13
+Lineout, 1, 1, 0, 1, 86.7, 27
+GIDP, 0, 0, 0, 0, 57.1, -41
+Groundout, 2, 1, 1, 0, 98.0, -3
+Single, 1, 1, 1, 0, 105.8, -17
+Single, 1, 1, 0, 0, 77.1, 10
+Flyout, 1, 1, 0, 0, 79.1, 29
+Single, 0, 0, 0, 0, 100.2, -16
+Groundout, 2, 1, 0, 0, 93.0, -14
+Single, 1, 1, 0, 0, 81.5, -7
+Pop Out, 0, 0, 0, 0, 71.3, 73
+Single, 2, 1, 1, 2, 85.5, 18
+Strikeout, 1, 1, 2, 1, None, None
+Groundout, 1, 0, 0, 1, 64.4, -19
+Walk, 4, 1, 0, 0, None, None
+Strikeout, 3, 2, 1, 0, None, None
+Strikeout, 0, 2, 1, 0, None, None
+Strikeout, 2, 0, 1, 5, None, None
+Walk, 4, 0, 0, 2, None, None
+Pop Out, 0, 0, 0, 3, 57.7, 42
+Single, 1, 1, 0, 0, 65.2, 16
+Lineout, 0, 0, 0, 0, 68.5, 15
+Strikeout, 0, 1, 1, 1, None, None
+Single, 1, 2, 0, 0, 71.9, -44
+Groundout, 1, 1, 0, 2, 87.8, -11
+Pop Out, 3, 1, 0, 0, 69.6, 71
+Strikeout, 2, 2, 1, 0, None, None
+Single, 1, 2, 0, 0, 99.1, 8
+Single, 1, 2, 0, 0, 88.8, 8
+Walk, 4, 0, 2, 0, None, None
+Walk, 4, 0, 0, 0, None, None
+Pop Out, 0, 0, 0, 0, 71.1, 73
+Strikeout, 1, 1, 1, 1, None, None
+Single, 0, 0, 0, 0, 82.5, 5
+Strikeout, 2, 0, 1, 4, None, None
+Single, 2, 1, 0, 0, 75.3, 54
+Flyout, 1, 0, 0, 0, 90.0, 35
+Groundout, 0, 1, 0, 0, 95.4, -1
+Single, 0, 0, 0, 0, 99.1, 13
+Single, 0, 0, 0, 0, 96.1, -12
+Groundout, 0, 0, 0, 0, 97.2, -21
+Flyout, 1, 1, 0, 0, 91.9, 31
+Single, 1, 1, 0, 0, 93.1, -15
+Single, 2, 0, 1, 2, 86.6, 18
+Single, 0, 0, 0, 0, 100.0, 13
+Groundout, 2, 1, 1, 0, 70.2, 12
+Groundout, 2, 1, 0, 0, 97.7, -2
+Single, 0, 0, 0, 0, 89.8, 1
+Groundout, 2, 1, 0, 3, 82.6, -8
+Groundout, 2, 0, 0, 1, 100.8, -30
+Single, 2, 0, 0, 0, 85.3, 11
+Lineout, 3, 2, 0, 0, 93.1, 20
+Hit By Pitch, 2, 0, 0, 2, None, None
+Groundout, 0, 1, 0, 1, 91.7, -16
+Double, 1, 0, 0, 0, 90.6, 10
+Groundout, 0, 1, 0, 1, 99.4, -23
+Double, 2, 0, 1, 0, 97.5, 8
+Strikeout, 0, 1, 1, 1, None, None
+Lineout, 3, 0, 0, 2, 91.1, 25
+GIDP, 1, 0, 0, 3, 98.2, -32
+Groundout, 0, 2, 0, 0, 68.1, -50
+Pop Out, 0, 0, 0, 0, 72.5, 79
+Strikeout, 0, 1, 1, 1, None, None
+Groundout, 1, 0, 1, 0, 80.1, -44
+Groundout, 2, 1, 0, 1, 101.8, -38
+Flyout, 0, 0, 0, 0, 87.0, 33
+Single, 0, 0, 0, 0, 99.4, -34
+Groundout, 1, 1, 0, 0, 86.4, -13
+Field Error, 2, 1, 0, 2, 68.4, -42
+Groundout, 1, 1, 0, 0, 99.5, -19
+Double, 0, 0, 0, 0, 95.1, 10
+Single, 1, 1, 0, 0, 95.0, 8
+Strikeout, 1, 1, 1, 1, None, None
+Pop Out, 1, 1, 0, 0, 64.8, 76
+Double, 1, 0, 0, 0, 100.1, 7
+Lineout, 1, 2, 0, 1, 78.9, 28
+Flyout, 1, 0, 0, 0, 84.2, 45
+Groundout, 2, 0, 0, 0, 95.5, -13
+Pop Out, 0, 0, 0, 0, 72.4, 62
+Pop Out, 1, 1, 1, 0, 59.0, 82
+Strikeout, 1, 1, 1, 1, None, None
+Field Error, 0, 0, 0, 1, 101.3, -1
+Groundout, 3, 2, 0, 0, 73.2, -46
+Groundout, 0, 1, 1, 0, 90.9, -23
+Groundout, 2, 0, 2, 0, 85.2, -2
+Walk, 4, 1, 0, 0, None, None
+Strikeout, 1, 0, 2, 0, None, None
+Flyout, 0, 0, 0, 0, 91.3, 35
+Walk, 4, 2, 0, 0, None, None
+Single, 0, 0, 0, 0, 97.9, 13
+Groundout, 0, 2, 0, 0, 91.3, -14
+Single, 0, 0, 0, 0, 93.2, -8
+Double, 0, 1, 0, 1, 86.6, 8
+Walk, 4, 1, 0, 0, None, None
+Strikeout, 3, 0, 1, 4, None, None
+Single, 0, 0, 0, 0, 97.3, None
+Single, 0, 0, 0, 0, 90.5, 16
+GIDP, 0, 2, 0, 0, 93.1, -14
+Walk, 4, 1, 1, 0, None, None
+Groundout, 0, 0, 0, 0, 84.4, -29
+GIDP, 0, 0, 0, 1, 82.1, -11
+Single, 1, 1, 0, 0, 74.0, 22
+Forceout, 2, 0, 1, 1, 98.4, -6
+Strikeout, 1, 1, 0, 1, None, None
+Single, 2, 0, 0, 1, 100.5, None
+Groundout, 0, 0, 0, 0, 93.6, -24
+Double, 2, 0, 0, 1, 99.7, 14
+Flyout, 3, 1, 0, 2, 85.8, 28
+Flyout, 1, 0, 0, 0, 71.7, 36
+Pop Out, 0, 0, 0, 0, 85.0, 61
+Strikeout, 1, 1, 1, 1, None, None
+Groundout, 1, 0, 0, 0, 96.5, -53
+Groundout, 1, 1, 1, 0, 67.0, -5
+Single, 1, 1, 0, 0, 99.1, 2
+GIDP, 3, 1, 0, 0, 82.4, 3
+Groundout, 2, 1, 0, 1, 89.1, -20

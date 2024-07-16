@@ -1,0 +1,246 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Flyout, 2, 1, 0, 1, 87.7, 43
+Groundout, 1, 1, 0, 0, 79.3, 6
+Walk, 4, 0, 0, 0, None, None
+Double, 1, 0, 0, 0, 85.1, 7
+Pop Out, 1, 0, 0, 4, 73.5, 75
+Walk, 4, 0, 1, 0, None, None
+Lineout, 0, 1, 0, 1, 106.3, 15
+Groundout, 0, 0, 0, 0, 94.1, -9
+Flyout, 0, 1, 0, 0, 83.4, 40
+Forceout, 2, 1, 0, 1, 95.8, -15
+Single, 1, 0, 1, 0, 55.1, -41
+Flyout, 1, 2, 0, 0, 87.0, 49
+Pop Out, 2, 1, 0, 2, 84.7, 54
+Forceout, 3, 1, 0, 0, 67.8, -24
+Flyout, 0, 0, 0, 1, 89.7, 31
+Flyout, 1, 1, 0, 0, 86.8, 37
+Single, 0, 0, 0, 0, 106.2, 4
+Groundout, 0, 0, 0, 0, 90.9, 6
+Single, 0, 0, 0, 0, 75.3, 9
+Strikeout, 1, 1, 1, 1, None, None
+Groundout, 1, 1, 0, 0, 68.7, -29
+Single, 1, 0, 1, 0, 106.9, 3
+Forceout, 1, 0, 0, 1, 71.6, -1
+Strikeout, 2, 0, 3, 1, None, None
+Strikeout, 2, 0, 2, 2, None, None
+Flyout, 1, 1, 0, 1, 78.5, 49
+Pop Out, 2, 0, 0, 1, 63.4, 52
+Flyout, 2, 0, 0, 1, 93.4, 29
+Flyout, 1, 0, 0, 0, 93.3, 53
+Groundout, 0, 0, 1, 0, 103.2, 1
+Groundout, 0, 0, 2, 1, 88.1, -10
+Strikeout, 1, 1, 1, 3, None, None
+Groundout, 2, 0, 0, 0, None, None
+Strikeout, 1, 2, 1, 1, None, None
+Groundout, 1, 1, 0, 1, None, None
+Forceout, 0, 2, 0, 0, 76.6, 4
+Strikeout, 3, 0, 1, 4, None, None
+Pop Out, 0, 0, 0, 0, 72.6, 56
+Home Run, 3, 1, 0, 1, 109.6, 22
+Lineout, 1, 0, 0, 0, 105.3, 19
+Forceout, 1, 1, 1, 0, 90.4, -23
+Groundout, 3, 1, 0, 0, 70.3, -8
+Bunt Groundout, 0, 0, 0, 0, 38.3, -27
+Strikeout, 2, 1, 1, 3, None, None
+Groundout, 3, 2, 0, 1, 99.4, 4
+Home Run, 1, 0, 0, 0, 108.0, 35
+Groundout, 1, 1, 0, 0, 71.7, 15
+Flyout, 0, 0, 0, 0, 83.6, 37
+Single, 1, 1, 0, 2, 75.5, 14
+Single, 2, 0, 0, 0, 89.3, 7
+Pop Out, 1, 0, 0, 0, 61.6, 76
+Strikeout, 2, 1, 1, 1, None, None
+Groundout, 2, 0, 0, 1, 86.7, -36
+Flyout, 2, 0, 0, 1, 76.8, 34
+Pop Out, 2, 1, 1, 1, 85.5, 55
+Pop Out, 2, 0, 0, 1, 67.2, 73
+Single, 2, 0, 0, 1, 103.4, 13
+Walk, 4, 2, 0, 0, None, None
+Strikeout, 3, 1, 1, 2, None, None
+Lineout, 1, 0, 1, 0, 96.3, 21
+Flyout, 3, 1, 0, 0, 98.9, 44
+Lineout, 3, 0, 1, 1, 86.9, 24
+Walk, 4, 0, 1, 2, None, None
+Flyout, 1, 0, 0, 0, 98.0, 37
+Strikeout, 0, 0, 2, 1, None, None
+Groundout, 0, 0, 0, 0, 61.6, -35
+Single, 1, 2, 0, 0, 92.9, 7
+Lineout, 0, 1, 1, 1, 100.9, 8
+Single, 1, 1, 1, 0, 107.5, 5
+Lineout, 2, 2, 0, 0, 92.6, 19
+Strikeout, 3, 2, 0, 2, None, None
+Flyout, 0, 0, 2, 0, 91.7, 44
+GIDP, 0, 0, 0, 1, 90.5, 1
+GIDP, 0, 1, 0, 2, 94.6, -29
+Flyout, 1, 0, 0, 1, 89.6, 46
+Groundout, 2, 0, 0, 3, 100.5, 3
+GIDP, 1, 0, 0, 0, 72.6, -10
+Groundout, 2, 2, 0, 3, 92.5, -7
+Pop Out, 2, 1, 0, 1, 62.8, 68
+Double, 0, 0, 0, 0, 86.6, 21
+Lineout, 0, 0, 0, 0, 101.3, 17
+Lineout, 0, 0, 0, 0, 109.9, 7
+Walk, 4, 1, 0, 1, None, None
+Strikeout, 1, 1, 2, 0, None, None
+Strikeout, 2, 0, 1, 2, None, None
+Groundout, 0, 0, 0, 0, 95.9, None
+Home Run, 0, 0, 1, 1, 99.7, 34
+Home Run, 0, 0, 0, 1, 102.7, 26
+Single, 1, 0, 0, 0, 92.3, 16
+Single, 3, 1, 0, 1, 107.5, 12
+Strikeout, 2, 1, 2, 2, None, None
+Groundout, 1, 1, 0, 1, 67.7, -80
+Intent Walk, 2, 0, 0, 0, None, None
+Groundout, 2, 1, 0, 0, 98.2, 7
+Flyout, 0, 0, 0, 0, 104.2, 40
+Flyout, 1, 1, 0, 0, 90.2, 49
+Strikeout, 1, 0, 2, 1, None, None
+Strikeout, 2, 0, 1, 3, None, None
+Groundout, 1, 1, 1, 0, 105.9, -4
+Flyout, 1, 0, 1, 0, None, None
+Walk, 4, 1, 1, 0, None, None
+Walk, 4, 0, 0, 1, None, None
+Strikeout, 2, 2, 0, 1, None, None
+Strikeout, 1, 2, 1, 0, None, None
+Flyout, 0, 1, 0, 0, 97.5, 58
+Strikeout, 0, 1, 2, 0, None, None
+Home Run, 0, 0, 0, 0, 102.6, 30
+Groundout, 2, 1, 0, 0, 102.6, -15
+Flyout, 2, 0, 1, 0, 89.4, 48
+Strikeout, 1, 1, 1, 1, None, None
+Single, 0, 0, 0, 0, 95.6, 14
+Walk, 4, 0, 0, 0, None, None
+Home Run, 0, 0, 0, 1, 98.6, 31
+Double, 1, 0, 0, 0, 102.6, 14
+Walk, 4, 1, 0, 0, None, None
+Single, 2, 1, 1, 1, 86.1, 11
+Groundout, 1, 1, 0, 1, 95.2, -2
+Lineout, 1, 0, 0, 1, 78.8, 23
+Strikeout, 0, 2, 1, 1, None, None
+Walk, 4, 0, 0, 2, None, None
+Home Run, 1, 0, 0, 0, 98.8, 25
+Groundout, 3, 1, 0, 0, 87.8, -29
+Groundout, 3, 1, 0, 0, 106.9, -17
+Home Run, 2, 0, 0, 0, 102.6, 26
+Walk, 4, 0, 0, 1, None, None
+Groundout, 1, 1, 1, 0, 97.7, -14
+Flyout, 1, 1, 0, 0, 88.3, 57
+Double, 0, 0, 1, 2, 103.5, 12
+Single, 3, 0, 0, 1, 90.7, 5
+Lineout, 3, 0, 0, 1, 58.0, 20
+Strikeout, 0, 2, 1, 0, None, None
+Single, 1, 0, 0, 1, 76.3, 18
+Pop Out, 2, 0, 2, 0, 83.1, 71
+Strikeout, 1, 0, 2, 1, None, None
+Strikeout, 3, 1, 2, 0, None, None
+Pop Out, 2, 0, 2, 0, 83.1, 71
+Strikeout, 1, 0, 2, 1, None, None
+Strikeout, 3, 1, 2, 0, None, None
+Groundout, 0, 0, 2, 0, 72.7, -28
+Lineout, 0, 0, 0, 0, 102.8, 21
+Single, 2, 1, 0, 0, 83.9, 15
+Double, 0, 0, 0, 0, 103.7, 15
+Groundout, 0, 0, 0, 0, 104.5, -2
+Pop Out, 0, 1, 0, 0, 84.6, 69
+Flyout, 1, 1, 0, 1, 79.3, 33
+Strikeout, 3, 1, 2, 2, None, None
+Strikeout, 3, 0, 1, 2, None, None
+Home Run, 3, 1, 1, 1, 107.2, 37
+Walk, 4, 1, 1, 0, None, None
+Walk, 4, 1, 1, 2, None, None
+Groundout, 1, 1, 0, 0, 76.9, -7
+Groundout, 2, 2, 0, 1, 94.4, -14
+Home Run, 0, 0, 0, 0, 95.2, 29
+Walk, 4, 0, 1, 1, None, None
+Strikeout, 3, 3, 0, 0, None, None
+Flyout, 1, 0, 0, 2, 91.4, 41
+Groundout, 2, 2, 0, 1, 62.8, -18
+Groundout, 2, 1, 0, 1, 85.7, 1
+Flyout, 1, 2, 0, 0, 95.5, 48
+Lineout, 0, 0, 1, 0, 96.2, 22
+Groundout, 3, 1, 0, 1, 101.0, -6
+Pop Out, 3, 0, 0, 0, 76.4, 73
+Single, 2, 0, 2, 0, 74.4, 24
+Single, 0, 1, 0, 1, 110.6, 13
+Groundout, 2, 0, 1, 0, 77.2, 2
+Flyout, 0, 0, 0, 0, 104.8, 44
+Walk, 4, 1, 1, 1, None, None
+Flyout, 0, 1, 0, 1, 91.9, 51
+Pop Out, 2, 0, 1, 1, 67.1, 40
+Double Play, 0, 0, 0, 0, 105.9, 16
+Lineout, 2, 0, 1, 1, 71.7, 14
+Flyout, 0, 1, 0, 1, 84.8, 32
+Walk, 4, 1, 1, 0, None, None
+Single, 0, 0, 0, 0, 101.1, -23
+Flyout, 1, 0, 0, 0, 75.0, 38
+Walk, 4, 0, 0, 2, None, None
+Strikeout, 1, 0, 1, 3, None, None
+Flyout, 0, 0, 0, 0, 99.3, 34
+Flyout, 0, 0, 0, 0, 86.2, 46
+Pop Out, 1, 0, 0, 0, 68.6, 66
+Strikeout, 1, 1, 1, 1, None, None
+Strikeout, 2, 1, 2, 0, None, None
+Strikeout, 0, 0, 2, 1, None, None
+Single, 0, 1, 0, 2, 74.6, 17
+Flyout, 1, 1, 0, 1, 97.7, 38
+Groundout, 0, 1, 0, 1, 101.0, 5
+Groundout, 2, 1, 0, 1, 101.3, 2
+Flyout, 1, 1, 0, 0, 100.6, 32
+Strikeout, 2, 3, 0, 1, None, None
+Strikeout, 2, 0, 3, 2, None, None
+Single, 3, 0, 1, 2, 103.2, 16
+Single, 1, 1, 0, 0, 74.3, -3
+Single, 1, 1, 0, 1, 58.7, -59
+Strikeout, 2, 1, 2, 1, None, None
+Flyout, 3, 0, 2, 3, 85.7, 55
+Walk, 4, 0, 0, 0, None, None
+Forceout, 0, 0, 0, 0, 104.7, 2
+Flyout, 1, 0, 1, 1, 93.4, 33
+Flyout, 2, 0, 0, 6, 87.1, 47
+Groundout, 1, 0, 0, 0, 67.9, -24
+Single, 3, 1, 0, 0, 92.6, 16
+Groundout, 1, 0, 0, 1, 56.4, -3
+Strikeout, 2, 1, 2, 1, None, None
+Strikeout, 0, 1, 1, 3, None, None
+Groundout, 0, 0, 0, 0, 62.7, -67
+Single, 1, 0, 2, 0, 95.3, 14
+Groundout, 1, 1, 0, 0, 97.9, 6
+Groundout, 2, 1, 0, 0, 68.9, 7
+Single, 0, 0, 0, 0, 103.7, 6
+Strikeout, 2, 0, 2, 1, None, None
+Walk, 4, 1, 0, 0, None, None
+Walk, 4, 1, 0, 1, None, None
+Home Run, 0, 1, 0, 0, 102.9, 25
+Flyout, 1, 1, 0, 0, 99.6, 38
+Single, 0, 0, 0, 0, 104.2, 3
+Double, 2, 1, 0, 0, 98.2, 27
+Groundout, 1, 0, 0, 3, 109.6, -19
+Walk, 4, 1, 0, 0, None, None
+Groundout, 3, 0, 0, 2, 102.7, -2
+GIDP, 1, 0, 0, 0, 65.3, -18
+Single, 3, 0, 0, 1, 88.3, 13
+Double, 2, 0, 0, 0, 99.2, 26
+Strikeout, 2, 1, 2, 1, None, None
+Walk, 4, 1, 0, 1, None, None
+Strikeout, 2, 0, 3, 0, None, None
+Double, 0, 0, 0, 1, 84.8, 14
+Walk, 4, 1, 0, 1, None, None
+Walk, 4, 0, 0, 0, None, None
+Single, 1, 0, 0, 4, 60.2, -34
+Groundout, 1, 1, 0, 2, 84.0, 6
+Strikeout, 2, 1, 1, 2, None, None
+Home Run, 3, 0, 0, 3, 102.5, 28
+Strikeout, 1, 0, 3, 0, None, None
+Pop Out, 0, 0, 0, 0, 88.3, 64
+Walk, 4, 1, 0, 2, None, None
+Double, 0, 0, 0, 0, 93.3, 8
+Walk, 4, 1, 0, 0, None, None
+Flyout, 3, 0, 0, 1, 80.1, 49
+Strikeout, 2, 1, 1, 1, None, None
+Groundout, 0, 0, 0, 0, 96.2, -1
+Walk, 4, 0, 1, 1, None, None
+Walk, 4, 0, 0, 5, None, None
+Double, 2, 0, 0, 1, 104.3, 19
+Lineout, 1, 1, 0, 1, 102.4, 7
+Flyout, 2, 0, 0, 1, 101.1, 42

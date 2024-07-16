@@ -7,8 +7,8 @@ import os
 def daterange(start_date, end_date):
     for n in range(int((end_date - start_date).days)):
         yield start_date + timedelta(n)
-start_date = date(2019, 9, 28)
-end_date = date(2019, 9, 30)
+start_date = date(2020, 8, 30)
+end_date = date(2020, 9, 28)
 
 def write_to_csv(year, line, id):
     path = str(year) + '_pbp/' + str(id) + '.csv'
@@ -127,20 +127,23 @@ def main():
         print(ids)
         for id in ids:
             print(id)
-            outcomes = scrape(id)
-            for outcome in outcomes:
-                pid = outcome['id']
-                line = ''
-                line += outcome['outcome'] + ', ' + str(outcome['balls']) + ', ' + str(outcome['called_strikes']) + ", " + str(outcome['whiffs']) + ', ' + str(outcome['fouls']) + ', '
-                if outcome['EV'] != None:
-                    line += outcome['EV'] + ', '
-                else:
-                    line += 'None, '
-                if outcome['LA'] != None:
-                    line += outcome['LA'] + '\n'
-                else:
-                    line += 'None\n'
-                write_to_csv(2019, line, pid)
+            try:
+                outcomes = scrape(id)
+                for outcome in outcomes:
+                    pid = outcome['id']
+                    line = ''
+                    line += outcome['outcome'] + ', ' + str(outcome['balls']) + ', ' + str(outcome['called_strikes']) + ", " + str(outcome['whiffs']) + ', ' + str(outcome['fouls']) + ', '
+                    if outcome['EV'] != None:
+                        line += outcome['EV'] + ', '
+                    else:
+                        line += 'None, '
+                    if outcome['LA'] != None:
+                        line += outcome['LA'] + '\n'
+                    else:
+                        line += 'None\n'
+                    write_to_csv(2020, line, pid)
+            except KeyError:
+                continue
             sleep(5)
 
 
@@ -160,13 +163,13 @@ def fix(ids):
                     line += outcome['LA'] + '\n'
                 else:
                     line += 'None\n'
-                write_to_csv(2019, line, pid)
+                write_to_csv(2020, line, pid)
             sleep(5)
 
    
 
 main()
-# ids = [567341]
+# ids = [631277, 631319, 631369, 631427, 631428, 631457, 631458, 631502, 631525, 631581, 631595, 631654]
 # fix(ids)
         
         

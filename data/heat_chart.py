@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 import os
 import math
+import queue
 
 class heat_chart:
     MAX_LA = 90
@@ -85,41 +86,58 @@ class heat_chart:
                     table[l - min][e] = r
                     hm[l - min][e] = h + o
         if not n is None:
-            table = self.interpolate(table, hm, n)
+            if self.kernel is None:
+                table = self.interpolate(table, hm, n)
+            else:
+                table = self.nadaraya_watson_weighted_avg(table, hm, n)
         return table
 
     def interpolate(self, table, hm, n):
         new_table = np.zeros((len(table), len(table[0])))
+
         for i in range(len(table)):
             for j in range(len(table[0])):
+                pq = queue.PriorityQueue()
                 points = hm[i][j]
-                average = table[i][j] * points
-                bound = 1
-                while points < n:
-                    for j_ in range(j - bound, j + bound + 1):
-                        if i - bound >= 0:
-                            if not (j_ < 0 or j_ >= len(table[0])):
-                                num = hm[i - bound][j_]
-                                points += num
-                                average += (table[i - bound][j_] * num)
-                        if i + bound < len(table):
-                            if not (j_ < 0 or j_ >= len(table[0])):
-                                num = hm[i + bound][j_]
-                                points += num
-                                average += (table[i + bound][j_] * num)
-                    for i_ in range(i - bound, i + bound + 1):
-                        if j - bound >= 0:
-                            if not (i_ < 0 or i_ >= len(table)):
-                                num = hm[i_][j - bound]
-                                points += num
-                                average += (table[i_][j - bound] * num)
-                        if j + bound < len(table[0]):
-                            if not (i_ < 0 or i_ >= len(table)):
-                                num = hm[i_][j + bound]
-                                points += num
-                                average += (table[i_][j + bound] * num)
-                    bound += 1
-                new_table[i][j] = (average) / points
+                total = points * table[i][j]
+                vis = {}
+                pq.put((math.sqrt((1)+ (1)), (1, 1)))
+                pq.put((1, (1, 0)))
+                pq.put((1, (0, 1)))
+                prev = 0
+                while True:
+                    (curr, (dx, dy)) = pq.get()
+                    if points > n and prev != curr:
+                        break
+                    if i - dx >= 0:
+                        if not j + dy >= len(table[0]):
+                            num = hm[i - dx][j + dy]
+                            points += num
+                            total += table[i - dx][j + dy] * num
+                        if not j - dy < 0:
+                            num = hm[i - dx][j - dy]
+                            points += num
+                            total += table[i - dx][j - dy] * num
+                    if i + dx < len(table[0]):
+                        if not j + dy >= len(table[0]):
+                            num = hm[i + dx][j + dy]
+                            points += num
+                            total += table[i + dx][j + dy] * num
+                        if not j - dy < 0:
+                            num = hm[i + dx][j - dy]
+                            points += num
+                            total += table[i + dx][j - dy] * num
+                    if not ((dx + 1) * 1000 + (dy + 1)) in vis:
+                        pq.put((math.sqrt((dx + 1)**2 + (dy + 1)**2), (dx + 1, dy + 1)))
+                        vis[(dx + 1) * 1000 + (dy + 1)] = True
+                    if not ((dx + 1) * 1000 + dy) in vis:
+                        pq.put((math.sqrt((dx + 1)**2 + (dy)**2), (dx + 1, dy)))
+                        vis[(dx + 1) * 1000 + (dy)] = True
+                    if not ((dy + 1)) in vis:
+                        pq.put((math.sqrt((dx)**2 + (dy + 1)**2), (dx, dy + 1)))
+                        vis[(dy + 1)] = True
+                    prev = curr
+                new_table[i][j] = total / points
         return new_table
 
 
@@ -129,62 +147,90 @@ class heat_chart:
                 la, ev = x
                 la0, ev0 = x0
                 d = math.sqrt((la - la0)**2 + (ev - ev0)**2)
-                d = (x - x0) / lmda
-                return 3/4 * (1 - d**2)  
+                d /= lmda
+                return 3/4 * (1 - d**2) 
         kernel = ekernel
 
 
+        new_table = np.zeros((len(table), len(table[0])))
+
         for i in range(len(table)):
             for j in range(len(table[0])):
+                pq = queue.PriorityQueue()
                 points = hm[i][j]
-                bound = 1
-                numerator = 0
-                denominator = 0
-                
-                ## find furthest neighbor
-                while points < n:
-                    for j_ in range(j - bound, j + bound + 1):
-                        if i - bound >= 0:
-                            if not (j_ < 0 or j_ >= len(table[0])):
-                                num = hm[i - bound][j_]
-                                points += num
-                        if i + bound < len(table):
-                            if not (j_ < 0 or j_ >= len(table[0])):
-                                num = hm[i + bound][j_]
-                                points += num
-                    for i_ in range(i - bound, i + bound + 1):
-                        if j - bound >= 0:
-                            if not (i_ < 0 or i_ >= len(table)):
-                                num = hm[i_][j - bound]
-                                points += num
-                        if j + bound < len(table[0]):
-                            if not (i_ < 0 or i_ >= len(table)):
-                                num = hm[i_][j + bound]
-                                points += num
-                    bound += 1
-                ## Compute nadaraya watson weighted average
-                for b in range (1, bound):
-                    for j_ in range(j - b, j + b + 1):
-                        if i - b >= 0:
-                            if not (j_ < 0 or j_ >= len(table[0])):
-                                num = hm[i - b][j_]
-                                numerator += num * kernel((i, j_), (i, j), bound + 1)
-                                points += num
-                        if i + b < len(table):
-                            if not (j_ < 0 or j_ >= len(table[0])):
-                                num = hm[i + b][j_]
-                                points += num
-                    for i_ in range(i - b, i + b + 1):
-                        if j - bound >= 0:
-                            if not (i_ < 0 or i_ >= len(table)):
-                                num = hm[i_][j - b]
-                                points += num
-                        if j + b < len(table[0]):
-                            if not (i_ < 0 or i_ >= len(table)):
-                                num = hm[i_][j + b]
-                                points += num
+                vis = {}
+                pq.put((math.sqrt((1)+ (1)), (1, 1)))
+                pq.put((1, (1, 0)))
+                pq.put((1, (0, 1)))
+                prev = 0
+                last = False
+                while True:
+                    (curr, (dx, dy)) = pq.get()
+                    if points > n and prev != curr:
+                        prev = curr
+                        break
+                    vis[(dx) * 1000 + (dy)] = False
+                    if i - dx >= 0:
+                        if not j + dy >= len(table[0]):
+                            num = hm[i - dx][j + dy]
+                            points += num
+                        if not j - dy < 0:
+                            num = hm[i - dx][j - dy]
+                            points += num
+                    if i + dx < len(table[0]):
+                        if not j + dy >= len(table[0]):
+                            num = hm[i + dx][j + dy]
+                            points += num
+                        if not j - dy < 0:
+                            num = hm[i + dx][j - dy]
+                            points += num
+                    if not ((dx + 1) * 1000 + (dy + 1)) in vis:
+                        pq.put((math.sqrt((dx + 1)**2 + (dy + 1)**2), (dx + 1, dy + 1)))
+                        vis[(dx + 1) * 1000 + (dy + 1)] = True
+                    if not ((dx + 1) * 1000 + dy) in vis:
+                        pq.put((math.sqrt((dx + 1)**2 + (dy)**2), (dx + 1, dy)))
+                        vis[(dx + 1) * 1000 + (dy)] = True
+                    if not ((dy + 1)) in vis:
+                        pq.put((math.sqrt((dx)**2 + (dy + 1)**2), (dx, dy + 1)))
+                        vis[(dy + 1)] = True
+                    prev = curr
 
-
+                if prev != 0:
+                    k = kernel((i, j), (i, j), prev)
+                    top = 0
+                    bottom = 0
+                    top += hm[i][j] * table[i][j] * k
+                    bottom += k * hm[i][j]
+                    for key in vis:
+                        if not vis[key]:
+                            dx = int(key / 1000)
+                            dy = key % 1000
+                            if i - dx >= 0:
+                                if not j + dy >= len(table[0]):
+                                    num = hm[i - dx][j + dy]
+                                    k = kernel((i - dx, j + dy), (i, j), prev)
+                                    top += table[i - dx][j + dy] * num * k
+                                    bottom += k * num
+                                if not j - dy < 0:
+                                    num = hm[i - dx][j - dy]
+                                    k = kernel((i - dx, j - dy), (i, j), prev)
+                                    top += table[i - dx][j - dy] * num * k
+                                    bottom += k * num
+                            if i + dx < len(table[0]):
+                                if not j + dy >= len(table[0]):
+                                    num = hm[i + dx][j + dy]
+                                    k = kernel((i + dx, j + dy), (i, j), prev)
+                                    top += table[i + dx][j + dy] * num * k
+                                    bottom += k * num
+                                if not j - dy < 0:
+                                    num = hm[i + dx][j - dy]
+                                    k = kernel((i + dx, j - dy), (i, j), prev)
+                                    top += table[i + dx][j - dy] * num * k
+                                    bottom += k * num
+                    new_table[i][j] = top / bottom
+                else:
+                    new_table[i][j] = table[i][j]
+        return new_table
 
     
     def create_heat_chart(self):

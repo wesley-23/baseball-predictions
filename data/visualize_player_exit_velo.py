@@ -119,7 +119,7 @@ def get_hit_frequencies_table():
         r = h / (h + o)
         table[l - min][e] = r
         hm[l - min][e] = h + o
-    table = interpolate(table, hm, 20)
+    table = interpolate(table, hm, 50)
    
     return (table, min, rows, cols)
 
@@ -135,9 +135,12 @@ def interpolate(table, hm, n):
             pq.put((math.sqrt((1)+ (1)), (1, 1)))
             pq.put((1, (1, 0)))
             pq.put((1, (0, 1)))
-            while points < n:
-                dx, dy = pq.get()[1]
+            prev = 0
+            while True:
+                (curr, (dx, dy)) = pq.get()
                 # print(dx, dy)
+                if points > n and prev != curr:
+                    break
                 if i - dx >= 0:
                     if not j + dy >= len(table[0]):
                         num = hm[i - dx][j + dy]
@@ -165,6 +168,7 @@ def interpolate(table, hm, n):
                 if not ((dy + 1)) in vis:
                     pq.put((math.sqrt((dx)**2 + (dy + 1)**2), (dx, dy + 1)))
                     vis[(dy + 1)] = True
+                prev = curr
             new_table[i][j] = total / points
     return new_table
 

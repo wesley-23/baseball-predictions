@@ -1,0 +1,19 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Strikeout, 1, 1, 2, 0, None, None
+Strikeout, 2, 2, 1, 0, None, None
+Double, 2, 0, 0, 4, 87.5, 17
+Lineout, 2, 2, 0, 1, 89.2, 16
+Walk, 4, 1, 0, 0, None, None
+Strikeout, 2, 1, 1, 1, None, None
+Single, 2, 1, 1, 0, 91.0, 7
+Strikeout, 2, 1, 2, 0, None, None
+Walk, 4, 1, 0, 0, None, None
+Strikeout, 1, 0, 2, 2, None, None
+Lineout, 3, 1, 0, 1, 105.1, 15
+Catcher Interference, 3, 1, 1, 0, 86.9, 27
+Groundout, 3, 1, 1, 1, 77.3, -29
+Forceout, 1, 1, 1, 0, 77.0, -33
+Hit By Pitch, 0, 0, 0, 0, None, None
+Forceout, 3, 2, 0, 3, 81.5, -30
+Strikeout, 0, 3, 0, 0, None, None
+Sac Bunt, 1, 0, 0, 0, 37.4, -32
