@@ -5,6 +5,7 @@ import numpy as np
 import os
 import math
 import queue
+import scipy.stats
 
 class heat_chart:
     MAX_LA = 90
@@ -26,8 +27,9 @@ class heat_chart:
 
         if self.neighbors != None and not isinstance(self.neighbors, int):
             raise TypeError('Neighbor must be integer')
-        if self.kernel != None and (self.kernel != 'ekernel'):
-            raise TypeError('Possible kernel methods are: ekernel (Epanchnikov Kernel)')
+        if self.kernel != None and (self.kernel != 'ekernel' and self.kernel != 'tricube' and self.kernel != 'gaussian'):
+            raise KeyError('Possible kernel methods are: ekernel (Epanchnikov Kernel), tricube, gaussian')
+        
         # if self.kernel != None and not isinstance(self.width, int):
         #     raise TypeError('Width of kernel must be defined as an int if a kernel smoothing method is desired')
         
@@ -149,7 +151,24 @@ class heat_chart:
                 d = math.sqrt((la - la0)**2 + (ev - ev0)**2)
                 d /= lmda
                 return 3/4 * (1 - d**2) 
+        def tricube(x, x0, lmda):
+            la, ev = x
+            la0, ev0 = x0
+            d = math.sqrt((la - la0)**2 + (ev - ev0)**2)
+            d /= lmda
+            return (1 - (d**3))**3
+        def gaussian(x, x0, lmda):
+            la, ev = x
+            la0, ev0 = x0
+            d = math.sqrt((la - la0)**2 + (ev - ev0)**2)
+            d /= lmda
+            return scipy.stats.norm(0, lmda).pdf(d)
+
         kernel = ekernel
+        if self.kernel == 'tricube':
+            kernel = tricube
+        if self.kernel == 'gaussian':
+            kernel = gaussian
 
 
         new_table = np.zeros((len(table), len(table[0])))
@@ -163,7 +182,6 @@ class heat_chart:
                 pq.put((1, (1, 0)))
                 pq.put((1, (0, 1)))
                 prev = 0
-                last = False
                 while True:
                     (curr, (dx, dy)) = pq.get()
                     if points > n and prev != curr:
@@ -263,21 +281,20 @@ class heat_chart:
         index = self.MAX_LA + la
         return (self.table[index][ev]) >= .5
 
-    # def __del__(self):
-    #     if not self.neighbors is None:
-    #         path = ''
-    #         if self.to is None:
-    #             path = 'data/' + str(self.year) + '_pbp_all/'+str(self.neighbors) +'.csv'    
-    #         else:
-    #             path = 'data/' + str(self.year) + '_pbp_all/' + str(self.to) + '_' + str(self.neighbors) + '.csv' 
-    #         if not os.path.isfile(path):
-    #             f = open(path, 'a')
-    #             f.write('EV, LA, Hit_Probability\n')
-    #             for i in range(0, len(self.table)):
-    #                 for j in range(0, len(self.table[0])):
-    #                     line = str(j) + ', ' + str(i - self.MAX_LA) + ', ' + str(self.table[i][j]) + '\n'
-    #                     f.write(line)
-    #             f.close()
+    def get_likelihood(self, ev, la):
+        index = self.MAX_LA + la
+        return (self.table[index][ev])
+    
+    def save(self, path):
+        if not self.neighbors is None:
+            if not os.path.isfile(path):
+                f = open(path, 'a')
+                f.write('EV, LA, Hit_Probability\n')
+                for i in range(0, len(self.table)):
+                    for j in range(0, len(self.table[0])):
+                        line = str(j) + ', ' + str(i - self.MAX_LA) + ', ' + str(self.table[i][j]) + '\n'
+                        f.write(line)
+                f.close()
 
 
 

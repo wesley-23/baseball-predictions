@@ -215,9 +215,9 @@ def interpolate(table, hm, n):
 
 
 
-create_hit_frequency_heat_map()
+# create_hit_frequency_heat_map()
 # get_hit_frequencies_table()
 # create_hit_EV_LA_hit_chart()
-# create_conglomerate_data(2021)
-# create_hit_frequency_data(2021)
+create_conglomerate_data(2019)
+create_hit_frequency_data(2019)
 
