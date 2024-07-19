@@ -8,15 +8,16 @@ def sortById(e):
     id = int(attr[2])
     return id
 def parse():
-    f = open('batter_stats.csv', 'r')
+    f = open('data/batter_stats/batter_stats.csv', 'r')
     list = []
     for line in f:
+        line = line.replace('"', '')
         line = line[:-1]
         list.append(line)
     header = list.pop(0)
     list.sort(key=sortByYear)
     list.sort(key=sortById)
-    o = open('batter_stats_sorted.csv', 'a')
+    o = open('data/batter_stats/batter_stats_sorted.csv', 'a')
     o.write(header + '\n')
     for line in list:
         o.write(line + '\n')
