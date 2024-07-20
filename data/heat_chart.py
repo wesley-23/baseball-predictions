@@ -42,7 +42,6 @@ class heat_chart:
             if os.path.isfile(path):
                 self.table = self.parse_file(path = path)    
             else:
-                path = 'data/' + str(year) + '_pbp_all/EV_LA_hit_out_data.csv'
                 self.table = self.parse_file(n = self.neighbors)            
         else:
             path = ''
@@ -72,8 +71,8 @@ class heat_chart:
             la = df['LA']
             for e, l, h, o in zip(ev, la, df['Hits'], df['Outs']):
                 r = h / (h + o)
-                table[l - min][e] = r
-                hm[l - min][e] = h + o
+                table[l + min][e] = r
+                hm[l + min][e] = h + o
         else:
             end = self.year + 1
             if self.to is not None:
@@ -84,9 +83,13 @@ class heat_chart:
                 ev = df['EV']
                 la = df['LA']
                 for e, l, h, o in zip(ev, la, df['Hits'], df['Outs']):
-                    r = h / (h + o)
-                    table[l - min][e] = r
-                    hm[l - min][e] = h + o
+                    old_r = table[l + min][e]
+                    old_h = hm[l + min][e]
+                    old_r = old_r * old_h
+                    r = h + old_r
+                    outcomes = o + h + old_h
+                    table[l + min][e] = r / outcomes
+                    hm[l + min][e] = outcomes
         if not n is None:
             if self.kernel is None:
                 table = self.interpolate(table, hm, n)
