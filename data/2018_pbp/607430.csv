@@ -1,0 +1,75 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Flyout, 0, 1, 1, 0, 93.5, 32
+Single, 2, 0, 1, 2, 97.0, 12
+Lineout, 0, 0, 0, 0, 78.1, 28
+Walk, 4, 0, 1, 0, None, None
+Single, 3, 1, 1, 0, 64.2, 31
+Lineout, 1, 0, 1, 1, 82.5, 27
+Groundout, 3, 1, 0, 0, 82.2, -22
+Forceout, 3, 1, 0, 0, 94.0, -8
+Strikeout, 3, 0, 2, 1, None, None
+Strikeout, 2, 1, 1, 1, None, None
+Single, 2, 0, 0, 2, 99.4, 1
+Groundout, 1, 1, 0, 0, 89.8, None
+Walk, 4, 0, 0, 0, None, None
+Groundout, 1, 1, 0, 0, 86.0, -18
+Strikeout, 1, 1, 2, 0, None, None
+Flyout, 1, 0, 0, 0, 86.8, 45
+Single, 1, 0, 0, 0, 79.3, -32
+Pop Out, 1, 0, 0, 0, None, None
+Pop Out, 0, 0, 0, 0, None, None
+Field Error, 0, 1, 0, 0, 95.4, -2
+Strikeout, 0, 2, 1, 0, None, None
+Single, 3, 1, 1, 0, 64.2, 31
+Lineout, 1, 0, 1, 1, 82.5, 27
+Groundout, 3, 1, 0, 0, 82.2, -22
+Forceout, 3, 1, 0, 0, 94.0, -8
+Strikeout, 3, 1, 1, 1, None, None
+Strikeout, 1, 1, 1, 1, None, None
+Strikeout, 1, 1, 1, 1, None, None
+Single, 3, 2, 0, 1, 73.1, 11
+Flyout, 1, 0, 0, 0, 99.9, 24
+Flyout, 1, 1, 0, 0, 96.0, 48
+Flyout, 2, 0, 0, 1, 74.6, 33
+GIDP, 1, 0, 0, 0, 99.7, -7
+Flyout, 0, 1, 0, 0, 91.9, 32
+Flyout, 1, 1, 0, 1, 90.3, 35
+Single, 2, 0, 0, 2, 69.5, -43
+Double, 2, 2, 0, 1, 92.2, 12
+Sac Fly, 0, 1, 0, 0, 79.6, 40
+Walk, 4, 2, 0, 1, None, None
+Flyout, 2, 1, 0, 2, 92.3, 30
+Strikeout, 1, 1, 1, 1, None, None
+Strikeout, 0, 2, 0, 1, None, None
+Flyout, 1, 0, 0, 4, 78.0, 46
+Forceout, 0, 1, 0, 1, 71.2, 9
+Flyout, 0, 1, 0, 0, 88.1, 33
+Single, 1, 2, 0, 0, 67.3, 24
+Strikeout, 2, 1, 1, 1, None, None
+Strikeout, 3, 0, 3, 1, None, None
+Single, 2, 1, 0, 1, 94.1, 8
+Strikeout, 1, 2, 0, 2, None, None
+Strikeout, 2, 0, 2, 1, None, None
+Strikeout, 1, 2, 1, 1, None, None
+Single, 3, 1, 0, 1, 64.6, 48
+Lineout, 0, 0, 0, 1, 93.4, 23
+Strikeout, 1, 1, 1, 2, None, None
+Single, 2, 0, 1, 2, 71.8, -41
+Pop Out, 0, 0, 1, 0, 43.1, 49
+Single, 1, 1, 0, 1, 67.3, -33
+Flyout, 0, 0, 0, 0, 89.3, 53
+Lineout, 2, 1, 0, 0, 83.3, 24
+Strikeout, 1, 3, 0, 1, None, None
+Walk, 4, 1, 0, 2, None, None
+Strikeout, 3, 1, 1, 1, None, None
+Lineout, 1, 1, 1, 0, 96.2, 8
+Strikeout, 3, 2, 1, 1, None, None
+Strikeout, 1, 2, 1, 0, None, None
+Pop Out, 2, 0, 1, 1, 64.7, 50
+Double, 1, 1, 1, 1, 88.1, 31
+Walk, 4, 1, 0, 0, None, None
+Lineout, 2, 1, 0, 2, 80.8, 10
+Single, 0, 0, 0, 0, 90.0, -20
+Walk, 4, 1, 0, 0, None, None
+Lineout, 2, 1, 0, 2, 80.8, 10
+Single, 0, 0, 0, 0, 90.0, -20

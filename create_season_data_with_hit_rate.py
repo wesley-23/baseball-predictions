@@ -62,4 +62,4 @@ def get_season_data(year):
 
 # get_players(2023)
 
-get_season_data(2023)
+get_season_data(2022)

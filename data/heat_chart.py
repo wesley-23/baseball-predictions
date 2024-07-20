@@ -282,7 +282,7 @@ class heat_chart:
 
     def is_hit(self, ev, la):
         index = self.MAX_LA + la
-        return (self.table[index][ev]) >= .5
+        return (self.table[index][ev]) >= .45
 
     def get_likelihood(self, ev, la):
         index = self.MAX_LA + la

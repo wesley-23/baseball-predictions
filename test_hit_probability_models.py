@@ -115,6 +115,9 @@ def calculate_mse_statcast_xba():
     next(f)
     for line in f:
         l = line.split(',')
+        pa = int(l[4])
+        if pa < 100:
+            continue
         ba = l[7]
         xba = l[8]
         squared_error += (float(ba) - float(xba))**2
@@ -129,6 +132,9 @@ def calculate_mse_model_xba():
     next(f)
     for line in f:
         l = line.split(',')
+        # pa = int(l[4])
+        # if pa < 100:
+        #     continue
         id = int(l[2])
         path = 'data/2023_pbp/' + str(id) + '.csv'
         if not os.path.isfile(path):
@@ -159,9 +165,9 @@ def calculate_mse_model_xba():
             
 
 # graph_deviance_nearest_neighbors()
-compare_methods()
+# compare_methods()
 # calculate_mse_statcast_xba()
-# calculate_mse_model_xba()
+calculate_mse_model_xba()
 
 
 

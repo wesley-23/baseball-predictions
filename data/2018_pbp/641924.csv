@@ -1,0 +1,30 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Walk, 4, 2, 0, 0, None, None
+Walk, 4, 1, 0, 3, None, None
+Groundout, 2, 0, 0, 0, None, None
+Forceout, 1, 0, 0, 1, 79.2, -35
+Groundout, 3, 1, 1, 0, 98.9, -4
+Strikeout, 0, 0, 1, 2, None, None
+Flyout, 2, 0, 1, 1, 84.7, 41
+Single, 2, 1, 0, 2, None, None
+Flyout, 0, 0, 0, 0, 85.9, 40
+Strikeout, 2, 0, 2, 1, None, None
+Walk, 4, 1, 0, 0, None, None
+Groundout, 1, 1, 0, 0, None, None
+Caught Stealing 2B, 1, 1, 0, 0, None, None
+Single, 1, 1, 0, 1, 63.3, 35
+Double, 2, 1, 1, 0, 97.5, 15
+Strikeout, 3, 1, 2, 0, None, None
+Pop Out, 1, 1, 0, 0, None, None
+Strikeout, 2, 1, 2, 1, None, None
+Single, 2, 1, 0, 1, 103.7, 6
+Strikeout, 2, 2, 1, 0, None, None
+Strikeout, 1, 1, 0, 2, None, None
+Walk, 4, 0, 0, 1, None, None
+Strikeout, 2, 1, 1, 1, None, None
+Flyout, 1, 0, 0, 0, 92.5, 44
+Strikeout, 1, 0, 3, 0, None, None
+Single, 2, 1, 0, 2, None, None
+Flyout, 0, 0, 0, 0, 85.9, 40
+Strikeout, 2, 0, 2, 1, None, None
+Walk, 4, 1, 0, 0, None, None

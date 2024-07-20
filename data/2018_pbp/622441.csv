@@ -1,0 +1,7 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Pop Out, 0, 0, 0, 0, 69.9, 57
+Pop Out, 1, 1, 0, 0, 78.4, 57
+Lineout, 3, 0, 1, 2, 91.3, 22
+Strikeout, 2, 0, 3, 0, None, None
+Pop Out, 0, 0, 2, 0, 75.9, 75
+GIDP, 1, 2, 0, 1, 66.9, -28

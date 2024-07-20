@@ -1,0 +1,60 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Strikeout, 0, 1, 1, 1, None, None
+Strikeout, 1, 1, 0, 2, None, None
+Strikeout, 1, 2, 1, 0, None, None
+Sac Bunt, 0, 0, 0, 0, None, None
+Strikeout, 2, 0, 2, 0, None, None
+Groundout, 0, 0, 0, 1, 64.3, -16
+Strikeout, 1, 2, 0, 1, None, None
+Sac Bunt, 1, 0, 0, 1, None, None
+Strikeout, 0, 0, 2, 3, None, None
+Strikeout, 1, 0, 3, 0, None, None
+Sac Bunt, 0, 0, 1, 0, 38.5, -46
+Strikeout, 3, 3, 0, 0, None, None
+Sac Bunt, 1, 0, 0, 0, None, None
+Lineout, 0, 0, 0, 0, 86.9, 26
+Lineout, 1, 0, 0, 1, 91.7, 20
+Groundout, 0, 0, 0, 1, 64.3, -16
+Strikeout, 1, 2, 0, 1, None, None
+Groundout, 0, 0, 0, 0, 89.1, -24
+Strikeout, 1, 1, 1, 1, None, None
+Groundout, 2, 2, 0, 2, 89.2, None
+GIDP, 0, 0, 0, 0, 97.1, None
+Groundout, 1, 1, 1, 0, 48.4, -26
+Groundout, 0, 1, 0, 0, 60.6, -42
+Bunt Pop Out, 0, 0, 0, 0, None, None
+Strikeout, 0, 3, 0, 0, None, None
+Groundout, 3, 0, 2, 1, None, None
+Strikeout, 1, 1, 1, 1, None, None
+Groundout, 0, 0, 1, 0, 86.3, -33
+Strikeout, 2, 0, 0, 2, None, None
+Strikeout, 3, 1, 2, 0, None, None
+GIDP, 0, 0, 0, 0, None, None
+Groundout, 0, 1, 0, 0, 105.4, -66
+GIDP, 1, 1, 0, 1, 74.2, -44
+Groundout, 0, 1, 0, 1, None, None
+Strikeout, 1, 1, 1, 1, None, None
+Forceout, 2, 0, 0, 0, None, None
+Strikeout, 1, 1, 2, 0, None, None
+Strikeout, 3, 3, 0, 0, None, None
+Sac Bunt, 1, 1, 0, 0, None, None
+Strikeout, 0, 2, 1, 0, None, None
+Single, 0, 1, 0, 1, 71.7, 21
+Groundout, 2, 2, 0, 0, None, None
+Groundout, 0, 0, 0, 0, None, None
+Lineout, 3, 2, 0, 0, 99.5, 2
+Single, 0, 1, 0, 0, 74.5, 11
+Strikeout, 1, 0, 3, 0, None, None
+Groundout, 1, 0, 0, 0, None, None
+Strikeout, 2, 2, 0, 1, None, None
+Single, 2, 1, 0, 2, 100.2, -8
+Single, 0, 0, 0, 0, 84.6, 1
+Strikeout, 1, 2, 1, 0, None, None
+Strikeout, 0, 1, 2, 0, None, None
+Strikeout, 0, 0, 2, 1, None, None
+Sac Bunt, 0, 0, 0, 0, None, None
+Strikeout, 0, 3, 0, 0, None, None
+Groundout, 0, 1, 0, 0, 88.9, -21
+Strikeout, 1, 1, 2, 0, None, None
+Groundout, 2, 1, 1, 2, 59.1, -31
+Strikeout, 1, 3, 0, 0, None, None
