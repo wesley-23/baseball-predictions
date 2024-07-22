@@ -1,0 +1,5 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Strikeout, 1, 2, 0, 1, None, None
+Strikeout, 0, 1, 2, 0, None, None
+Single, 0, 1, 0, 0, 99.0, 3
+Sac Bunt, 0, 1, 0, 0, None, None

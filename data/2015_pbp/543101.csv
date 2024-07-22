@@ -1,0 +1,65 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Strikeout, 2, 1, 1, 2, None, None
+Strikeout, 1, 2, 1, 2, None, None
+Groundout, 1, 1, 0, 0, 95.3, -9
+Strikeout, 2, 2, 1, 1, None, None
+Single, 0, 0, 0, 0, 97.8, -16
+Strikeout, 3, 2, 0, 1, None, None
+Groundout, 2, 1, 0, 1, None, None
+Strikeout, 3, 2, 1, 2, None, None
+Groundout, 2, 0, 1, 1, 84.8, 1
+Sac Fly, 3, 0, 1, 2, 83.3, 32
+Strikeout, 1, 0, 0, 0, None, None
+Groundout, 0, 0, 0, 0, 78.1, -11
+Lineout, 0, 0, 1, 1, 88.3, 3
+Strikeout, 2, 0, 1, 2, None, None
+Strikeout, 2, 0, 0, 0, None, None
+Lineout, 2, 1, 0, 0, 79.3, 10
+Single, 0, 0, 0, 0, 97.7, 11
+Pop Out, 1, 1, 0, 0, None, None
+Single, 0, 0, 0, 0, None, None
+Sac Bunt, 0, 0, 0, 0, None, None
+Strikeout, 1, 1, 1, 1, None, None
+Strikeout, 2, 2, 0, 1, None, None
+Groundout, 0, 1, 0, 1, 66.3, -18
+Strikeout, 0, 1, 2, 0, None, None
+Strikeout, 2, 2, 1, 1, None, None
+Strikeout, 1, 2, 1, 0, None, None
+Single, 0, 0, 0, 0, 78.0, 26
+Groundout, 1, 1, 0, 1, 93.7, -11
+Walk, 4, 0, 1, 0, None, None
+Single, 0, 0, 0, 0, None, None
+Flyout, 0, 0, 0, 0, 91.6, 32
+Single, 1, 0, 0, 2, 66.1, 26
+Double, 1, 0, 0, 0, 99.0, 15
+Walk, 4, 1, 0, 1, None, None
+Sac Bunt, 1, 0, 0, 0, None, None
+Groundout, 0, 1, 0, 0, 65.0, -22
+Strikeout, 0, 0, 0, 0, None, None
+Strikeout, 0, 2, 1, 0, None, None
+Strikeout, 0, 1, 2, 0, None, None
+Strikeout, 0, 2, 0, 1, None, None
+Bunt Pop Out, 0, 0, 0, 0, None, None
+Strikeout, 0, 0, 3, 0, None, None
+Strikeout, 2, 2, 1, 2, None, None
+Strikeout, 1, 1, 2, 0, None, None
+Strikeout, 0, 1, 1, 1, None, None
+Strikeout, 1, 0, 3, 0, None, None
+Strikeout, 2, 0, 2, 1, None, None
+Forceout, 0, 1, 0, 0, None, None
+Strikeout, 2, 1, 2, 2, None, None
+Strikeout, 0, 1, 0, 0, None, None
+Strikeout, 1, 0, 0, 0, None, None
+Strikeout, 0, 1, 2, 0, None, None
+Single, 1, 0, 0, 0, 76.2, 14
+Strikeout, 2, 0, 2, 1, None, None
+Single, 0, 0, 1, 0, 75.3, 19
+Walk, 4, 0, 0, 0, None, None
+Groundout, 0, 0, 0, 1, 76.6, -43
+Strikeout, 0, 0, 0, 0, None, None
+Flyout, 1, 0, 0, 0, 97.9, 28
+Strikeout, 1, 1, 2, 0, None, None
+Strikeout, 1, 2, 1, 0, None, None
+Strikeout, 1, 2, 1, 0, None, None
+Groundout, 1, 0, 1, 1, None, None
+Strikeout, 2, 1, 2, 2, None, None

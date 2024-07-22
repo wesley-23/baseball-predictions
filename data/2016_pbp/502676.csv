@@ -1,0 +1,32 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Lineout, 1, 1, 0, 0, 43.9, 33
+Lineout, 0, 1, 0, 0, 73.9, 27
+Lineout, 1, 0, 0, 0, 79.0, 24
+Groundout, 0, 1, 0, 0, 85.9, -7
+Flyout, 1, 0, 0, 1, None, None
+Lineout, 0, 1, 0, 0, 76.8, 25
+Flyout, 0, 0, 0, 1, 89.3, 27
+Lineout, 1, 1, 0, 0, 82.2, 23
+Lineout, 1, 0, 0, 0, 96.7, 21
+Groundout, 0, 1, 0, 0, 97.3, -5
+Single, 2, 0, 0, 0, 69.5, 3
+Strikeout, 3, 1, 1, 1, None, None
+Flyout, 1, 0, 0, 0, 80.3, 54
+Single, 1, 0, 0, 1, 88.8, 18
+Single, 1, 0, 0, 1, 93.2, 9
+Groundout, 1, 0, 0, 1, None, None
+Walk, 4, 0, 0, 0, None, None
+Single, 3, 1, 1, 0, 95.3, 6
+Pop Out, 2, 1, 0, 4, None, None
+Flyout, 1, 1, 1, 0, 81.2, 42
+Strikeout, 1, 1, 1, 1, None, None
+Groundout, 2, 0, 0, 0, 73.0, -19
+Pop Out, 1, 0, 0, 0, None, None
+Flyout, 1, 0, 0, 0, 94.8, 36
+Pop Out, 0, 0, 0, 2, 72.7, 65
+Groundout, 2, 0, 0, 0, 73.0, -19
+Pop Out, 1, 0, 0, 0, None, None
+Flyout, 1, 0, 0, 0, 94.8, 36
+Pop Out, 0, 0, 0, 2, 72.7, 65
+Pop Out, 1, 0, 0, 0, None, None
+Groundout, 1, 1, 0, 0, None, None

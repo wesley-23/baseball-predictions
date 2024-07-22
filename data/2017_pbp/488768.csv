@@ -1,0 +1,8 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Single, 2, 1, 0, 0, None, None
+Strikeout, 1, 2, 0, 0, None, None
+Sac Bunt, 0, 0, 0, 0, None, None
+Field Error, 1, 2, 0, 2, None, None
+Sac Fly, 1, 0, 0, 0, 87.7, 30
+Groundout, 0, 0, 0, 0, 105.3, -2
+Strikeout, 1, 2, 0, 1, None, None

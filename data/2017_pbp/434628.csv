@@ -1,0 +1,10 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Strikeout, 1, 1, 1, 1, None, None
+Lineout, 1, 0, 1, 1, 88.3, 10
+Groundout, 0, 0, 0, 0, 60.7, 33
+Forceout, 0, 0, 0, 0, 67.0, -40
+Lineout, 1, 1, 0, 1, 87.4, 21
+Sac Bunt, 0, 0, 0, 0, None, None
+GIDP, 1, 0, 1, 0, 68.7, -35
+Strikeout, 2, 1, 1, 1, None, None
+Groundout, 0, 1, 0, 0, 64.7, -25

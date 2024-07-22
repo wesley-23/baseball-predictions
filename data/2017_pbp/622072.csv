@@ -1,0 +1,59 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Strikeout, 3, 3, 0, 0, None, None
+Strikeout, 2, 2, 0, 1, None, None
+Strikeout, 2, 3, 0, 1, None, None
+Strikeout, 2, 2, 1, 0, None, None
+Strikeout, 3, 2, 1, 3, None, None
+Groundout, 0, 1, 0, 0, 76.7, -16
+Groundout, 0, 0, 0, 0, 96.7, -20
+Single, 1, 1, 1, 0, 66.9, 16
+Strikeout, 1, 0, 0, 0, None, None
+Strikeout, 2, 3, 0, 0, None, None
+Groundout, 2, 0, 0, 1, 91.0, -5
+Strikeout, 1, 2, 0, 1, None, None
+Sac Bunt, 0, 0, 0, 0, None, None
+Strikeout, 1, 3, 0, 0, None, None
+Strikeout, 0, 2, 1, 0, None, None
+Strikeout, 0, 2, 1, 0, None, None
+Groundout, 2, 1, 0, 0, 86.8, -15
+Strikeout, 3, 3, 0, 1, None, None
+Sac Bunt, 1, 0, 0, 1, None, None
+Sac Bunt, 0, 0, 0, 0, None, None
+Groundout, 2, 1, 0, 0, 66.2, -40
+Walk, 4, 1, 0, 0, None, None
+Groundout, 0, 1, 1, 0, 70.3, -30
+Single, 0, 0, 0, 0, 84.2, -1
+Strikeout, 0, 0, 0, 0, None, None
+GIDP, 0, 0, 1, 0, None, None
+Groundout, 2, 0, 0, 2, 90.9, -5
+Groundout, 2, 2, 0, 2, 96.4, -15
+Strikeout, 1, 2, 0, 1, None, None
+Bunt Pop Out, 0, 0, 0, 0, None, None
+Strikeout, 2, 3, 0, 0, None, None
+Bunt Groundout, 0, 0, 0, 1, None, None
+Strikeout, 1, 2, 1, 0, None, None
+Strikeout, 2, 3, 0, 0, None, None
+Strikeout, 3, 3, 0, 2, None, None
+Strikeout, 2, 1, 2, 0, None, None
+Strikeout, 0, 2, 1, 0, None, None
+Bunt Pop Out, 1, 0, 0, 0, None, None
+Groundout, 3, 0, 0, 0, 99.5, -18
+Strikeout, 3, 1, 1, 1, None, None
+Sac Bunt, 0, 0, 0, 0, None, None
+Strikeout, 1, 2, 0, 0, None, None
+Lineout, 1, 0, 0, 0, None, None
+Strikeout, 1, 2, 1, 0, None, None
+Groundout, 1, 1, 0, 0, 61.0, -34
+Bunt Groundout, 0, 1, 0, 0, None, None
+Groundout, 0, 0, 0, 0, 89.7, 3
+Strikeout, 1, 2, 1, 0, None, None
+Groundout, 2, 1, 0, 0, 94.2, -20
+Strikeout, 0, 2, 0, 1, None, None
+Strikeout, 2, 2, 1, 0, None, None
+Flyout, 0, 0, 0, 0, 89.3, 35
+Strikeout, 0, 3, 0, 0, None, None
+Single, 1, 2, 0, 0, 84.3, 14
+Strikeout, 1, 1, 1, 0, None, None
+Walk, 4, 1, 0, 0, None, None
+Strikeout, 0, 1, 1, 0, None, None
+Groundout, 0, 0, 0, 0, 40.4, 18

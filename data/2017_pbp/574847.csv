@@ -1,0 +1,26 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Single, 1, 1, 1, 0, 98.3, 6
+Strikeout, 2, 1, 2, 1, None, None
+Groundout, 0, 0, 0, 0, 44.7, -58
+Strikeout, 1, 0, 1, 2, None, None
+Strikeout, 2, 0, 2, 1, None, None
+Strikeout, 0, 2, 0, 1, None, None
+Groundout, 1, 0, 2, 0, 66.8, -28
+Double, 0, 0, 0, 0, 83.0, 23
+Groundout, 0, 1, 0, 0, 47.4, -33
+Caught Stealing 2B, 3, 0, 0, 1, None, None
+Groundout, 1, 0, 0, 0, 85.3, -5
+Groundout, 1, 0, 0, 1, 64.6, -22
+Strikeout, 2, 0, 2, 1, None, None
+Strikeout, 0, 2, 0, 1, None, None
+Groundout, 1, 0, 2, 0, 66.8, -28
+Double, 0, 0, 0, 0, 83.0, 23
+Groundout, 0, 1, 0, 0, 82.7, -4
+Strikeout, 2, 1, 2, 0, None, None
+Strikeout, 2, 2, 1, 0, None, None
+Strikeout, 3, 2, 1, 1, None, None
+Double, 2, 1, 0, 6, 97.6, 20
+Flyout, 0, 1, 0, 0, 84.5, 41
+Forceout, 2, 1, 1, 0, 92.9, -12
+Single, 0, 1, 0, 0, 96.9, 14
+Lineout, 3, 2, 0, 0, 92.0, 19

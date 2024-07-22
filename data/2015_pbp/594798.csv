@@ -1,0 +1,67 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Bunt Pop Out, 0, 0, 0, 0, None, None
+Strikeout, 1, 1, 1, 2, None, None
+Groundout, 0, 2, 0, 2, 72.1, -8
+Groundout, 1, 1, 0, 0, 92.5, -19
+Lineout, 0, 1, 0, 1, 95.3, 4
+GIDP, 2, 0, 0, 1, 87.4, -24
+Groundout, 0, 0, 1, 0, 72.2, -4
+Pop Out, 2, 1, 0, 2, None, None
+Strikeout, 2, 2, 1, 0, None, None
+Groundout, 2, 0, 1, 2, 70.6, -23
+Single, 0, 0, 0, 0, 72.6, 27
+Strikeout, 0, 0, 2, 1, None, None
+Groundout, 0, 1, 0, 0, 64.5, -29
+Single, 0, 1, 0, 1, 78.0, None
+Single, 0, 0, 0, 0, 101.9, -24
+Single, 0, 1, 0, 0, 94.8, 11
+Single, 0, 0, 0, 0, 85.1, 12
+Sac Bunt, 1, 0, 0, 0, 35.1, -49
+Groundout, 0, 1, 0, 0, 95.5, 2
+Forceout, 0, 1, 0, 0, 96.4, -9
+GIDP, 1, 0, 0, 0, None, None
+Flyout, 0, 0, 0, 0, 81.6, 25
+Strikeout, 3, 2, 1, 1, None, None
+Strikeout, 0, 0, 3, 1, None, None
+Strikeout, 0, 2, 1, 0, None, None
+GIDP, 2, 0, 0, 0, 100.2, -4
+GIDP, 0, 0, 0, 1, 79.0, -11
+Pop Out, 2, 0, 1, 1, 60.8, 42
+Groundout, 3, 1, 1, 1, None, None
+Flyout, 0, 0, 0, 0, 72.1, 50
+Groundout, 2, 0, 0, 1, 83.5, -35
+Sac Bunt, 0, 0, 0, 0, None, None
+Sac Bunt, 0, 0, 0, 0, None, None
+Groundout, 1, 0, 0, 0, None, None
+Strikeout, 2, 2, 1, 0, None, None
+Strikeout, 2, 1, 1, 1, None, None
+Single, 2, 1, 0, 0, 91.7, 12
+Double, 2, 1, 0, 0, 95.4, 34
+Double Play, 2, 0, 0, 0, 69.1, 8
+Pop Out, 1, 0, 0, 0, None, None
+Strikeout, 1, 2, 1, 1, None, None
+Single, 0, 0, 0, 0, 99.3, -7
+Walk, 4, 1, 1, 0, None, None
+Flyout, 1, 0, 0, 0, 88.1, 39
+Strikeout, 0, 2, 1, 1, None, None
+Fielders Choice, 0, 0, 0, 1, 65.4, -41
+Groundout, 2, 0, 0, 1, None, None
+Walk, 4, 1, 0, 3, None, None
+Strikeout, 3, 2, 0, 3, None, None
+Sac Bunt, 0, 0, 0, 0, 35.6, -36
+Strikeout, 2, 1, 1, 1, None, None
+Strikeout, 1, 0, 2, 1, None, None
+Flyout, 1, 1, 0, 0, 82.8, 29
+Groundout, 1, 0, 0, 0, 66.6, -11
+Lineout, 0, 1, 0, 0, 90.3, 21
+Walk, 4, 0, 1, 1, None, None
+Single, 0, 0, 0, 0, 96.1, 13
+Groundout, 1, 0, 0, 0, 81.6, -29
+Strikeout, 0, 2, 0, 2, None, None
+Strikeout, 2, 1, 1, 1, None, None
+Strikeout, 2, 2, 1, 0, None, None
+Groundout, 1, 0, 0, 0, 90.1, 1
+Single, 1, 0, 0, 1, 103.5, 4
+Single, 1, 0, 1, 0, 69.1, 29
+Field Error, 1, 0, 1, 0, 95.2, 17
+Flyout, 2, 0, 2, 0, 87.4, 48

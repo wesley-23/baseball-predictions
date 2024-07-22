@@ -1,0 +1,62 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Single, 1, 1, 1, 0, 69.1, 31
+Strikeout, 2, 1, 2, 0, None, None
+Flyout, 0, 1, 0, 0, 85.5, 43
+Strikeout, 2, 2, 1, 0, None, None
+Single, 1, 1, 0, 0, 100.5, -11
+Walk, 4, 1, 0, 1, None, None
+Groundout, 1, 0, 1, 1, None, None
+Single, 1, 1, 0, 1, 81.9, -7
+Strikeout, 1, 1, 2, 4, None, None
+Walk, 4, 0, 0, 0, None, None
+Single, 1, 1, 0, 1, 70.3, -40
+Strikeout, 2, 2, 1, 0, None, None
+Single, 0, 1, 0, 1, 95.7, 1
+Strikeout, 2, 1, 1, 2, None, None
+Groundout, 0, 1, 0, 1, 61.8, -36
+Strikeout, 1, 0, 2, 1, None, None
+Groundout, 1, 0, 0, 1, 50.7, -48
+Strikeout, 0, 1, 1, 1, None, None
+Double, 1, 0, 0, 0, 101.1, 18
+Strikeout, 0, 1, 2, 0, None, None
+Single, 0, 0, 0, 1, 77.2, 17
+Groundout, 2, 0, 0, 1, None, None
+Groundout, 1, 1, 0, 2, 92.9, -18
+Groundout, 0, 1, 0, 0, 96.1, -10
+Pop Out, 0, 0, 0, 0, 77.2, 52
+Flyout, 0, 0, 0, 0, 80.2, 34
+Strikeout, 1, 1, 1, 1, None, None
+Single, 0, 1, 1, 0, 80.0, 20
+Strikeout, 1, 1, 2, 0, None, None
+Single, 0, 0, 0, 0, 85.1, -8
+Strikeout, 2, 1, 0, 2, None, None
+Double, 0, 0, 0, 0, 99.7, 13
+Strikeout, 1, 1, 1, 1, None, None
+Lineout, 1, 1, 1, 1, 75.1, 11
+Flyout, 0, 0, 0, 1, 94.9, 37
+Pop Out, 2, 1, 0, 0, 77.9, 83
+Forceout, 1, 0, 0, 0, None, None
+Strikeout, 2, 1, 1, 1, None, None
+Groundout, 0, 0, 0, 0, 69.6, 12
+Strikeout, 1, 1, 1, 2, None, None
+Groundout, 1, 2, 0, 1, 92.0, -3
+Forceout, 0, 0, 0, 1, 66.6, 14
+Groundout, 1, 1, 0, 0, 76.5, 9
+Strikeout, 3, 0, 1, 7, None, None
+Strikeout, 2, 1, 2, 0, None, None
+Home Run, 1, 1, 0, 0, 98.8, 27
+Lineout, 0, 1, 0, 1, 91.0, 23
+Strikeout, 3, 0, 2, 1, None, None
+Pop Out, 2, 0, 0, 0, None, None
+Flyout, 2, 1, 0, 0, 77.5, 37
+Groundout, 1, 0, 0, 0, 79.4, -12
+Forceout, 1, 1, 0, 0, 72.3, 6
+Forceout, 0, 0, 0, 0, 61.1, -29
+Strikeout, 1, 1, 1, 1, None, None
+Groundout, 2, 1, 1, 1, None, None
+Bunt Groundout, 1, 0, 0, 0, None, None
+Lineout, 0, 0, 0, 1, 66.0, 25
+Strikeout, 0, 3, 0, 0, None, None
+Lineout, 1, 1, 1, 0, 89.3, 24
+Strikeout, 1, 1, 1, 1, None, None
+Walk, 4, 0, 1, 0, None, None

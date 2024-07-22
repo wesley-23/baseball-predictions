@@ -1,0 +1,74 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Strikeout, 2, 2, 1, 0, None, None
+Strikeout, 1, 2, 1, 1, None, None
+Flyout, 2, 1, 0, 1, 81.3, 39
+Strikeout, 1, 0, 1, 0, None, None
+Strikeout, 3, 2, 1, 1, None, None
+Strikeout, 1, 1, 2, 2, None, None
+Groundout, 0, 1, 0, 0, 103.4, -6
+Single, 3, 2, 0, 1, 91.8, 15
+Lineout, 2, 1, 0, 0, 95.8, 19
+Strikeout, 1, 1, 2, 0, None, None
+Lineout, 1, 1, 0, 0, 71.1, 28
+Groundout, 0, 1, 0, 1, 90.4, -5
+Flyout, 1, 1, 0, 0, 78.1, 52
+Groundout, 1, 0, 1, 1, 71.2, -50
+Double, 1, 1, 0, 0, 100.7, 18
+Groundout, 3, 1, 0, 2, 68.7, 11
+Sac Bunt, 0, 0, 0, 0, None, None
+Groundout, 0, 0, 1, 0, 88.5, -21
+Sac Bunt, 1, 0, 0, 0, None, None
+Groundout, 0, 2, 0, 0, 69.9, -5
+Strikeout, 1, 1, 2, 0, None, None
+Single, 3, 1, 1, 1, None, None
+Flyout, 1, 1, 1, 1, 79.5, 38
+Strikeout, 1, 1, 2, 0, None, None
+Single, 3, 1, 1, 1, None, None
+Flyout, 1, 1, 1, 1, 79.5, 38
+Single, 2, 1, 0, 0, 104.7, -4
+Strikeout, 3, 1, 1, 1, None, None
+Groundout, 0, 0, 0, 0, 87.2, -21
+Groundout, 1, 1, 0, 0, 55.7, -37
+Strikeout, 1, 1, 1, 1, None, None
+Groundout, 0, 1, 0, 1, 58.5, -4
+Groundout, 2, 1, 1, 0, 98.7, -24
+Sac Bunt, 0, 1, 0, 0, None, None
+Strikeout, 0, 2, 1, 0, None, None
+Groundout, 1, 0, 0, 2, 60.5, -28
+Fielders Choice Out, 1, 0, 0, 1, 96.3, -1
+Flyout, 1, 1, 0, 0, 81.1, 32
+Lineout, 3, 1, 0, 4, 84.4, 32
+Lineout, 3, 1, 0, 4, 84.4, 32
+Lineout, 1, 1, 0, 1, 60.5, 7
+Strikeout, 0, 1, 0, 0, None, None
+Sac Bunt, 0, 0, 0, 0, None, None
+Lineout, 2, 1, 0, 0, 80.7, 20
+Bunt Pop Out, 0, 0, 0, 0, None, None
+Strikeout, 3, 1, 1, 2, None, None
+Groundout, 0, 2, 0, 0, None, None
+Single, 0, 1, 1, 0, None, None
+Groundout, 2, 1, 1, 0, 60.4, -37
+Strikeout, 0, 2, 1, 0, None, None
+Groundout, 0, 1, 0, 0, None, None
+Groundout, 0, 0, 0, 0, 70.9, -41
+Groundout, 2, 1, 0, 1, None, None
+Groundout, 0, 1, 0, 1, 96.0, -6
+Strikeout, 1, 2, 1, 0, None, None
+Lineout, 0, 0, 0, 0, 90.5, 7
+Sac Bunt, 0, 0, 0, 0, None, None
+Single, 0, 0, 0, 0, 37.3, -32
+Groundout, 2, 2, 0, 0, 65.1, -27
+Fielders Choice Out, 0, 0, 0, 0, 36.1, -39
+Single, 2, 1, 0, 0, 86.1, 11
+Flyout, 1, 0, 0, 0, 95.3, 50
+Strikeout, 1, 1, 2, 0, None, None
+Sac Bunt, 0, 0, 0, 0, None, None
+Strikeout, 0, 1, 2, 1, None, None
+Strikeout, 1, 2, 1, 1, None, None
+Single, 1, 1, 1, 0, 98.5, 1
+Strikeout, 1, 1, 1, 2, None, None
+Lineout, 1, 1, 0, 0, 76.6, 36
+Single, 2, 2, 0, 0, 93.1, 14
+Pop Out, 3, 2, 0, 0, None, None
+Forceout, 1, 2, 0, 0, 89.2, -20
+Single, 1, 1, 0, 0, 68.8, 8

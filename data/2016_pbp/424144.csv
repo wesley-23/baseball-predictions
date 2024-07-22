@@ -1,0 +1,4 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Field Error, 1, 1, 0, 0, None, None
+Single, 2, 1, 0, 0, 92.7, -2
+Double, 1, 0, 0, 3, 85.8, 22

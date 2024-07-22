@@ -1,0 +1,31 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Sac Bunt, 0, 0, 0, 0, None, None
+Lineout, 1, 1, 0, 0, 90.5, 5
+Single, 0, 1, 0, 0, 105.4, 14
+Single, 0, 0, 0, 0, 92.1, 5
+Strikeout, 1, 1, 0, 2, None, None
+Strikeout, 0, 1, 2, 1, None, None
+Strikeout, 1, 1, 1, 1, None, None
+Double, 3, 0, 0, 1, 97.6, 19
+Groundout, 1, 1, 0, 0, 80.2, -5
+Single, 0, 0, 0, 0, 100.7, 1
+Strikeout, 2, 2, 1, 0, None, None
+Flyout, 1, 1, 0, 0, 93.1, 22
+Single, 1, 0, 0, 0, 99.9, 7
+Lineout, 0, 0, 0, 0, 89.8, 23
+Strikeout, 0, 2, 0, 2, None, None
+Groundout, 1, 1, 0, 0, 83.7, -25
+Single, 0, 1, 0, 0, 103.6, 10
+Strikeout, 2, 1, 2, 0, None, None
+Single, 2, 0, 0, 0, 81.6, 8
+Strikeout, 1, 0, 2, 1, None, None
+Strikeout, 2, 2, 1, 0, None, None
+Walk, 4, 0, 2, 1, None, None
+Single, 1, 0, 0, 2, 82.1, 10
+Strikeout, 3, 2, 0, 2, None, None
+Strikeout, 1, 0, 2, 2, None, None
+Caught Stealing 2B, 2, 1, 0, 0, None, None
+Flyout, 1, 0, 0, 0, 89.0, 22
+Strikeout, 1, 1, 1, 2, None, None
+Lineout, 0, 1, 0, 1, 90.4, 16
+Strikeout, 1, 1, 0, 2, None, None

@@ -1,0 +1,20 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Strikeout, 2, 2, 0, 1, None, None
+Single, 0, 0, 0, 0, 110.0, 6
+Lineout, 2, 1, 0, 0, 99.7, 21
+Double, 0, 1, 0, 0, 104.7, 21
+Strikeout, 0, 0, 1, 2, None, None
+Walk, 4, 1, 0, 2, None, None
+Intent Walk, 0, 0, 0, 0, None, None
+Strikeout, 1, 1, 1, 2, None, None
+Single, 2, 0, 0, 0, 88.4, 6
+Double Play, 2, 0, 0, 1, 93.1, 56
+Forceout, 1, 0, 0, 1, None, None
+Strikeout, 1, 1, 1, 2, None, None
+Single, 2, 0, 0, 0, 88.4, 6
+Double Play, 2, 0, 0, 1, 93.1, 56
+Forceout, 1, 0, 0, 1, None, None
+Lineout, 2, 1, 0, 1, 98.8, 23
+Groundout, 3, 0, 0, 2, None, None
+Strikeout, 2, 1, 1, 1, None, None
+Hit By Pitch, 2, 1, 0, 1, None, None

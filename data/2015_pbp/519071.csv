@@ -1,0 +1,31 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Strikeout, 1, 3, 0, 0, None, None
+Double, 0, 1, 0, 0, 89.3, 24
+Sac Bunt, 0, 0, 0, 0, None, None
+Flyout, 3, 1, 0, 0, 71.8, 35
+Pop Out, 1, 1, 0, 1, 80.7, 60
+Strikeout, 3, 1, 1, 1, None, None
+Lineout, 1, 0, 0, 1, 94.7, 22
+Strikeout, 0, 0, 1, 1, None, None
+Lineout, 0, 0, 0, 1, 97.6, 22
+Single, 0, 0, 0, 1, 82.1, 1
+Single, 0, 0, 0, 2, 90.8, 5
+Double, 0, 0, 0, 0, 92.9, 11
+Lineout, 0, 0, 1, 2, 75.3, 24
+Flyout, 1, 0, 0, 1, 73.4, 51
+Flyout, 1, 0, 0, 0, 79.4, 45
+Groundout, 1, 1, 0, 0, None, None
+Flyout, 0, 0, 0, 0, 82.4, 31
+Single, 1, 0, 1, 0, 88.1, 10
+Flyout, 3, 1, 0, 0, 72.6, 36
+Single, 2, 1, 1, 0, 85.2, 12
+Groundout, 0, 1, 0, 0, None, None
+Flyout, 0, 0, 0, 0, 80.2, 27
+Flyout, 2, 1, 0, 0, 89.0, 45
+Home Run, 1, 0, 0, 0, 95.7, 35
+Pop Out, 3, 1, 0, 0, 71.1, 49
+Flyout, 2, 1, 0, 0, 83.0, 48
+Lineout, 0, 1, 1, 1, 82.9, 22
+Groundout, 0, 1, 0, 2, 74.4, 1
+Flyout, 0, 1, 0, 0, 80.2, 56
+Single, 1, 0, 0, 0, 83.2, 14

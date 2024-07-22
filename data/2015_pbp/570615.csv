@@ -1,0 +1,29 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Pop Out, 0, 0, 0, 0, None, None
+Flyout, 1, 0, 0, 0, 104.7, 44
+Strikeout, 1, 1, 2, 0, None, None
+Strikeout, 1, 0, 3, 0, None, None
+Single, 0, 1, 1, 0, 89.7, -1
+Triple, 0, 0, 0, 0, 102.5, 35
+Walk, 4, 0, 2, 0, None, None
+Strikeout, 2, 1, 1, 2, None, None
+Strikeout, 1, 2, 1, 0, None, None
+Strikeout, 0, 1, 2, 0, None, None
+Strikeout, 0, 0, 3, 0, None, None
+Strikeout, 1, 2, 0, 1, None, None
+Groundout, 2, 1, 0, 0, 72.8, -35
+Strikeout, 1, 1, 2, 0, None, None
+Pop Out, 0, 0, 0, 0, None, None
+Flyout, 1, 0, 0, 0, 104.7, 44
+Strikeout, 1, 1, 2, 0, None, None
+Strikeout, 3, 1, 1, 2, None, None
+Walk, 4, 0, 1, 2, None, None
+Strikeout, 1, 1, 2, 2, None, None
+Single, 1, 0, 1, 2, 108.3, 3
+Pop Out, 0, 0, 0, 0, 74.4, 66
+Single, 1, 0, 0, 0, 109.6, 10
+Walk, 4, 0, 0, 2, None, None
+Pop Out, 3, 0, 2, 2, 92.7, 66
+Groundout, 1, 0, 0, 0, 71.3, -13
+Flyout, 1, 0, 0, 0, 79.6, 34
+Lineout, 1, 1, 0, 0, 91.8, 17

@@ -1,0 +1,10 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Flyout, 0, 0, 0, 0, 97.2, 40
+Flyout, 0, 0, 0, 0, 95.3, 33
+Groundout, 1, 1, 0, 0, 77.3, -16
+Single, 2, 0, 1, 1, 83.3, 6
+Lineout, 1, 1, 0, 1, 86.7, 33
+Double, 0, 0, 0, 0, 63.0, 35
+Strikeout, 2, 1, 1, 1, None, None
+Groundout, 0, 0, 0, 1, None, None
+Home Run, 0, 0, 0, 0, 105.6, 23

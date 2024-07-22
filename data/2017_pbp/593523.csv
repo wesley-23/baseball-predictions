@@ -1,0 +1,65 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Double, 0, 0, 0, 1, 94.8, 31
+Pop Out, 1, 0, 0, 0, 71.3, 61
+Forceout, 2, 0, 1, 1, None, None
+Strikeout, 3, 1, 1, 3, None, None
+Groundout, 1, 0, 2, 1, 74.4, 1
+Flyout, 0, 0, 0, 1, 73.5, 43
+Lineout, 2, 1, 0, 0, 55.1, 23
+Pop Out, 2, 0, 2, 0, 71.7, 47
+Groundout, 0, 1, 0, 1, 98.1, 3
+Strikeout, 0, 2, 1, 1, None, None
+Single, 0, 0, 0, 0, 91.0, 14
+Single, 1, 1, 0, 1, 85.5, 13
+Flyout, 1, 0, 0, 0, 97.8, 49
+Single, 2, 1, 0, 2, 63.0, -29
+Single, 1, 0, 1, 0, 85.1, 10
+Lineout, 1, 0, 1, 0, 104.6, 17
+Groundout, 1, 0, 1, 3, 85.4, 1
+Strikeout, 2, 2, 1, 3, None, None
+Strikeout, 3, 1, 2, 1, None, None
+Double, 0, 0, 0, 1, 94.8, 31
+Pop Out, 1, 0, 0, 0, 71.3, 61
+Forceout, 2, 0, 1, 1, None, None
+Strikeout, 3, 1, 1, 3, None, None
+Single, 1, 0, 0, 0, 81.0, 5
+Fielders Choice, 2, 0, 2, 0, 97.1, -17
+Strikeout, 0, 0, 2, 0, None, None
+Strikeout, 0, 0, 3, 0, None, None
+Strikeout, 1, 1, 1, 1, None, None
+Strikeout, 3, 0, 1, 2, None, None
+Groundout, 1, 0, 0, 0, 105.5, 8
+Walk, 4, 1, 0, 1, None, None
+Single, 1, 1, 0, 0, 72.4, 20
+Single, 1, 1, 1, 0, 98.6, 10
+Groundout, 2, 0, 0, 1, None, None
+Single, 1, 1, 0, 0, 98.4, 15
+Groundout, 0, 0, 0, 0, 82.2, -16
+Hit By Pitch, 1, 1, 0, 1, None, None
+Single, 1, 0, 2, 0, 83.3, 15
+Groundout, 1, 0, 0, 1, 106.6, -7
+Forceout, 2, 0, 1, 1, 86.9, 8
+Groundout, 2, 0, 1, 1, 97.1, 5
+Single, 1, 0, 1, 2, None, None
+Strikeout, 3, 0, 3, 0, None, None
+Strikeout, 1, 1, 1, 1, None, None
+Groundout, 1, 0, 0, 0, None, None
+Strikeout, 0, 1, 1, 1, None, None
+Groundout, 0, 1, 0, 1, None, None
+Flyout, 0, 1, 0, 0, 83.4, 57
+Single, 0, 0, 0, 0, 87.0, None
+Single, 1, 1, 0, 0, 66.9, 30
+Strikeout, 1, 1, 1, 1, None, None
+Forceout, 1, 0, 0, 1, 77.3, 4
+Double, 0, 1, 0, 0, 96.2, 27
+Lineout, 0, 1, 0, 0, 77.0, 11
+Strikeout, 1, 1, 1, 3, None, None
+Groundout, 3, 1, 0, 0, None, None
+Groundout, 3, 0, 0, 1, 60.3, -21
+Single, 2, 1, 1, 0, 81.2, None
+Strikeout, 1, 1, 2, 1, None, None
+Flyout, 0, 0, 0, 0, 86.2, 28
+Double, 3, 1, 0, 2, 95.1, 22
+Strikeout, 3, 1, 1, 1, None, None
+Groundout, 1, 0, 0, 1, None, None
+Forceout, 0, 0, 0, 0, None, None

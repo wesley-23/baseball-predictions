@@ -1,0 +1,65 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Single, 3, 0, 0, 1, 107.2, -4
+Walk, 4, 0, 0, 2, None, None
+Strikeout, 2, 1, 2, 0, None, None
+Walk, 4, 1, 0, 1, None, None
+Single, 1, 0, 0, 0, None, None
+Single, 1, 1, 0, 1, 100.5, 10
+Triple, 3, 1, 1, 0, 100.3, 28
+Walk, 4, 0, 2, 0, None, None
+Groundout, 0, 2, 0, 0, 61.2, -38
+Flyout, 0, 0, 0, 1, 87.2, 35
+Walk, 4, 0, 1, 2, None, None
+Strikeout, 3, 3, 0, 1, None, None
+Groundout, 3, 1, 0, 1, 96.6, -2
+Single, 3, 1, 0, 0, 110.4, 6
+Strikeout, 2, 2, 1, 0, None, None
+Strikeout, 1, 1, 1, 1, None, None
+Walk, 4, 0, 0, 0, None, None
+Walk, 4, 1, 0, 0, None, None
+Strikeout, 2, 1, 1, 1, None, None
+Double, 0, 1, 0, 0, 105.2, 11
+Groundout, 2, 2, 0, 0, 71.3, -5
+Strikeout, 1, 2, 1, 0, None, None
+Groundout, 1, 1, 0, 0, 93.3, None
+Strikeout, 1, 1, 1, 0, None, None
+Groundout, 1, 1, 0, 0, None, None
+Strikeout, 2, 0, 3, 0, None, None
+Single, 1, 0, 0, 1, 91.5, 1
+Groundout, 1, 1, 0, 0, None, None
+Strikeout, 1, 2, 1, 0, None, None
+Strikeout, 2, 1, 2, 0, None, None
+Strikeout, 3, 0, 2, 1, None, None
+Strikeout Double Play, 3, 0, 3, 1, None, None
+Pickoff Caught Stealing 2B, 1, 1, 0, 1, None, None
+Strikeout, 2, 0, 2, 0, None, None
+Strikeout, 3, 2, 0, 1, None, None
+Strikeout, 2, 0, 3, 0, None, None
+Strikeout, 2, 1, 1, 1, None, None
+Groundout, 2, 2, 0, 0, 78.0, -12
+Groundout, 3, 1, 1, 1, 59.7, -43
+Forceout, 2, 2, 0, 0, 74.5, -27
+Strikeout, 0, 1, 1, 1, None, None
+Single, 3, 1, 0, 2, 78.1, 15
+Strikeout, 0, 2, 1, 0, None, None
+Walk, 4, 1, 0, 0, None, None
+Single, 1, 0, 0, 0, 89.0, 6
+Groundout, 3, 0, 1, 2, 58.4, -33
+Strikeout, 3, 1, 1, 1, None, None
+Field Error, 1, 0, 0, 0, None, None
+Walk, 4, 0, 0, 0, None, None
+Strikeout, 1, 1, 1, 1, None, None
+Strikeout, 0, 2, 1, 0, None, None
+Groundout, 2, 1, 0, 0, 85.4, -27
+Strikeout, 1, 1, 2, 0, None, None
+Pop Out, 2, 2, 0, 0, None, None
+Single, 2, 0, 0, 3, 105.6, -8
+Double, 1, 2, 0, 0, 80.4, 8
+Single, 0, 2, 0, 0, 55.7, -51
+Forceout, 0, 0, 0, 0, 82.5, -29
+Strikeout, 0, 3, 0, 0, None, None
+Strikeout, 1, 1, 2, 0, None, None
+Flyout, 0, 1, 0, 0, 64.3, 49
+Strikeout, 2, 1, 2, 0, None, None
+Strikeout, 0, 0, 3, 0, None, None
+Sac Bunt, 1, 0, 0, 0, None, None

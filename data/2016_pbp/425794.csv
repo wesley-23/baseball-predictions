@@ -1,0 +1,71 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Fielders Choice, 1, 0, 0, 0, None, None
+Strikeout, 0, 1, 2, 0, None, None
+Sac Bunt, 0, 0, 0, 0, None, None
+Flyout, 1, 0, 1, 1, 85.6, 24
+Pop Out, 2, 0, 1, 1, 77.4, 60
+Strikeout, 1, 0, 1, 0, None, None
+Groundout, 0, 1, 1, 0, 105.3, -11
+Sac Bunt, 0, 0, 0, 0, None, None
+Groundout, 0, 1, 0, 0, 104.2, -8
+Groundout, 0, 0, 0, 0, 99.1, None
+Triple, 1, 0, 0, 0, 106.1, None
+Double, 2, 0, 0, 1, 105.7, 11
+Home Run, 3, 0, 0, 1, 105.4, 32
+Double, 1, 1, 0, 1, 83.4, 24
+Groundout, 2, 0, 0, 1, 70.6, -35
+Groundout, 1, 1, 0, 2, 88.3, -2
+Fielders Choice Out, 0, 0, 0, 1, None, None
+Sac Bunt, 0, 1, 0, 0, None, None
+Groundout, 0, 0, 0, 0, 94.1, -13
+Double, 0, 0, 0, 0, 104.3, 7
+GIDP, 3, 0, 0, 2, 97.1, -23
+Strikeout, 0, 2, 1, 0, None, None
+Groundout, 1, 1, 0, 4, 74.2, 3
+Sac Bunt, 0, 0, 0, 0, None, None
+Caught Stealing 2B, 2, 0, 1, 1, None, None
+Strikeout, 0, 1, 2, 0, None, None
+Flyout, 1, 0, 0, 0, 97.9, 36
+Double, 1, 0, 0, 1, 89.0, 20
+Groundout, 0, 0, 0, 0, 73.4, -8
+Forceout, 0, 0, 1, 1, None, None
+Lineout, 1, 0, 0, 2, 77.1, 13
+Groundout, 2, 1, 0, 0, 84.3, -2
+Strikeout, 0, 1, 1, 1, None, None
+Strikeout, 0, 0, 1, 3, None, None
+Lineout, 0, 0, 0, 0, 91.5, 22
+Flyout, 0, 1, 0, 0, 88.5, 33
+Strikeout, 2, 2, 1, 0, None, None
+Strikeout, 0, 0, 3, 0, None, None
+Strikeout, 0, 1, 1, 2, None, None
+Strikeout, 1, 0, 2, 2, None, None
+Strikeout, 1, 1, 0, 2, None, None
+Strikeout, 1, 0, 2, 1, None, None
+Groundout, 0, 0, 0, 0, 98.4, -25
+Walk, 4, 2, 0, 3, None, None
+Pop Out, 0, 0, 1, 0, None, None
+Strikeout, 0, 0, 3, 0, None, None
+Home Run, 0, 1, 0, 0, 101.4, 22
+Lineout, 3, 1, 0, 0, 80.6, 22
+Strikeout, 1, 0, 3, 0, None, None
+Flyout, 0, 1, 0, 1, 71.7, 33
+Double, 3, 2, 0, 0, 66.9, 18
+Strikeout, 0, 1, 1, 1, None, None
+Pop Out, 0, 0, 0, 0, None, None
+Strikeout, 2, 2, 1, 0, None, None
+Groundout, 0, 0, 0, 0, 104.1, 5
+Flyout, 1, 0, 0, 0, 95.1, 37
+Double, 0, 0, 0, 0, 100.7, 24
+Flyout, 3, 1, 0, 1, 87.4, 53
+Single, 0, 0, 0, 0, 69.2, 28
+Single, 2, 1, 0, 0, None, None
+Walk, 4, 1, 0, 0, None, None
+Pop Out, 2, 0, 0, 0, None, None
+Strikeout, 2, 0, 1, 2, None, None
+Double, 0, 1, 0, 0, 104.0, 15
+Sac Bunt, 0, 0, 0, 0, None, None
+Single, 0, 0, 1, 0, 62.0, 25
+Lineout, 2, 0, 1, 1, 101.4, 11
+Groundout, 0, 0, 0, 1, None, None
+Pop Out, 1, 0, 0, 0, None, None
+Field Error, 3, 1, 1, 1, 108.0, 3

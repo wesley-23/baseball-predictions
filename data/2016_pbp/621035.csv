@@ -1,0 +1,67 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Strikeout, 0, 1, 2, 0, None, None
+Strikeout, 0, 0, 3, 0, None, None
+Single, 0, 0, 0, 0, 68.9, 32
+Triple, 0, 0, 2, 0, 101.1, 18
+Lineout, 0, 1, 0, 0, 75.7, 26
+Groundout, 0, 0, 0, 0, None, None
+GIDP, 2, 0, 0, 3, 103.7, -7
+Lineout, 0, 0, 0, 0, 88.7, 9
+Single, 1, 2, 0, 1, 86.8, 7
+Forceout, 2, 1, 0, 1, 72.9, -5
+Strikeout, 2, 0, 2, 1, None, None
+Strikeout, 3, 0, 1, 2, None, None
+Strikeout, 2, 1, 1, 1, None, None
+Walk, 4, 2, 0, 1, None, None
+Single, 2, 2, 0, 0, 103.8, -15
+Caught Stealing 2B, 2, 0, 1, 6, None, None
+Lineout, 1, 0, 1, 1, 91.5, 21
+Lineout, 1, 0, 0, 1, 84.5, 26
+GIDP, 1, 0, 0, 1, 77.0, -9
+Flyout, 1, 1, 0, 0, 97.9, 43
+Groundout, 1, 0, 2, 0, 65.7, -45
+Strikeout, 2, 1, 2, 0, None, None
+Triple, 0, 0, 0, 1, 101.6, 23
+Double, 0, 0, 0, 0, 87.9, -23
+Home Run, 2, 0, 0, 0, 102.5, 31
+Bunt Groundout, 0, 0, 0, 0, None, None
+Walk, 4, 0, 1, 1, None, None
+Single, 2, 0, 0, 0, 90.4, 13
+GIDP, 3, 0, 2, 0, 84.8, 3
+Single, 1, 0, 0, 0, 96.6, 15
+Strikeout, 0, 0, 2, 1, None, None
+Double, 0, 0, 0, 0, 102.9, 19
+Groundout, 2, 0, 0, 0, 92.6, -7
+Intent Walk, 1, 0, 0, 0, None, None
+Field Error, 1, 0, 0, 0, None, None
+Strikeout, 2, 1, 2, 0, None, None
+Flyout, 2, 0, 0, 0, 87.1, 38
+Flyout, 2, 1, 0, 0, 90.1, 42
+Lineout, 2, 1, 0, 0, 98.5, 17
+Pop Out, 2, 1, 0, 0, None, None
+Strikeout, 2, 0, 1, 2, None, None
+Strikeout, 3, 3, 0, 3, None, None
+Groundout, 1, 1, 1, 1, 86.3, -1
+Flyout, 1, 0, 0, 1, 91.8, 36
+Groundout, 1, 1, 1, 0, 94.1, -14
+Walk, 4, 0, 2, 3, None, None
+Groundout, 0, 1, 0, 0, None, None
+Strikeout, 0, 0, 1, 2, None, None
+Strikeout, 1, 2, 1, 0, None, None
+Flyout, 0, 0, 2, 0, 95.3, 38
+Pop Out, 1, 0, 0, 0, 68.7, 60
+Single, 3, 0, 0, 2, None, None
+Groundout, 2, 2, 0, 1, 69.8, -9
+Lineout, 0, 0, 0, 0, 81.1, 30
+Strikeout, 2, 2, 1, 0, None, None
+Single, 1, 0, 0, 0, 84.3, 9
+Single, 2, 1, 0, 2, 81.5, 16
+Groundout, 2, 1, 0, 1, 81.1, -12
+Groundout, 1, 1, 0, 0, 93.6, -1
+Groundout, 0, 0, 0, 0, None, None
+Strikeout, 0, 0, 2, 1, None, None
+Lineout, 1, 1, 0, 0, 106.0, 14
+Strikeout, 2, 1, 1, 1, None, None
+Lineout, 2, 0, 1, 0, 92.4, 21
+Lineout, 3, 1, 0, 0, 89.0, 10
+Groundout, 1, 0, 0, 1, 73.0, -4

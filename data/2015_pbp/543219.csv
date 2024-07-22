@@ -1,0 +1,7 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Single, 0, 1, 0, 0, 63.7, 44
+Groundout, 2, 1, 0, 1, 101.7, -4
+Strikeout, 1, 0, 3, 0, None, None
+Single, 3, 1, 1, 1, 110.1, -3
+Strikeout, 1, 3, 0, 1, None, None
+Strikeout, 0, 2, 0, 1, None, None

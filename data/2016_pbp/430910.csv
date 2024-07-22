@@ -1,0 +1,15 @@
+Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
+Flyout, 0, 0, 0, 0, 95.0, 41
+Strikeout, 2, 1, 1, 1, None, None
+Walk, 4, 0, 0, 0, None, None
+Groundout, 0, 1, 0, 0, 65.1, -35
+Forceout, 0, 0, 0, 0, 78.8, -24
+Forceout, 2, 1, 0, 1, 87.9, -22
+Single, 1, 1, 0, 0, 93.2, 14
+Groundout, 1, 0, 0, 1, None, None
+Strikeout, 1, 1, 2, 0, None, None
+Double, 0, 0, 1, 0, 91.6, 17
+Groundout, 2, 0, 0, 0, 81.1, -42
+Groundout, 0, 0, 0, 0, 72.0, -57
+Forceout, 0, 1, 0, 0, 75.0, 12
+Pop Out, 0, 0, 1, 0, None, None
