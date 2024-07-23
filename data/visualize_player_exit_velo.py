@@ -5,7 +5,9 @@ import numpy as np
 import os
 import queue
 import math
-
+import multiprocessing as mp
+import ctypes as c
+from time import time
 
 # Create csv file that conglomerates all pbp data for a certain year.
 def create_conglomerate_data(year):
@@ -117,16 +119,17 @@ def get_hit_frequencies_table():
 
     for e, l, h, o in zip(ev, la, df['Hits'], df['Outs']):
         r = h / (h + o)
-        table[l - min][e] = r
-        hm[l - min][e] = h + o
+        table[l + min][e] = r
+        hm[l + min][e] = h + o
     table = interpolate(table, hm, 50)
-   
     return (table, min, rows, cols)
 
-def interpolate(table, hm, n):
-    new_table = np.zeros((len(table), len(table[0])))
 
-    for i in range(len(table)):
+
+def interpolate_point(table, hm, n, i, i_end, new_table):
+    # new_table = np.zeros((len(table), len(table[0])))
+
+    for i in range(i, i_end):
         for j in range(len(table[0])):
             pq = queue.PriorityQueue()
             points = hm[i][j]
@@ -169,12 +172,80 @@ def interpolate(table, hm, n):
                     pq.put((math.sqrt((dx)**2 + (dy + 1)**2), (dx, dy + 1)))
                     vis[(dy + 1)] = True
                 prev = curr
+            # print(i,  j)
+            new_table[i * len(table[0]) + j] = total / points
+        # print(new_table[i])
+
+def interpoolate(table, hm, n):
+    new_table = np.zeros((len(table) * len(table[0])))
+    shared_table = mp.Array(c.c_float, new_table) 
+    processes = []
+    start = 0
+    for i in range(1, 9):
+        end = round(len(table) * i / 8)
+        p = mp.Process(target = interpolate_point, args = (table, hm, n, start, end, shared_table))
+        # p = (table, hm, n, start, end, new_table)
+        processes.append(p)
+        # interpolate_point(table, hm, n, start, end, new_table)
+        start = end
+    for p in processes:
+        p.start()
+    for p in processes:
+        p.join()
+    new_table = np.copy(shared_table)
+    output = new_table.reshape((len(table), len(table[0])))
+    return output
+                
+    
+def interpolate(table, hm, n):
+    new_table = np.zeros((len(table), len(table[0])))
+
+    for i in range(len(table)):
+        for j in range(len(table[0])):
+            pq = queue.PriorityQueue()
+            points = hm[i][j]
+            total = points * table[i][j]
+            vis = {}
+            pq.put((math.sqrt((1)+ (1)), (1, 1)))
+            pq.put((1, (1, 0)))
+            pq.put((1, (0, 1)))
+            prev = 0
+            while True:
+                (curr, (dx, dy)) = pq.get()
+                if points > n and prev != curr:
+                    break
+                if i - dx >= 0:
+                    if not j + dy >= len(table[0]):
+                        num = hm[i - dx][j + dy]
+                        points += num
+                        total += table[i - dx][j + dy] * num
+                    if not j - dy < 0:
+                        num = hm[i - dx][j - dy]
+                        points += num
+                        total += table[i - dx][j - dy] * num
+                if i + dx < len(table[0]):
+                    if not j + dy >= len(table[0]):
+                        num = hm[i + dx][j + dy]
+                        points += num
+                        total += table[i + dx][j + dy] * num
+                    if not j - dy < 0:
+                        num = hm[i + dx][j - dy]
+                        points += num
+                        total += table[i + dx][j - dy] * num
+                if not ((dx + 1) * 1000 + (dy + 1)) in vis:
+                    pq.put((math.sqrt((dx + 1)**2 + (dy + 1)**2), (dx + 1, dy + 1)))
+                    vis[(dx + 1) * 1000 + (dy + 1)] = True
+                if not ((dx + 1) * 1000 + dy) in vis:
+                    pq.put((math.sqrt((dx + 1)**2 + (dy)**2), (dx + 1, dy)))
+                    vis[(dx + 1) * 1000 + (dy)] = True
+                if not ((dy + 1)) in vis:
+                    pq.put((math.sqrt((dx)**2 + (dy + 1)**2), (dx, dy + 1)))
+                    vis[(dy + 1)] = True
+                prev = curr
             new_table[i][j] = total / points
     return new_table
 
 
-                
-    
 
 # def interpolate(table, hm, n):
 #     new_table = np.zeros((len(table), len(table[0])))
@@ -214,10 +285,14 @@ def interpolate(table, hm, n):
 
 
 
-
-# create_hit_frequency_heat_map()
-# get_hit_frequencies_table()
+if __name__ == '__main__':
+    mp.set_start_method('spawn')
+    start = time()
+    create_hit_frequency_heat_map()
+    # get_hit_frequencies_table()
+    print(time() - start)
 # create_hit_EV_LA_hit_chart()
-create_conglomerate_data(2019)
-create_hit_frequency_data(2019)
+# create_conglomerate_data(2018)
+# create_hit_frequency_data(2018)
+
 

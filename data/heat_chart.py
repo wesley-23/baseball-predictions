@@ -6,6 +6,8 @@ import os
 import math
 import queue
 import scipy.stats
+import multiprocessing as mp
+import ctypes as c
 
 class heat_chart:
     MAX_LA = 90
@@ -92,15 +94,14 @@ class heat_chart:
                     hm[l + min][e] = outcomes
         if not n is None:
             if self.kernel is None:
-                table = self.interpolate(table, hm, n)
+                    table = self.interpolate(table, hm, n)
             else:
                 table = self.nadaraya_watson_weighted_avg(table, hm, n)
         return table
 
-    def interpolate(self, table, hm, n):
-        new_table = np.zeros((len(table), len(table[0])))
-
-        for i in range(len(table)):
+    def interpolate_point(self, table, hm, n, i, i_end, new_table):
+    # new_table = np.zeros((len(table), len(table[0])))
+        for i in range(i, i_end):
             for j in range(len(table[0])):
                 pq = queue.PriorityQueue()
                 points = hm[i][j]
@@ -112,6 +113,7 @@ class heat_chart:
                 prev = 0
                 while True:
                     (curr, (dx, dy)) = pq.get()
+                    # print(dx, dy)
                     if points > n and prev != curr:
                         break
                     if i - dx >= 0:
@@ -142,9 +144,26 @@ class heat_chart:
                         pq.put((math.sqrt((dx)**2 + (dy + 1)**2), (dx, dy + 1)))
                         vis[(dy + 1)] = True
                     prev = curr
-                new_table[i][j] = total / points
-        return new_table
+                new_table[i * len(table[0]) + j] = total / points
 
+    def interpolate(self, table, hm, n):
+        new_table = np.zeros((len(table) * len(table[0])))
+        shared_table = mp.Array(c.c_float, new_table) 
+        processes = []
+        start = 0
+        for i in range(1, 9):
+            end = round(len(table) * i / 8)
+            p = mp.Process(target = self.interpolate_point, args = (table, hm, n, start, end, shared_table))
+            processes.append(p)
+            # interpolate_point(table, hm, n, start, end, new_table)
+            start = end
+        for p in processes:
+            p.start()
+        for p in processes:
+            p.join()
+        new_table = np.copy(shared_table)
+        output = new_table.reshape((len(table), len(table[0])))
+        return output
 
     def nadaraya_watson_weighted_avg(self, table, hm, n):
         new_table = np.zeros((len(table), len(table[0])))
