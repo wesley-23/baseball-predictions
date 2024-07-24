@@ -202,7 +202,6 @@ Strikeout, 2, 1, 1, 2, None, None
 Groundout, 1, 0, 0, 1, 60.1, -15
 Flyout, 2, 0, 0, 1, 95.5, 41
 Single, 2, 1, 0, 1, 74.2, -15
-Walk, 4, 0, 0, 2, None, None
 Pop Out, 2, 1, 0, 0, 79.5, 63
 Double, 0, 0, 0, 0, 95.9, -4
 Flyout, 2, 1, 0, 1, 85.1, 46
@@ -278,8 +277,6 @@ Walk, 4, 1, 0, 0, None, None
 Groundout, 0, 0, 0, 1, 70.0, -5
 Groundout, 3, 1, 0, 1, 82.2, 4
 Sac Bunt, 0, 0, 0, 0, 30.7, -55
-Walk, 4, 0, 0, 2, None, None
-Flyout, 2, 1, 0, 0, 77.6, 50
 Walk, 4, 2, 0, 2, None, None
 Flyout, 1, 1, 0, 0, 88.4, 55
 Flyout, 2, 2, 0, 0, 87.3, 34

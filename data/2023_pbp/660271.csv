@@ -1,14 +1,12 @@
 Outcome, Balls, CalledStrikes, Whiffs, Fouls, EV, LA
 Strikeout, 3, 1, 1, 3, None, None
 Single, 1, 0, 0, 0, 111.6, -3
-Strikeout, 3, 1, 2, 0, None, None
 Groundout, 1, 0, 1, 0, 100.8, -6
 Single, 0, 0, 1, 0, 99.3, 21
 Strikeout, 2, 1, 1, 2, None, None
 Single, 1, 0, 0, 0, 100.0, -3
 Groundout, 1, 0, 0, 1, 100.9, -7
 Lineout, 0, 0, 0, 0, 103.2, 18
-Strikeout, 3, 1, 2, 0, None, None
 Home Run, 0, 0, 0, 0, 110.8, 27
 Strikeout, 1, 1, 2, 1, None, None
 Groundout, 1, 1, 0, 1, 103.7, -34
@@ -30,7 +28,6 @@ Double, 2, 1, 0, 4, 101.6, 23
 Strikeout, 0, 1, 2, 0, None, None
 Double, 1, 1, 0, 0, 80.4, 16
 Walk, 4, 0, 0, 3, None, None
-Strikeout, 3, 1, 2, 0, None, None
 Forceout, 1, 2, 0, 0, 73.5, -30
 Home Run, 2, 0, 0, 1, 108.6, 23
 Single, 3, 1, 1, 0, 100.5, 7
@@ -65,7 +62,6 @@ Flyout, 1, 1, 0, 0, 81.2, 39
 Field Error, 1, 0, 0, 0, 62.5, -78
 Lineout, 1, 0, 0, 0, 97.1, 23
 Home Run, 2, 0, 0, 0, 116.7, 19
-Strikeout, 3, 1, 2, 0, None, None
 Catcher Interference, 1, 0, 2, 1, None, None
 Flyout, 1, 1, 1, 1, 78.8, 31
 Flyout, 3, 1, 1, 0, 111.5, 33
@@ -131,7 +127,6 @@ Walk, 4, 0, 0, 0, None, None
 Single, 3, 0, 0, 1, 113.0, 4
 Walk, 4, 0, 0, 0, None, None
 Pop Out, 0, 1, 0, 0, 88.0, 69
-Strikeout, 3, 1, 2, 0, None, None
 Forceout, 1, 0, 0, 0, 89.6, 9
 Groundout, 0, 0, 0, 0, 82.5, -6
 Pop Out, 1, 0, 0, 0, 88.2, 63
@@ -154,7 +149,6 @@ Groundout, 3, 1, 0, 2, 94.9, -22
 Lineout, 3, 1, 1, 0, 94.4, 18
 Catcher Interference, 0, 0, 0, 1, None, None
 Strikeout, 1, 0, 3, 0, None, None
-Strikeout, 3, 1, 2, 0, None, None
 Flyout, 0, 0, 1, 0, 73.6, 32
 Strikeout, 2, 0, 2, 1, None, None
 Home Run, 1, 0, 0, 2, 102.6, 31
@@ -272,7 +266,6 @@ Strikeout, 2, 0, 1, 2, None, None
 Single, 1, 0, 0, 0, 92.2, 10
 Pop Out, 2, 1, 1, 1, 77.7, 60
 Groundout, 1, 0, 1, 2, 71.2, -27
-Strikeout, 3, 1, 2, 0, None, None
 Single, 2, 0, 1, 2, 67.7, -33
 Home Run, 0, 0, 0, 0, 112.9, 30
 Double, 0, 0, 0, 0, 112.4, 11
@@ -393,8 +386,6 @@ Triple, 1, 0, 0, 1, 113.1, 11
 Flyout, 1, 0, 0, 0, 101.1, 51
 Home Run, 0, 0, 0, 1, 105.2, 29
 Sac Fly, 0, 0, 0, 0, 92.4, 44
-Strikeout, 3, 1, 2, 0, None, None
-Walk, 4, 0, 0, 2, None, None
 Single, 0, 0, 0, 0, 76.9, 25
 Lineout, 0, 0, 0, 0, 110.3, 12
 Single, 3, 2, 0, 0, 87.9, 14
@@ -485,7 +476,6 @@ Strikeout, 0, 0, 2, 1, None, None
 GIDP, 1, 0, 0, 3, 89.3, -9
 Lineout, 3, 0, 1, 2, 107.3, 17
 Strikeout, 0, 0, 2, 1, None, None
-Strikeout, 3, 1, 2, 0, None, None
 Single, 1, 0, 0, 0, 105.6, 15
 Strikeout, 0, 1, 1, 2, None, None
 Strikeout, 1, 1, 2, 0, None, None

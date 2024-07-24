@@ -354,7 +354,6 @@ Triple, 1, 1, 0, 2, 101.3, 18
 Groundout, 2, 0, 0, 2, 90.4, -1
 Pop Out, 2, 1, 0, 1, 90.7, 79
 Walk, 4, 1, 0, 1, None, None
-Strikeout, 1, 1, 2, 1, None, None
 Sac Fly, 1, 0, 0, 1, 95.6, 25
 GIDP, 1, 0, 1, 0, 95.1, 3
 Lineout, 0, 1, 0, 1, 97.9, 10
@@ -399,8 +398,6 @@ Strikeout, 0, 1, 2, 0, None, None
 Single, 2, 0, 2, 3, 90.2, None
 Pop Out, 2, 0, 0, 0, 77.0, 64
 Flyout, 0, 0, 0, 0, 86.9, 37
-Groundout, 0, 1, 1, 0, 88.1, -24
-Strikeout, 1, 1, 2, 1, None, None
 Hit By Pitch, 2, 0, 0, 0, None, None
 Single, 3, 0, 0, 1, 94.0, 11
 Groundout, 0, 0, 0, 1, 102.4, 6

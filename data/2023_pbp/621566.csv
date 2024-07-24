@@ -177,7 +177,6 @@ Groundout, 3, 2, 0, 1, 100.3, -5
 Groundout, 1, 1, 0, 2, 96.2, None
 Groundout, 1, 0, 0, 0, 75.8, -28
 Strikeout, 0, 1, 2, 1, None, None
-Strikeout, 2, 0, 2, 1, None, None
 Pop Out, 0, 0, 0, 0, 97.1, 63
 Walk, 4, 2, 0, 1, None, None
 Groundout, 1, 1, 0, 1, 107.5, -4
@@ -418,7 +417,6 @@ Flyout, 0, 1, 0, 0, 87.4, 53
 GIDP, 2, 0, 0, 3, 106.2, 6
 Double, 0, 1, 1, 0, 106.1, 14
 Flyout, 0, 0, 0, 0, 87.9, 35
-Strikeout, 2, 0, 2, 1, None, None
 Home Run, 1, 0, 0, 0, 110.3, 24
 Hit By Pitch, 2, 1, 0, 1, None, None
 Groundout, 2, 1, 0, 0, 91.7, None
@@ -455,14 +453,12 @@ Groundout, 2, 0, 0, 2, 99.5, -9
 Strikeout, 0, 0, 3, 0, None, None
 Strikeout, 2, 2, 1, 1, None, None
 Groundout, 1, 0, 0, 0, 93.5, -9
-Strikeout, 2, 0, 2, 1, None, None
 Groundout, 1, 0, 1, 2, 96.1, -9
 Groundout, 1, 0, 0, 0, 89.9, -15
 Walk, 4, 1, 0, 0, None, None
 Groundout, 3, 1, 0, 2, 104.1, -4
 Flyout, 1, 0, 0, 2, 97.0, 48
 Single, 3, 2, 0, 2, 93.8, 12
-Strikeout, 2, 0, 2, 1, None, None
 Single, 0, 0, 0, 0, 105.1, 5
 Groundout, 2, 1, 0, 0, 86.7, -31
 Flyout, 1, 0, 0, 0, 108.2, 51

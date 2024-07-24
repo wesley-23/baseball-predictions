@@ -23,7 +23,6 @@ Single, 0, 0, 0, 0, 69.2, 37
 Lineout, 1, 1, 1, 0, 105.1, 21
 Single, 2, 1, 0, 0, 93.4, -24
 Strikeout, 2, 0, 2, 1, None, None
-Strikeout, 1, 1, 2, 0, None, None
 Single, 1, 0, 1, 2, 91.9, -11
 Groundout, 2, 1, 0, 2, 81.2, -22
 Single, 0, 0, 0, 0, 114.4, 11
@@ -55,7 +54,6 @@ Strikeout, 2, 0, 3, 2, None, None
 Groundout, 2, 2, 0, 0, 109.4, 1
 Single, 1, 0, 0, 0, 108.6, -14
 Walk, 4, 1, 1, 0, None, None
-Strikeout, 1, 1, 2, 0, None, None
 Walk, 4, 2, 0, 0, None, None
 Double, 1, 1, 0, 0, 95.6, 24
 Single, 1, 2, 0, 0, 79.7, -3
@@ -121,7 +119,6 @@ Groundout, 2, 1, 1, 0, 98.9, -29
 Fielders Choice, 1, 0, 0, 1, 109.8, -3
 Walk, 4, 0, 1, 1, None, None
 Lineout, 0, 0, 0, 0, 110.6, 8
-Strikeout, 1, 1, 2, 0, None, None
 Single, 0, 0, 0, 0, 103.8, 8
 Single, 2, 0, 0, 2, 88.4, -52
 Walk, 4, 1, 1, 0, None, None
@@ -154,7 +151,6 @@ Groundout, 0, 0, 1, 0, 84.6, -19
 Single, 0, 0, 0, 0, 73.1, -55
 Walk, 4, 0, 0, 1, None, None
 Groundout, 1, 0, 0, 0, 108.7, 5
-Strikeout, 1, 1, 2, 0, None, None
 Double Play, 1, 0, 0, 1, 107.5, 17
 Single, 1, 1, 0, 0, 110.3, -14
 Walk, 4, 0, 0, 0, None, None
@@ -238,7 +234,6 @@ Groundout, 3, 0, 0, 3, 103.4, -4
 Groundout, 3, 0, 0, 2, 93.1, -23
 Single, 0, 0, 0, 0, 110.5, 2
 Pop Out, 2, 0, 0, 0, 90.8, 67
-Strikeout, 1, 1, 2, 0, None, None
 Single, 0, 0, 0, 0, 110.3, -6
 Single, 3, 1, 0, 1, 81.8, 14
 Single, 3, 1, 0, 1, 102.4, -18
@@ -423,8 +418,6 @@ Groundout, 1, 1, 0, 0, 81.1, -4
 Pop Out, 0, 0, 0, 0, 87.1, 66
 Groundout, 3, 1, 0, 1, 105.8, -10
 Flyout, 0, 0, 0, 1, 96.7, 35
-Flyout, 1, 0, 0, 0, 100.2, 29
-Strikeout, 1, 1, 2, 0, None, None
 Walk, 4, 1, 1, 0, None, None
 Flyout, 0, 0, 0, 0, 74.5, 33
 Groundout, 1, 0, 0, 1, 70.4, -7

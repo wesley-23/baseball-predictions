@@ -5,7 +5,6 @@ Single, 3, 0, 1, 2, 76.8, 15
 Groundout, 0, 1, 0, 0, 96.4, None
 Groundout, 0, 0, 0, 0, 63.7, -5
 Pop Out, 0, 1, 1, 1, 61.5, 58
-Strikeout, 0, 0, 1, 2, None, None
 Lineout, 2, 1, 0, 1, 104.0, 2
 Flyout, 0, 1, 0, 0, 90.7, 30
 Strikeout, 0, 1, 1, 1, None, None
@@ -102,7 +101,6 @@ Flyout, 0, 0, 0, 1, 100.8, 45
 Single, 1, 0, 0, 3, 101.8, 8
 Strikeout, 2, 1, 1, 1, None, None
 Groundout, 1, 0, 1, 0, 99.6, 4
-Strikeout, 2, 0, 1, 2, None, None
 Single, 0, 1, 0, 2, 93.8, 1
 Flyout, 2, 1, 0, 0, 86.7, 51
 Groundout, 0, 0, 0, 0, 79.0, -25
@@ -156,7 +154,6 @@ Flyout, 0, 1, 0, 2, 80.7, 48
 Groundout, 2, 0, 1, 0, 68.2, -50
 Single, 1, 0, 0, 3, 74.5, 46
 Flyout, 0, 1, 0, 1, 90.2, 27
-Strikeout, 0, 0, 1, 2, None, None
 GIDP, 1, 1, 0, 0, 91.3, -10
 Lineout, 0, 0, 0, 0, 77.5, 12
 Flyout, 0, 0, 0, 0, 93.0, 31
@@ -315,8 +312,6 @@ Single, 1, 1, 1, 1, 89.8, 5
 Groundout, 0, 2, 0, 0, 95.2, -10
 Pop Out, 2, 1, 0, 2, 65.8, 65
 Strikeout, 0, 1, 2, 0, None, None
-Strikeout, 2, 0, 1, 2, None, None
-Strikeout, 0, 0, 1, 2, None, None
 Strikeout, 3, 3, 0, 0, None, None
 Groundout, 0, 0, 0, 0, 92.5, 2
 Single, 0, 1, 0, 0, 93.8, 8

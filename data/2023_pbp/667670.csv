@@ -300,8 +300,6 @@ Single, 0, 0, 0, 0, 112.6, 12
 Home Run, 1, 0, 0, 0, 111.6, 32
 Single, 3, 1, 0, 1, 74.4, 2
 Walk, 4, 0, 1, 2, None, None
-Double, 0, 0, 1, 0, 100.4, 25
-Double Play, 0, 0, 0, 0, 106.2, 6
 Strikeout, 0, 0, 2, 1, None, None
 Single, 0, 0, 0, 0, 105.7, -10
 Strikeout, 0, 1, 2, 0, None, None

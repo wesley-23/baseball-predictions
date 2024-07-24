@@ -311,7 +311,6 @@ Home Run, 0, 1, 0, 0, 96.4, 31
 Flyout, 2, 0, 0, 2, 96.2, 28
 Groundout, 0, 0, 0, 0, 93.2, -19
 Flyout, 0, 0, 1, 0, 91.9, 43
-Walk, 4, 0, 0, 2, None, None
 Walk, 4, 1, 0, 0, None, None
 Single, 0, 1, 0, 0, 95.7, -2
 Strikeout, 1, 1, 1, 1, None, None
@@ -373,9 +372,6 @@ Groundout, 1, 1, 0, 1, 78.9, 6
 Strikeout, 3, 0, 2, 1, None, None
 Flyout, 0, 0, 0, 0, 63.0, 34
 Strikeout, 3, 0, 1, 2, None, None
-Walk, 4, 0, 0, 2, None, None
-Flyout, 0, 0, 0, 0, 89.1, 48
-Walk, 4, 0, 0, 2, None, None
 Single, 1, 1, 1, 0, 99.1, 16
 Hit By Pitch, 0, 0, 0, 0, None, None
 Double, 1, 0, 0, 0, 105.0, 14
@@ -551,7 +547,6 @@ Fielders Choice, 0, 0, 0, 0, 83.4, -9
 Pop Out, 2, 1, 0, 1, 75.3, 76
 Forceout, 3, 0, 0, 2, 86.6, -40
 Strikeout, 3, 0, 2, 1, None, None
-Walk, 4, 0, 0, 2, None, None
 Single, 2, 2, 0, 0, 99.6, -3
 Single, 0, 0, 0, 0, 102.3, -2
 Groundout, 3, 1, 0, 0, 73.9, 8
@@ -644,7 +639,6 @@ Walk, 4, 0, 2, 0, None, None
 Double, 1, 0, 0, 2, 105.1, 13
 Pop Out, 3, 0, 1, 1, 99.7, 76
 Catcher Interference, 1, 0, 0, 1, None, None
-Walk, 4, 0, 0, 2, None, None
 Pop Out, 0, 0, 0, 1, 84.1, 63
 Groundout, 0, 1, 0, 0, 86.5, -3
 Lineout, 1, 0, 0, 0, 92.7, 23

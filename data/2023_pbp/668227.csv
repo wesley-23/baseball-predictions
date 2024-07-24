@@ -142,7 +142,6 @@ Flyout, 3, 2, 0, 0, 97.1, 26
 Single, 2, 0, 0, 0, 110.5, 3
 Flyout, 0, 0, 0, 0, 93.6, 48
 Single, 0, 1, 0, 0, 81.3, -30
-Strikeout, 3, 1, 1, 1, None, None
 Strikeout, 0, 2, 1, 1, None, None
 Single, 2, 0, 1, 2, 96.6, 6
 Groundout, 2, 1, 1, 0, 56.9, -73
@@ -376,8 +375,6 @@ Walk, 4, 1, 0, 0, None, None
 Single, 0, 1, 0, 0, 111.9, 10
 Single, 2, 2, 0, 1, 103.6, 5
 Groundout, 1, 0, 0, 0, 99.0, -3
-Single, 3, 0, 1, 0, 97.9, 12
-Strikeout, 3, 1, 1, 1, None, None
 Bunt Groundout, 0, 0, 0, 0, 26.8, -18
 Lineout, 0, 0, 0, 0, 102.1, 19
 Groundout, 0, 0, 0, 0, 85.1, -33
@@ -625,7 +622,6 @@ Strikeout, 0, 1, 1, 1, None, None
 Single, 0, 1, 0, 1, 91.3, 8
 Field Error, 2, 2, 0, 0, 82.7, 3
 Walk, 4, 0, 0, 3, None, None
-Strikeout, 3, 1, 1, 1, None, None
 Strikeout, 1, 1, 1, 1, None, None
 Pop Out, 2, 1, 1, 0, 58.7, 48
 Strikeout, 2, 0, 2, 1, None, None
