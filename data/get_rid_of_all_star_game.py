@@ -14,6 +14,7 @@ def all_star_game_was_scraped(pk, year):
     outcomes = scrape(pk)
     for outcome in outcomes:
         pid = outcome['id']
+        print(outcome)
         outcome_contained = False
         path = str(year) + '_pbp/' + str(pid) + '.csv'
         f = open(path, 'r')
@@ -51,24 +52,30 @@ def delete_all_star_data(pk, year):
         pid = outcome['id']
         path = str(year) + '_pbp/' + str(pid) + '.csv'
         f = open(path, 'r')
+        deleted = False
 
         lines = ''
         for line in f:
             l = line.split(',')
-            if (l[0].strip() == outcome['outcome'] and int(l[1].strip()) == outcome['balls'] and int(l[2].strip()) == outcome['called_strikes']
-                and int(l[3].strip()) == outcome['whiffs'] and int(l[4].strip()) == outcome['fouls']):
-                if (l[5].strip() == outcome['EV'] and l[6].strip() == outcome['LA']):
-                    print(pid)
-                    continue
-                if (outcome['EV'] == None and outcome['LA'] == None and l[5].strip() == 'None' and l[6].strip() == 'None'):
-                    print(pid)
-                    continue
-                if (outcome['EV'] == None and l[5].strip == 'None' and l[6].strip() == outcome['LA']):
-                    print(pid)
-                    continue
-                if (outcome['LA'] == None and l[6].strip() == 'None' and l[5].strip() == outcome['EV']):
-                    print(pid)
-                    continue
+            if not deleted:
+                if (l[0].strip() == outcome['outcome'] and int(l[1].strip()) == outcome['balls'] and int(l[2].strip()) == outcome['called_strikes']
+                    and int(l[3].strip()) == outcome['whiffs'] and int(l[4].strip()) == outcome['fouls']):
+                    if (l[5].strip() == outcome['EV'] and l[6].strip() == outcome['LA']):
+                        print(pid)
+                        deleted = True
+                        continue
+                    if (outcome['EV'] == None and outcome['LA'] == None and l[5].strip() == 'None' and l[6].strip() == 'None'):
+                        print(pid)
+                        deleted = True
+                        continue
+                    if (outcome['EV'] == None and l[5].strip == 'None' and l[6].strip() == outcome['LA']):
+                        print(pid)
+                        deleted = True
+                        continue
+                    if (outcome['LA'] == None and l[6].strip() == 'None' and l[5].strip() == outcome['EV']):
+                        print(pid)
+                        deleted = True
+                        continue
             lines += line
         f.close()
         w = open(path, 'w')
@@ -80,5 +87,5 @@ def delete_all_star_data(pk, year):
 
 
 
-# print(all_star_game_was_scraped(717421, 2023))
-delete_all_star_data(717421, 2023)
+# print(all_star_game_was_scraped(663466, 2022))
+delete_all_star_data(663466, 2022)

@@ -149,7 +149,6 @@ Groundout, 2, 2, 0, 1, 88.8, -21
 Groundout, 1, 1, 0, 0, 78.7, -1
 Walk, 4, 1, 0, 1, None, None
 Single, 0, 0, 0, 0, 99.1, 12
-Strikeout, 0, 1, 1, 1, None, None
 Single, 1, 1, 0, 1, 95.1, 9
 Single, 0, 1, 0, 0, 97.8, 14
 Strikeout, 0, 1, 1, 1, None, None
@@ -348,7 +347,6 @@ Flyout, 2, 1, 0, 0, 89.4, 37
 Lineout, 1, 1, 0, 0, 91.4, 17
 Groundout, 1, 1, 0, 0, 69.7, -31
 Strikeout, 0, 1, 1, 1, None, None
-Single, 0, 1, 1, 2, 94.8, 9
 Single, 2, 1, 0, 0, 99.4, -6
 Groundout, 0, 0, 0, 2, 66.3, -33
 Single, 3, 2, 0, 0, 89.4, 7

@@ -53,7 +53,6 @@ Walk, 4, 2, 0, 0, None, None
 Groundout, 0, 0, 1, 0, 93.4, 4
 Strikeout, 2, 1, 1, 1, None, None
 Groundout, 0, 0, 1, 0, 93.9, None
-Walk, 4, 1, 0, 1, None, None
 Double, 1, 0, 0, 0, 92.8, 37
 Lineout, 2, 0, 0, 2, 102.9, 6
 Single, 0, 0, 0, 0, 35.2, -50
@@ -381,7 +380,6 @@ Pop Out, 0, 1, 0, 0, 67.3, 51
 Field Error, 0, 0, 0, 0, 90.7, 79
 Single, 0, 0, 0, 0, 103.0, 14
 Single, 0, 0, 0, 0, 107.0, None
-Single, 0, 0, 0, 0, 78.1, 19
 Walk, 4, 1, 0, 1, None, None
 Groundout, 1, 2, 0, 0, 83.7, -1
 Strikeout, 1, 0, 2, 1, None, None

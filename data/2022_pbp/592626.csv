@@ -81,7 +81,6 @@ Sac Fly, 0, 2, 0, 0, 88.7, 48
 Walk, 4, 0, 0, 0, None, None
 Groundout, 0, 0, 0, 1, 104.9, 1
 Forceout, 0, 1, 0, 2, 84.6, -17
-Strikeout, 2, 0, 2, 1, None, None
 Strikeout, 3, 0, 2, 2, None, None
 Single, 0, 0, 1, 2, 51.9, -53
 Walk, 4, 0, 2, 5, None, None
@@ -267,7 +266,6 @@ Field Error, 1, 0, 0, 2, 98.4, -12
 Double, 2, 0, 1, 0, 99.6, 24
 Pop Out, 2, 1, 0, 0, 89.3, 66
 Flyout, 1, 1, 0, 0, 97.7, 41
-Strikeout, 1, 2, 1, 2, None, None
 Strikeout, 2, 0, 2, 1, None, None
 Pop Out, 3, 1, 0, 3, 71.2, 53
 Pop Out, 2, 1, 0, 0, 62.4, 58

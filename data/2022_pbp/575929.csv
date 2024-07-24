@@ -351,8 +351,6 @@ Lineout, 1, 0, 0, 0, 112.1, 15
 Strikeout, 3, 0, 1, 3, None, None
 Strikeout, 0, 2, 1, 0, None, None
 Single, 1, 1, 0, 0, 101.6, -15
-Strikeout, 2, 1, 1, 3, None, None
-Field Error, 2, 0, 1, 2, 93.8, -22
 GIDP, 1, 1, 0, 0, 101.7, -17
 Home Run, 1, 0, 0, 0, 107.0, 21
 Walk, 4, 1, 0, 1, None, None

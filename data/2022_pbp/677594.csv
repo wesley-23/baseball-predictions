@@ -390,8 +390,6 @@ Hit By Pitch, 0, 0, 0, 2, None, None
 Lineout, 1, 1, 0, 0, 99.0, 20
 Double, 1, 0, 0, 0, 103.6, 23
 Strikeout, 2, 0, 1, 4, None, None
-Groundout, 1, 0, 1, 0, 107.0, -25
-Flyout, 0, 1, 0, 0, 85.0, 48
 Home Run, 2, 0, 1, 2, 106.0, 24
 Flyout, 1, 1, 1, 1, 84.7, 39
 Strikeout, 0, 1, 1, 1, None, None
