@@ -67,7 +67,6 @@ Walk, 4, 1, 0, 0, None, None
 Strikeout, 2, 0, 2, 1, None, None
 Strikeout, 2, 1, 1, 1, None, None
 Walk, 4, 0, 0, 0, None, None
-Walk, 4, 0, 0, 0, None, None
 Strikeout, 1, 1, 2, 0, None, None
 Walk, 4, 0, 1, 0, None, None
 Strikeout, 1, 1, 1, 1, None, None
@@ -370,8 +369,6 @@ Groundout, 0, 0, 0, 0, 93.2, 9
 Walk, 4, 1, 0, 0, None, None
 Strikeout, 2, 1, 1, 1, None, None
 Walk, 4, 0, 0, 0, None, None
-Forceout, 2, 0, 1, 1, 110.9, -7
-Flyout, 1, 1, 0, 1, 77.5, 48
 Groundout, 0, 0, 1, 0, 97.4, -20
 Strikeout, 1, 0, 2, 1, None, None
 Walk, 4, 0, 1, 0, None, None

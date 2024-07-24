@@ -65,7 +65,6 @@ Strikeout, 1, 0, 2, 1, None, None
 Single, 0, 0, 1, 0, 79.0, 23
 Sac Fly, 3, 1, 1, 0, 104.2, 26
 Field Error, 0, 1, 1, 0, 80.7, -3
-Strikeout, 0, 1, 2, 0, None, None
 Hit By Pitch, 1, 0, 0, 2, None, None
 Strikeout, 1, 1, 1, 2, None, None
 Groundout, 2, 0, 0, 0, 93.6, 2
@@ -333,7 +332,6 @@ Hit By Pitch, 1, 1, 0, 0, None, None
 Flyout, 1, 0, 0, 1, 76.5, 42
 Strikeout, 3, 1, 2, 1, None, None
 Strikeout, 0, 1, 2, 0, None, None
-Double, 1, 0, 1, 2, 97.9, 7
 Pop Out, 0, 0, 0, 0, 94.8, 63
 Flyout, 2, 0, 0, 3, 101.6, 56
 Flyout, 0, 1, 0, 0, 92.8, 59

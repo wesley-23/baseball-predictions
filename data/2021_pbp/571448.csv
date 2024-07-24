@@ -374,8 +374,6 @@ Walk, 4, 0, 0, 0, None, None
 Strikeout, 0, 0, 1, 2, None, None
 Groundout, 0, 2, 0, 0, 106.2, 5
 Single, 0, 0, 1, 0, 106.6, 9
-Groundout, 2, 0, 1, 2, 87.0, -19
-Groundout, 2, 2, 0, 0, 88.4, -2
 Groundout, 3, 1, 0, 1, 85.5, -15
 Single, 2, 1, 0, 4, 101.5, -4
 Flyout, 1, 0, 0, 1, 87.1, 35

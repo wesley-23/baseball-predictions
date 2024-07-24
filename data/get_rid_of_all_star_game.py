@@ -87,5 +87,5 @@ def delete_all_star_data(pk, year):
 
 
 
-# print(all_star_game_was_scraped(663466, 2022))
-delete_all_star_data(663466, 2022)
+# print(all_star_game_was_scraped(634675, 2021))
+delete_all_star_data(634675, 2021)
