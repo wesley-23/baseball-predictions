@@ -117,8 +117,8 @@ def calculate_mse_statcast_xba():
     next(f)
     for line in f:
         l = line.split(',')
-        ba = l[7]
-        xba = l[8]
+        ba = l[12]
+        xba = l[13]
         squared_error += (float(ba) - float(xba))**2
         num += 1
     print(squared_error / num)
@@ -153,7 +153,7 @@ def calculate_mse_model_xba():
                 hits += 1
             abs += 1
         xba = hits / abs
-        ba = l[7]
+        ba = l[12]
         squared_error += (float(ba) - float(xba)) ** 2
         num += 1
     print(squared_error / num)
@@ -166,7 +166,7 @@ def calculate_mse_model_xba():
 
 def see_error_type():
     start = time()
-    m = heat_chart(2015, to = 2022,  neighbors = 50)
+    m = heat_chart(2015, to = 2022,  neighbors = 1, method = 'tricube')
     # m.create_heat_chart()
     mis_as_hit = 0
     mis_as_out = 0
@@ -208,7 +208,9 @@ def see_error_type():
 # calculate_mse_model_xba()
 if __name__ == '__main__':
     mp.set_start_method('spawn')
-    calculate_mse_model_xba()
+    # calculate_mse_model_xba()
+    calculate_mse_statcast_xba()
+    # see_error_type()
 
 
 

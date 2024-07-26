@@ -47,7 +47,7 @@ def write(line, path):
     f.close()
 
 """
-    Creates a csv file with only season data
+    Creates a csv file with only data from one season
 """
 
 def get_season_data(year):
@@ -62,4 +62,4 @@ def get_season_data(year):
 
 # get_players(2023)
 
-get_season_data(2022)
+get_season_data(2015)
