@@ -1,9 +1,11 @@
 from data.heat_chart import heat_chart
+from data.linear_methods import Logistic_Regression
 import os
 import matplotlib.pyplot as plt
 import math
 from time import time
 import multiprocessing as mp
+
 
 
 
@@ -157,6 +159,14 @@ def calculate_mse_model_xba():
         squared_error += (float(ba) - float(xba)) ** 2
         num += 1
     print(squared_error / num)
+
+def test_logistic_regression():
+    years = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+    l = Logistic_Regression(years = years)
+    l.fit()
+    
+    f = open('data/batter_stats/2023.csv', 'r')
+
         
 ## Tests what type of error my model is making, that is a hit misclassified as an out or an out misclassified as a hit. While the raw error rate is
 ## a good indication of how well my model can be used to estimate expected batting average, having a 1:1 ratio or as close to it as possible can
