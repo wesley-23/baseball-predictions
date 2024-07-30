@@ -162,10 +162,44 @@ def calculate_mse_model_xba():
 
 def test_logistic_regression():
     years = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
-    l = Logistic_Regression(years = years)
-    l.fit()
+    model = Logistic_Regression(years = years)
+    model.fit()
     
     f = open('data/batter_stats/2023.csv', 'r')
+    next(f)
+    misclassified = 0
+    total = 0
+    for line in f:
+        l = line.split(',')
+        id = int(l[2])
+        try:
+            sprint = float(l[17])
+        except ValueError:
+            continue
+        path = 'data/2023_pbp/' + str(id) + '.csv'
+        pbp = open(path, 'r')
+        next(pbp)
+
+        for play in pbp:
+            p = play.split(',')
+            ev = p[5].strip()
+            la = p[6].strip()
+            outcome = p[0].strip()
+            if ev == 'None' or la == 'None':
+                continue
+            elif 'Sac' in outcome:
+                continue
+            if outcome != 'Single' and outcome != 'Double' and outcome != 'Triple' and outcome != 'Home Run':
+                if model.predict(float(ev), float(la), sprint):
+                    misclassified += 1
+            else:
+                if not model.predict(float(ev), float(la), sprint):
+                    misclassified += 1
+            total += 1
+    print(misclassified / total)
+
+
+
 
         
 ## Tests what type of error my model is making, that is a hit misclassified as an out or an out misclassified as a hit. While the raw error rate is
@@ -219,8 +253,9 @@ def see_error_type():
 if __name__ == '__main__':
     mp.set_start_method('spawn')
     # calculate_mse_model_xba()
-    calculate_mse_statcast_xba()
+    # calculate_mse_statcast_xba()
     # see_error_type()
+    test_logistic_regression()
 
 
 
