@@ -37,9 +37,30 @@ class Logistic_Regression:
         # print((self.Y))
         # print(self.X)
         self.tensor_prod_spline()
-        self.normalize_predictors()
+        self.standardize_predictors()
         self.features = len(self.X.columns)
-        # print(self.X)
+
+    """
+        Standardizes predictors by centering the mean at 0 and replacing each individual value with its z-score
+    """
+    def standardize_predictors(self):
+        new_x = {}
+        means = []
+        sds = []
+        for col in self.X.columns:
+            if col == 'intercept':
+                new_x[col] = self.X[col]
+                means.append(1),
+                sds.append(0)
+                continue
+            mean = np.mean(self.X[col])
+            sd = np.std(self.X[col])
+            new_x[col] = (self.X[col] - mean) / sd
+            means.append(mean)
+            sds.append(sd)
+        self.means = means
+        self.sds = sds
+        self.X = pd.DataFrame(new_x)
 
     """
         Normalizes predictors by scaling them to be between 0 - 1. Prevents overflow in math calculations
@@ -128,11 +149,13 @@ class Logistic_Regression:
         Calculates P(Outcome = Hit|X=x) under the logistic regression model. Numerator is exp(dot product between observation and coffecients).
         Denominator is 1 + numerator as we are solving a 2 class case.
     """
-    def calc_likelihoods(self, obs):
+    def calc_likelihoods(self, obs, **kwargs):
+        lmda = kwargs.get('lmda', None)
         numerator = 0
         for i in range(len(obs)):
             numerator += self.coeffs[i] * obs[i]
-        
+        if lmda is not None:       #When we are using regularization, we must manually add the intercept coefficients since it is not in our array of coefficients
+            numerator += self.intercept
         try:    
             numerator = math.exp(numerator)
         except OverflowError:
@@ -148,11 +171,12 @@ class Logistic_Regression:
     """
         Return an N X 1 2d numpy array in which the ith element is the probability that the ith outcome is a hit given the current parameters.
     """
-    def create_probabilities_vector(self, X):
+    def create_probabilities_vector(self, X, **kwargs):
+        lmda = kwargs.get('lmda', None)
         p = np.empty((len(X)))
         for i in range(len(X)):
             obs = X[i]
-            prob = self.calc_likelihoods(obs)
+            prob = self.calc_likelihoods(obs, lmda = lmda)
             p[i] = prob
         return p
 
@@ -186,13 +210,16 @@ class Logistic_Regression:
             ans[i] = self.mult_vec_with_vec(b, A[i])
         return ans
     
-    def calc_log_likelihood(self, X, Y):
+    def calc_log_likelihood(self, X, Y, **kwargs):
+        lmda = kwargs.get('lmda', None)
         output = 0
         for i in range(len(Y)):
             if Y[i] == 1:
-                output += math.log(self.calc_likelihoods(X[i]))
+                output += math.log(self.calc_likelihoods(X[i], lmda = lmda))
             else:
-                output += math.log((1  - self.calc_likelihoods(X[i])))
+                output += math.log((1  - self.calc_likelihoods(X[i], lmda = lmda)))
+        if lmda is not None:
+            output += (lmda / 2) * np.dot(self.coeffs, self.coeffs)
         return output
     
     """
@@ -218,24 +245,41 @@ class Logistic_Regression:
         Fit logistic model by Newton Raphson Method. Store the coefficient values for prediction and graphing purposes and store the covariance matrix
         (inverse of the negative second derivative) for inference purposes.
     """
-    def fit(self):
-        self.coeffs = np.random.rand(self.features)  ## Initialize all coefficients to equal 0
+    def fit(self, **kwargs):
+        lmda = None
+        if kwargs.get('lmda') is not None and (isinstance(kwargs.get('lmda'), float) or isinstance(kwargs.get('lmda'), int)):
+            lmda = kwargs.get('lmda')
+            print(lmda)
+        X = None
+        Y = self.Y.to_numpy()
 
-        X = self.X.to_numpy()
-        Y = self.Y.to_numpy()  ## Get features and outcomes as numpy array for faster indexing
+        if lmda == None:    ## If not L2 regularization is being used, we will include the intercept term in our coefficient matrix
+            self.coeffs = np.zeros(self.features)  ## Initialize all coefficients to equal 0
+
+            X = self.X.to_numpy()  ## Get features and outcomes as numpy array for faster indexing
+        else:   ## We don't want to penalize intercept term, so we will set it to the average y value and perform ridge regression on other parameters
+            self.coeffs = np.zeros(self.features - 1)
+
+            X = self.X.drop('intercept', axis = 1).to_numpy()
+            self.intercept = np.mean(Y)
 
         for i in range(0, 100):
-            loglik = self.calc_log_likelihood(X, Y)
+            loglik = self.calc_log_likelihood(X, Y, lmda = lmda)
             print(loglik)
-            p = self.create_probabilities_vector(X)
+            p = self.create_probabilities_vector(X, lmda = lmda)
             Xt = np.transpose(X)
             y_p = np.subtract(Y, p)
             first_der = np.dot(Xt, y_p) ## First derivative is X'(Y - p)
+            if lmda != None:
+                print('hi')
+                first_der = np.subtract(first_der, lmda * self.coeffs)
             W = self.create_weight_matrix(p)
             second_der = np.matmul(self.mult_vectorized(Xt, W), X) ## second derivative of log-lik is -X'WX (ignore negative sign for now)
+            if lmda != None:
+                second_der = np.add(lmda * np.eye(self.features - 1), second_der) ## Add small positive values to diagonals to make matrix more stable
             print(np.linalg.cond(second_der))
             self.covar = np.linalg.inv(second_der)  ## Store covariance matrix
-            update = 0.5 * np.dot(self.covar, first_der)
+            update = np.dot(self.covar, first_der)
 
             self.coeffs = np.add(self.coeffs, update)
 
@@ -243,6 +287,21 @@ class Logistic_Regression:
             # print(self.coeffs)
             print(mag)
             if (mag < 0.0001):
+                if lmda != None:   # Recompute covariance matrix to include intercept term if l2 regularization was used
+                    X = self.X.to_numpy()
+                    reg = lmda * np.eye(self.features)
+                    reg[0, 0] = 0  # Do not regularize intercept
+                    hessian = np.matmul(self.mult_vectorized(X.T, W), X)
+                    self.covar = np.linalg.inv(hessian)
+                    self.params = np.zeros(0)    #Store coefficient parameters together in new variable
+                    np.append(self.params, self.intercept)
+                    np.append(self.params, self.coeffs)
+                    self.coeffs = None
+                    self.intercept = None 
+                else:
+                    self.params = self.coeffs   #Move coeffs to params to remain consistent with the l2 case
+                    self.coeffs = None
+
                 ## Exit when first derivative is very close to 0. Coefficient values and covariance matrix have been saved
                 return True
         return False
