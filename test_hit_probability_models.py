@@ -163,7 +163,7 @@ def calculate_mse_model_xba():
 def test_logistic_regression():
     years = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
     model = Logistic_Regression(years = years)
-    model.fit()
+    model.fit(lmbda = 100)
     
     f = open('data/batter_stats/2023.csv', 'r')
     next(f)

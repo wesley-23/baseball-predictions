@@ -13,6 +13,7 @@ class Logistic_Regression:
 
     def __init__(self, **kwargs):
         self.years = kwargs.get('years', None)
+        self.basis_expansion = (kwargs.get('basis', None))
         if not isinstance(self.years, list) or not isinstance(self.years[0], int):
             raise TypeError('Years must be a nonempty list of integers')
         self.create_data_frame()
@@ -32,12 +33,11 @@ class Logistic_Regression:
             'intercept': np.ones(frame['EV'].shape),
             'EV': frame['EV'].astype(float),
             'LA': frame['LA'].astype(float),
-            'Sprint_Speed': frame['Sprint_Speed'].astype(float)
+            'S': frame['Sprint_Speed'].astype(float)
         })
-        # print((self.Y))
-        # print(self.X)
-        self.tensor_prod_spline()
-        self.standardize_predictors()
+        if self.basis_expansion == 'tensor_spline':
+            self.tensor_prod_spline()
+            self.standardize_predictors()
         self.features = len(self.X.columns)
 
     """
@@ -100,7 +100,7 @@ class Logistic_Regression:
                     basis.append(0)
                 else:
                     basis.append((ev - knot)**3)
-            ev_basis['EVk'+str(knot)] = basis
+            ev_basis['EV'+str(knot)] = basis
         la_basis = {}
         la_basis['LA'] = self.X['LA'].to_numpy()
         la_basis['LA^2'] = la_basis['LA']**2
@@ -113,20 +113,20 @@ class Logistic_Regression:
                     basis.append(0)
                 else:
                     basis.append((la - knot)**3)
-            la_basis['LAk' + str(knot)] = basis
+            la_basis['LA' + str(knot)] = basis
         sprint_basis = {}
-        sprint_basis['S'] = self.X['Sprint_Speed'].to_numpy()
+        sprint_basis['S'] = self.X['S'].to_numpy()
         sprint_basis['S^2'] = sprint_basis['S']**2
         sprint_basis['S^3'] = sprint_basis['S']**3
         for i in range(1, 3):
             basis = []
             knot = 25 + (2 * i)
-            for s in self.X['Sprint_Speed']:
+            for s in self.X['S']:
                 if s <= knot:
                     basis.append(0)
                 else:
                     basis.append((s - knot)**3)
-            sprint_basis['Sk'+str(knot)] = basis
+            sprint_basis['S'+str(knot)] = basis
         s = pd.DataFrame(sprint_basis)
         new_x = {}
         new_x['intercept'] = self.X['intercept']
@@ -262,7 +262,7 @@ class Logistic_Regression:
 
             X = self.X.drop('intercept', axis = 1).to_numpy()
             self.intercept = np.mean(Y)
-
+        print(self.X.columns)
         for i in range(0, 100):
             loglik = self.calc_log_likelihood(X, Y, lmda = lmda)
             print(loglik)
@@ -271,7 +271,6 @@ class Logistic_Regression:
             y_p = np.subtract(Y, p)
             first_der = np.dot(Xt, y_p) ## First derivative is X'(Y - p)
             if lmda != None:
-                print('hi')
                 first_der = np.subtract(first_der, lmda * self.coeffs)
             W = self.create_weight_matrix(p)
             second_der = np.matmul(self.mult_vectorized(Xt, W), X) ## second derivative of log-lik is -X'WX (ignore negative sign for now)
@@ -294,12 +293,12 @@ class Logistic_Regression:
                     hessian = np.matmul(self.mult_vectorized(X.T, W), X)
                     self.covar = np.linalg.inv(hessian)
                     self.params = np.zeros(0)    #Store coefficient parameters together in new variable
-                    np.append(self.params, self.intercept)
-                    np.append(self.params, self.coeffs)
+                    self.params = np.append(self.intercept, self.coeffs)
+                    print(self.params)
                     self.coeffs = None
                     self.intercept = None 
                 else:
-                    self.params = self.coeffs   #Move coeffs to params to remain consistent with the l2 case
+                    self.params = np.copy(self.coeffs)   #Move coeffs to params to remain consistent with the l2 case
                     self.coeffs = None
 
                 ## Exit when first derivative is very close to 0. Coefficient values and covariance matrix have been saved
@@ -307,8 +306,52 @@ class Logistic_Regression:
         return False
 
     def predict(self, ev, la, sprint):
-        vec = (1, ev, la, sprint)
-        return np.dot(vec, self.coeffs) >= 0.5
+        vars = self.X.columns
+        vec = np.ones(len(vars))
+
+        for i in range(1, len(vars)):
+            index_ev = vars[i].find('EV')
+            index_la = vars[i].find('LA')
+            index_s = vars[i].find('S')
+            if index_ev != -1:
+                if index_ev + 2 >= len(vars[i]):
+                    vec[i] *= ev
+                elif vars[i][index_ev + 2] == '^':
+                    vec[i] *= ev**(int(vars[i][index_ev + 3]))
+                elif vars[i][index_ev + 2 : index_ev + 4].isdigit():
+                    num = int(vars[i][index_ev + 2 : index_ev + 4])
+                    if (ev <= num):
+                        vec[i] = 0
+                    else:
+                        vec[i] *= (ev - num)**3
+            if index_la != -1:
+                if index_la + 2 >= len(vars[i]):
+                    vec[i] *= la
+                elif vars[i][index_la + 2] == '^':
+                    vec[i] *= la**(int(vars[i][index_la + 3]))
+                elif vars[i][index_la + 2 : index_la + 4].isdigit():
+                    num = int(vars[i][index_la + 2 : index_la + 4])
+                    if (la <= num):
+                        vec[i] = 0
+                    else:
+                        vec[i] *= (la - num)**3
+            if index_s != -1:
+                if index_s + 2 >= len(vars[i]):
+                    vec[i] *= sprint
+                elif vars[i][index_s + 2] == '^':
+                    vec[i] *= sprint**(int(vars[i][index_s + 3]))
+                elif vars[i][index_s + 2 : index_s + 4].isdigit():
+                    num = int(vars[i][index_s + 2 : index_s + 4])
+                    if (sprint <= num):
+                        vec[i] = 0
+                    else:
+                        vec[i] *= (sprint - num)**3
+        print(vec)
+        print(self.params)
+        res = math.exp(np.dot(vec, self.params))
+        ans = res / (1 + res)
+        print(ans)
+        return ans >= 0.5
             
     
 
